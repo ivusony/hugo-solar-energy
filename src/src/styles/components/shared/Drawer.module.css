@@ -1,0 +1,52 @@
+.navbarDrawer {
+    background-color: #EEF1F3;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /* should be hidden left, then animated on click */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    
+}
+
+.navbarDrawerContainer {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    background-color: rgb(255, 255, 255);
+}
+
+.visible {
+    transform: translateX(0);
+}
+
+@media (max-width: 1000px) {
+    .navbarDrawer {
+        width: 100%;
+    }
+}
+@media (min-width: 1000px) {
+    .navbarDrawer {
+        width: 30%;
+    }
+}
+
+.navbarDrawerControls {
+   height: 100px;
+   display: flex;
+   align-items: center;
+   transition: height 0.3s ease;
+   background-color: rgb(255, 255, 255);
+}
+.navbarDrawerControls.scrolled {
+   height: 60px;
+}
+
+.navbarDrawerCloseButton {
+    cursor: pointer;
+}
+
+.navbarDrawerCloseButton svg {
+    stroke: var(--color);
+}
