@@ -16,10 +16,13 @@ export default function MainNavi() {
     // define function: if scrollY > 0 add class 'scrolled' to .mainNavi
     function handleScroll() {
         const mainNavi = document.querySelector(`.${styles.mainNavi}`);
+        const languageSelect = document.querySelector(`.${styles.languageSelect}`);
         if (window.scrollY > 0) {
             mainNavi.classList.add(styles.scrolled);
+            languageSelect.classList.add(styles.scrolled);
         } else {
             mainNavi.classList.remove(styles.scrolled);
+            languageSelect.classList.remove(styles.scrolled);
         }
     };
 
@@ -59,6 +62,21 @@ export default function MainNavi() {
                             <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
+
+                    {/* language select dropdown with SR and EN, with SR as default, select component styled with tailwind, next Link implementation, floated right. Simple implementation */}
+                    <div className={styles.languageSelect}>
+                        <select
+                            value={locale}
+                            onChange={(e) => {
+                                const locale = e.target.value;
+                                const path = router.asPath;
+                                router.push(path, path, { locale });
+                            }}
+                        >
+                            <option value="sr">SR</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </div>
                 </div>
                 <div className={ styles.navbarBrand}>
                     <span className={styles.navbarBrandName}>HUGO SOLAR ENERGY</span>

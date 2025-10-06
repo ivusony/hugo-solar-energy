@@ -7,6 +7,10 @@
             "@pages/*": ["src/components/pages/*"],
 
             "@styles/*": ["src/styles/*"],
+
+            "@locales/*": ["locales/*"],
+
+            "@components/*": ["components/*"]
         }
     }
 }

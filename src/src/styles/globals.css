@@ -14,14 +14,37 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
-    --color : #00366C
+    --color: #00366C;
+    --color-secondary: #0070f3;
+    --h1-size: 4vw;
+    --h1-size-mobile: 9vw;
+    --h2-size: 3vw;
+    --h2-size-mobile: 5vw;
+    --segment-padding-top : 80px;
+    --segment-padding-left : 3vw;
+    --segment-padding-right : 3vw;
   }
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/MONTSERRAT/web/Montserrat-Regular.woff2') format('woff2'),
+         url('/fonts/MONTSERRAT/web/Montserrat-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/static/Roboto_Condensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--color);
+    font-family: 'Roboto', Helvetica, sans-serif;
 }

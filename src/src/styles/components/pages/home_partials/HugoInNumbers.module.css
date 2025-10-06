@@ -1,0 +1,19 @@
+.HugoInNumbersSegment {
+    padding-left: var(--segment-padding-left);
+    padding-right: var(--segment-padding-right);
+    min-height: fit-content;
+}
+
+/* .HugoInNumbersSegment h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.HugoInNumbersSegment p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+} */
+

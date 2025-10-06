@@ -1,4 +1,8 @@
+import AboutIndustrySegment from "./components/AboutIndustrySegment";
+import HugoInNumbersSegment from "./components/HugoInNumbersSegment";
 import IntroMediaSegment from "./components/IntroMediaSegment";
+import IntroductionSegment from "./components/IntroductionSegment";
+import ProjectHighlightsSegment from "./components/ProjectHighlightsSegment";
 
 
 export default function Home() {
@@ -8,16 +12,16 @@ export default function Home() {
             <IntroMediaSegment />
 
             {/* about the company segment */}
-            <div>about the company segment</div>
+            <IntroductionSegment />
 
             {/* type of renewable energy segment */}
-            <div>type of renewable energy segment</div>
+            <AboutIndustrySegment />
 
             {/* projects segment */}
-            <div>projects segment</div>
+            <ProjectHighlightsSegment />
 
             {/* hugo solar in figures segment */}
-            <div>hugo solar in figures segment</div>
+            <HugoInNumbersSegment />
 
             {/* news from hugo solar segment */}
             <div>news from hugo solar segment</div>

@@ -1,0 +1,49 @@
+{
+    "components" : {
+        "IntroMediaSegment" : {
+            "introMediaTextBox" : "Vaš partner u rešenjima obnovljive energije."
+        },
+        "IntroductionSegment" : {
+            "title" : "Pouzdani fotonaponski sistemi izgrađeni da rade i traju",
+            "text" : "Hugo Solar Energy podržava preduzeća i investitore u njihovoj tranziciji na obnovljive izvore energije. Dizajniramo, instaliramo i održavamo kompletne solarne sisteme koji osiguravaju efikasnu proizvodnju energije i dugoročnu performansu. Sa godinama iskustva u solarnoj industriji, isporučujemo projekte koji su pažljivo planirani, održivi i isplativi - pomažući našim partnerima da smanje emisije i postignu pravu energetsku nezavisnost.",
+            "boxes" : {
+                "box1" : {
+                    "title" : "Razvoj projekta",
+                    "url" : "/test"
+                },
+                "box2" : {
+                    "title" : "Inženjering i izgradnja",
+                    "url" : "/test"
+                },
+                "box3" : {
+                    "title" : "Održavanje i podrška",
+                    "url" : "/test"
+                },
+                "box4" : {
+                    "title" : "Operativni menadžment",
+                    "url" : "/test"
+                }
+            }
+        },
+        "AboutIndustrySegment" : {
+            "title" : "Solarna energija",
+            "description": "Solarna energija pretvara sunčevu svetlost u električnu energiju, pružajući čistu i održivu energiju. Pomaže u smanjenju emisija, smanjenju troškova energije i podržava zeleniju budućnost za preduzeća i zajednice.",
+            "solar_parks" : {
+                "title" : "SOLARNI PARKOVI",
+                "text" : "Razvijamo i gradimo solarne parkove velikih razmera koji obezbeđuju čistu energiju zajednicama i preduzećima. Naša stručnost u izboru lokacije, dobijanju dozvola i povezivanju na mrežu osigurava da je svaki projekat optimizovan za maksimalnu efikasnost i uticaj na životnu sredinu."
+            },
+            "solar_roofs" : {
+                "title" : "SOLARNI KROVOVI",
+                "text" : "Specijalizovani smo za instalacije solarnih panela na krovovima komercijalnih i industrijskih objekata. Naša prilagođena rešenja pomažu preduzećima da smanje troškove energije i ugljenični otisak, istovremeno unapređujući svoje kredibilitete održivosti."
+            }
+        },
+        "ProjectHighlightsSegment" : {
+            "title" : "Istaknuti projekti",
+            "text" : "Otkrijte neke od naših najuspešnijih solarnih projekata, koji pokazuju našu posvećenost kvalitetu, inovacijama i održivosti. Od solarnih parkova velikih razmera do instalacija na krovovima, naši projekti demonstriraju našu sposobnost da isporučimo izuzetne rezultate za naše klijente."
+        },
+        "HugoInNumbersSegment" : {
+            "title" : "HUGO SOLAR ENERGY u brojkama",
+            "description": "Kratak pregled našeg uticaja i dostignuća u sektoru solarne energije."
+        }
+    }
+}

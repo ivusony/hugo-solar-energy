@@ -1,0 +1,21 @@
+.IntroductionSegment {
+    padding-top: var(--segment-padding-top);
+    padding-left: var(--segment-padding-left);
+    padding-right: var(--segment-padding-right);
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.IntroMediaSegmentContainer {
+    margin: 0 0;
+}
+
+
+
+.IntroductionBoxIcon {
+    fill: var(--color);
+    transition: fill 0.3s ease;
+}

@@ -1,0 +1,6 @@
+.ProjectHighlightsSegment {
+    padding-top: var(--segment-padding-top);
+    padding-left: var(--segment-padding-left);
+    padding-right: var(--segment-padding-right);
+}
+

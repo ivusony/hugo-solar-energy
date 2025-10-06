@@ -1,0 +1,49 @@
+{
+    "components" : {
+        "IntroMediaSegment" : {
+            "introMediaTextBox" : "Your partner in renewable energy solutions."
+        },
+        "IntroductionSegment" : {
+            "title" : "Reliable photovoltaic systems built to perform and last",
+            "text" : "Hugo Solar Energy supports businesses and investors in their transition to renewable energy. We design, install, and maintain complete solar systems that ensure efficient power generation and long-term performance. With years of experience in the solar sector, we deliver projects that are thoughtfully planned, sustainable, and cost-effective — helping our partners reduce emissions and achieve true energy independence.",
+            "boxes" : {
+                "box1" : {
+                    "title" : "Project Development",
+                    "url" : "/test"
+                },
+                "box2" : {
+                    "title" : "Engineering and Construction",
+                    "url" : "/test"
+                },
+                "box3" : {
+                    "title" : "Maintenance and Support",
+                    "url" : "/test"
+                },
+                "box4" : {
+                    "title" : "Operational Management",
+                    "url" : "/test"
+                }
+            }
+        },
+        "AboutIndustrySegment" : {
+            "title" : "Solar energy",    
+            "description": "Solar energy converts sunlight into electricity, providing a clean and sustainable power source. It helps reduce emissions, lower energy costs, and supports a greener future for businesses and communities.",
+            "solar_parks" : {
+                "title" : "SOLAR PARKS",
+                "text" : "We develop and build large-scale solar parks that provide clean energy to communities and businesses. Our expertise in site selection, permitting, and grid connection ensures that each project is optimized for maximum efficiency and environmental impact."
+            },
+            "solar_roofs" : {
+                "title" : "SOLAR ROOFS",
+                "text" : "We specialize in rooftop solar installations for commercial and industrial buildings. Our tailored solutions help businesses reduce their energy costs and carbon footprint while enhancing their sustainability credentials."
+            }
+        },
+        "ProjectHighlightsSegment" : {
+            "title" : "Project Highlights",
+            "text" : "Discover some of our most successful solar projects, showcasing our commitment to quality, innovation, and sustainability. From large-scale solar parks to rooftop installations, our projects demonstrate our ability to deliver exceptional results for our clients."
+        },
+        "HugoInNumbersSegment" : {
+            "title" : "HUGO SOLAR ENERGY in numbers",
+            "description": "A snapshot of our impact and achievements in the solar energy sector."
+        }
+    }
+}
