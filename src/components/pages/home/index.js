@@ -24,7 +24,7 @@ export default function Home() {
             <HugoInNumbersSegment />
 
             {/* news from hugo solar segment */}
-            <div>news from hugo solar segment</div>
+            {/* <div>news from hugo solar segment</div> */}
         </div>
     );
 }

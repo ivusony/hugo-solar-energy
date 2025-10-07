@@ -47,4 +47,7 @@ body {
     background: var(--background);
     color: var(--color);
     font-family: 'Roboto', Helvetica, sans-serif;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+    background-size: 4mm 4mm;
+    background-position: 0 0;
 }
