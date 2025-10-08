@@ -2,6 +2,7 @@ import styles from "@styles/components/pages/OurStory.module.css";
 import Image from "next/image";
 import AboutUsSegment from "./components/AboutUsSegment";
 import OurCoreStrengths from "./components/OurCoreStrengths";
+import PhotoAlbumSegment from "./components/PhotoAlbumSegment";
 
 export default function OurStory() {
     return (
@@ -22,6 +23,7 @@ export default function OurStory() {
 
             <OurCoreStrengths />
 
+            <PhotoAlbumSegment />
 
         </div>
     );
