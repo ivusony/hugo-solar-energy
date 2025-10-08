@@ -93,12 +93,24 @@ export default function ProjectHighlightsSegment() {
                             layout="fill"
                             objectFit="cover"   
                         />
-                        <div className={` bg-black bg-opacity-10 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                            <p className="text-white absolute bottom-5">
-                                {
-                                    locale == "sr" ? "SRBIJA, KLADOVO - 1MW" : "SERBIA, KLADOVO - 1MW"
-                                }
-                            </p>
+                        <div className={`relative bg-black bg-opacity-10  text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
+                            <div className="absolute w-full left-0 bottom-0 bg-[var(--color-secondary)]/50 px-2 rounded py-4">
+                                <p className="text-white text-xs md:text-2xl text-left ">
+                                    {
+                                        locale == "sr" ? "SRBIJA, KLADOVO - 1MW" : "SERBIA, KLADOVO - 1MW"
+                                    }
+                                </p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "KAPACITET" : "CAPACITY" }: 1MW`}</p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "GODINA IZGRADNJE" : "YEAR OF CONSTRUCTION" }: 2022`}</p>
+                                <div className="mt-4 flex justify-start">
+                                    <a 
+                                        className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
+                                        href="/projects"
+                                    >
+                                        { locale == "sr" ? "Više" : "See more" }
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -114,10 +126,22 @@ export default function ProjectHighlightsSegment() {
                             layout="fill"
                             objectFit="cover"
                         />
-                        <div className={` bg-black bg-opacity-10 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                            <p className="text-white absolute bottom-5">
-                                { locale == "sr" ? "SRBIJA, BEČEJ - 1MW" : "SERBIA, BEČEJ - 1MW" }
-                            </p>
+                        <div className={` bg-black bg-opacity-10  text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
+                            <div className="absolute w-full left-0 bottom-0 bg-[var(--color-secondary)]/50 px-2 rounded py-4">
+                                <p className="text-white text-xs md:text-2xl text-left">
+                                    { locale == "sr" ? "SRBIJA, BEČEJ - 1MW" : "SERBIA, BEČEJ" }
+                                </p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "KAPACITET" : "CAPACITY" }: 1.2MW`}</p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "GODINA IZGRADNJE" : "YEAR OF CONSTRUCTION" }: 2022`}</p>
+                                <div className="mt-4 flex justify-start">
+                                    <a 
+                                        className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
+                                        href="/projects"
+                                    >
+                                        { locale == "sr" ? "Više" : "See more" }
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -133,10 +157,22 @@ export default function ProjectHighlightsSegment() {
                             layout="fill"
                             objectFit="cover"
                         />
-                        <div className={` bg-black bg-opacity-10 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                            <p className="text-white absolute bottom-5">
-                                { locale == "sr" ? "SRBIJA, KRČEDIN - 570KW" : "SERBIA, KRČEDIN - 570KW" }
-                            </p>
+                        <div className={` bg-black bg-opacity-10 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
+                            <div className="absolute w-full left-0 bottom-0 bg-[var(--color-secondary)]/50 px-2 rounded py-4">
+                                <p className="text-white text-xs md:text-2xl text-left">
+                                    { locale == "sr" ? "SRBIJA, KRČEDIN - 570KW" : "SERBIA, KRČEDIN" }
+                                </p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "KAPACITET" : "CAPACITY" }: 570KW`}</p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "GODINA IZGRADNJE" : "YEAR OF CONSTRUCTION" }: 2022`}</p>
+                                <div className="mt-4 flex justify-start">
+                                    <a 
+                                        className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
+                                        href="/projects"
+                                    >
+                                        { locale == "sr" ? "Više" : "See more" }
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -152,10 +188,22 @@ export default function ProjectHighlightsSegment() {
                             layout="fill"
                             objectFit="cover"
                         />
-                        <div className={` bg-black bg-opacity-10 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                            <p className="text-white absolute bottom-5">
-                                { locale == "sr" ? "SRBIJA, BEOGRAD - 840KW" : "SERBIA, BELGRADE - 840KW" }
-                            </p>
+                        <div className={` bg-black bg-opacity-10 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
+                            <div className="absolute w-full left-0 bottom-0 bg-[var(--color-secondary)]/50 px-2 rounded py-4">
+                                <p className="text-white text-xs md:text-2xl text-left">
+                                    { locale == "sr" ? "SRBIJA, BEOGRAD - 840KW" : "SERBIA, BELGRADE" }
+                                </p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "KAPACITET" : "CAPACITY" }: 840KW`}</p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "GODINA IZGRADNJE" : "YEAR OF CONSTRUCTION" }: 2022`}</p>
+                                <div className="mt-4 flex justify-start">
+                                    <a 
+                                        className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
+                                        href="/projects"
+                                    >
+                                        { locale == "sr" ? "Više" : "See more" }
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -171,10 +219,22 @@ export default function ProjectHighlightsSegment() {
                             layout="fill"
                             objectFit="cover"
                         />
-                        <div className={` bg-black bg-opacity-10 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                            <p className="text-white absolute bottom-5">
-                                { locale == "sr" ? "BOSNA I HERCEGOVINA, GRUDE - 40MW" : "BOSNIA AND HERZEGOVINA, GRUDE - 40MW" }
-                            </p>
+                        <div className={` bg-black bg-opacity-10 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
+                            <div className="absolute w-full left-0 bottom-0 bg-[var(--color-secondary)]/50 px-2 rounded py-4">
+                                <p className="text-white text-xs md:text-2xl text-left">
+                                    { locale == "sr" ? "BiH, GRUDE - 40MW" : "BOSNIA, GRUDE" }
+                                </p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "KAPACITET" : "CAPACITY" }: 40MW`}</p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "GODINA IZGRADNJE" : "YEAR OF CONSTRUCTION" }: 2023`}</p>
+                                <div className="mt-4 flex justify-start">
+                                    <a 
+                                        className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
+                                        href="/projects"
+                                    >
+                                        { locale == "sr" ? "Više" : "See more" }
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -191,9 +251,21 @@ export default function ProjectHighlightsSegment() {
                             objectFit="cover"
                         />
                         <div className={` bg-black bg-opacity-10 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                            <p className="text-white absolute bottom-5">
-                                { locale == "sr" ? "SRBIJA, INĐIJA - 7.2MW" : "SERBIA, INĐIJA - 7.2MW" }
-                            </p>
+                             <div className="absolute w-full left-0 bottom-0 bg-[var(--color-secondary)]/50 px-2 rounded py-4">
+                                <p className="text-white text-xs md:text-2xl text-left">
+                                    { locale == "sr" ? "SRBIJA, INĐIJA - 7.2MW" : "SERBIA, INĐIJA" }
+                                </p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "KAPACITET" : "CAPACITY" }: 7.2MW`}</p>
+                                <p className="text-white text-left m-0 text-xs md:text-sm">{`${ locale == "sr" ? "GODINA IZGRADNJE" : "YEAR OF CONSTRUCTION" }: 2023`}</p>
+                                <div className="mt-4 flex justify-start">
+                                    <a 
+                                        className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
+                                        href="/projects"
+                                    >
+                                        { locale == "sr" ? "Više" : "See more" }
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>

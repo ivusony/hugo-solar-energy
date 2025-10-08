@@ -94,8 +94,16 @@ export default function AboutIndustrySegment() {
                         objectFit="cover"
                     />
                     <div className={` bg-black bg-opacity-30 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                        <h3 className="text-2xl font-semibold text-white mb-7">{locales[locale].home.components.AboutIndustrySegment.solar_parks.title}</h3>
+                        <h3 className="text-xl font-semibold text-white mb-3 mt-7 tracking-wider">{locales[locale].home.components.AboutIndustrySegment.solar_parks.title}</h3>
                         <span className="text-lg text-justify text-white">{locales[locale].home.components.AboutIndustrySegment.solar_parks.text}</span>
+                        <div className="mt-4 flex justify-center">
+                            <a 
+                                className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-7 py-3`}
+                                href="/solar-energy/industrial-solar-parks"
+                            >
+                                { locale == "sr" ? "Saznaj više" : "Learn more" }
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
 
@@ -113,8 +121,16 @@ export default function AboutIndustrySegment() {
                         objectFit="cover"
                     />
                     <div className={` bg-black bg-opacity-30 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                        <h3 className="text-2xl font-semibold text-white mb-7">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.title}</h3>
+                        <h3 className="text-xl font-semibold text-white mb-3 mt-7 tracking-wider">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.title}</h3>
                         <span className="text-lg text-justify text-white">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.text}</span>
+                        <div className="mt-4 flex justify-center">
+                            <a 
+                                className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-7 py-3`}
+                                href="/solar-energy/comercial-solar-roofs"
+                            >
+                                { locale == "sr" ? "Saznaj više" : "Learn more" }
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
             </motion.div>
