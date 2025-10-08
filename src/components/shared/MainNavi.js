@@ -78,8 +78,8 @@ export default function MainNavi() {
                         </select>
                     </div>
                 </div>
-                <div className={ styles.navbarBrand}>
-                    <span className={styles.navbarBrandName}>HUGO SOLAR ENERGY</span>
+                <div className={ `font-bold text-lg flex justify-end items-center w-[30%] text-white tracking-wider     ${styles.navbarBrand}`}>
+                    <span className={`mr-5 ${styles.navbarBrandName}`}>HUGO SOLAR ENERGY</span>
                     <img className={ styles.mainNaviLogo } src="/assets/hugo_logo.png" alt="Hugo Solar Energy Logo" />
                 </div>
             </div>

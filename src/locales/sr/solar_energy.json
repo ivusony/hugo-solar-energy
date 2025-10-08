@@ -1,0 +1,24 @@
+{
+    "banner" : {
+        "h1" : "Solarna Energija"
+    },
+    "components" : {
+        "solar_energy" : {
+            "h2" : "Solarna Energija",   
+            "h3" :  "Solarna energija je jedan od najobilnijih i najpouzdanijih izvora obnovljive energije na našoj planeti. Sunčeva svetlost je besplatna, dostupna gotovo svuda i obezbeđuje neograničenu količinu čiste električne energije bez emisije štetnih gasova. Kako svet teži ka održivoj energetskoj budućnosti, solarna energija ima ključnu ulogu u smanjenju zavisnosti od fosilnih goriva i smanjenju emisije ugljen-dioksida.",
+            "p1" : "Neprestana težnja ka inovacijama pokreće napredak savremene solarne tehnologije. Kontinuirano istraživanje i razvoj naprednih fotonaponskih rešenja omogućavaju prilagođavanje rastućim energetskim potrebama današnjeg sveta. Kroz pametne solarne proizvode, digitalni nadzor i integraciju sa smart-grid sistemima, sektor obnovljivih izvora energije stalno se unapređuje, obezbeđujući efikasniju, pouzdaniju i dugoročno održivu proizvodnju čiste energije.",
+            "p2" : "Inovativni koncepti poput Agri-PV sistema i višenamenskih solarnih instalacija menjaju način na koji se zemljište i sunčeva energija koriste zajedno. Ovi sistemi omogućavaju istovremeno poljoprivrednu proizvodnju i generisanje električne energije, povećavajući iskorišćenost površina i doprinosi energetskoj tranziciji ka održivosti. Kombinovanjem fotonaponskih panela sa sistemima za skladištenje energije, solarna energija postaje dostupnija i stabilnija tokom cele godine.",
+            "p3" : "Ulaganje u solarne projekte donosi dugoročne ekonomske i ekološke prednosti. Od industrijskih krovova i zemljišnih solarnih elektrana do poljoprivrednih PV sistema, postoji mnogo mogućnosti za vlasnike zemljišta, investitore i opštine da učestvuju u razvoju tržišta obnovljivih izvora energije. Dobro planirane solarne investicije obezbeđuju stabilan prihod, energetsku nezavisnost i značajno smanjenje ugljeničnog otiska.",
+            "p4" : "Realizacija fotonaponskog sistema obuhvata mnogo više od same instalacije. Uspešni projekti zahtevaju detaljno planiranje, finansiranje, izgradnju i održavanje kako bi se postigla maksimalna efikasnost i dugotrajnost. Sa jasnim pristupom upravljanju solarnim projektima i integracijom baterijskih sistema za skladištenje energije, obnovljiva energija postaje ne samo tehnološko rešenje, već i put ka zelenijoj i održivoj budućnosti."
+        },
+        "solar_industry" : {
+            "h2" : "Solarna Industrija",
+            "solar_roofs" : {
+                "h3" : "KOMERCIJALNI SOLARNI KROVOVI"
+            },
+            "solar_parks" : {
+                "h3" : "INDUSTRIJSKI SOLARNI PARKOVI"
+            }
+        } 
+    }
+}

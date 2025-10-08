@@ -52,17 +52,17 @@
 }
 
 .navbarBrand {
-    width: 30%;
+    /* width: 30%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center; */
 }
 .navbarBrandName {
-    font-weight: bold;
+    /* font-weight: bold;
     font-size: small;
     height: 100%;
     margin-right: 10px;
-    color: white;
+    color: white; */
 }
 
 @media (max-width: 1000px) {

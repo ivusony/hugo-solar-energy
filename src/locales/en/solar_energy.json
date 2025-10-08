@@ -1,0 +1,24 @@
+{
+    "banner" : {
+        "h1" : "Solar Energy"
+    },
+    "components" : {
+        "solar_energy" : {
+            "h2" : "Solar Energy",
+            "h3" : "Solar energy is one of the most abundant and reliable sources of renewable power on our planet. Sunlight is free, accessible almost everywhere, and provides a limitless supply of clean electricity without emitting greenhouse gases. As the world moves toward a sustainable energy future, solar power plays a key role in reducing dependence on fossil fuels and lowering carbon emissions. \n Modern photovoltaic systems convert sunlight directly into electricity through advanced solar panel technology, making them an essential part of the global green energy transition. From industrial and commercial installations to large-scale solar farms, solar energy solutions today include project design, system construction, energy storage integration, and intelligent energy management — enabling a stable and efficient renewable energy supply for decades to come.",
+            "p1" : "The continuous drive for innovation defines the progress of modern solar energy technology. Constant research and development of advanced photovoltaic solutions make it possible to adapt to the growing energy demands of today’s world. Through cutting-edge solar products, intelligent monitoring systems, and smart-grid integration, the renewable energy sector continues to evolve, ensuring more efficient, reliable, and future-proof clean power generation.",
+            "p2" : "New approaches such as Agri-PV systems and multi-purpose solar installations are transforming how land and sunlight are used together. These innovations allow agriculture and energy production to coexist, improving land efficiency while contributing to a sustainable energy transition. By combining photovoltaic panels with energy storage technologies, solar power becomes more flexible and accessible throughout the year.",
+            "p3" : "Investing in solar power projects offers long-term environmental and economic benefits. From industrial rooftops and ground-mounted solar farms to agricultural PV installations, there are numerous possibilities for landowners, investors, and municipalities to participate in the renewable energy market. Well-planned solar investments contribute to stable income sources, energy independence, and measurable carbon footprint reduction.",
+            "p4" : "The implementation of a photovoltaic system involves much more than installation. Successful projects require careful planning, financing, construction, and maintenance to ensure consistent performance and long-term reliability. With a well-structured approach to solar project management and battery energy storage systems, renewable energy becomes not only a technological solution but also a path toward a greener, more sustainable future."
+        },
+        "solar_industry" : {
+            "h2" : "Solar Industry",
+            "solar_roofs" : {
+                "h3" : "COMMERCIAL SOLAR ROOFS"
+            },
+            "solar_parks" : {
+                "h3" : "INDUSTRIAL SOLAR PARKS"
+            }
+        }  
+    }
+}

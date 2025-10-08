@@ -74,7 +74,6 @@ export default function AboutUsSegment() {
                     { locales[locale].our_story.components.AboutUsSegment.h2 }
                 </h2>
 
-                {/* make two column grid on ms screens and larger, one column on mobile. Two paragraphs per column */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
                     <p className="mb-5 text-justify  text-xl bg-white">
                         { locales[locale].our_story.components.AboutUsSegment.p1 }
