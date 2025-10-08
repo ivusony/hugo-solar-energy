@@ -54,8 +54,10 @@ export default function SolarEnergySegment() {
                         <li>
                             <div class="flex items-center">
                                 <span class="mx-2 text-gray-400">›</span>
-                                <a href="/nasa-prica" class="text-gray-700 hover:text-[var(--color-secondary)] font-medium">
-                                    Solarna energija
+                                <a href="/solar-energy" class="text-gray-700 hover:text-[var(--color-secondary)] font-medium">
+                                    {
+                                        locale ==  "sr" ? "Solarna energija" : "Solar Energy"
+                                    }
                                 </a>
                             </div>
                         </li>
@@ -71,23 +73,23 @@ export default function SolarEnergySegment() {
                 <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
                     <h2 className="bg-white p-1">{ locales[locale].solar_energy.components.solar_energy.h2 }</h2>
                 </div>
-                <h3 className="text-xl md:text-2xl font-normal mb-10 text-justify  font-italic bg-white">
+                <h3 className="text-xl md:text-2xl font-normal mb-10 text-justify  font-italic">
                     {
                         locales[locale].solar_energy.components.solar_energy.h3
                     }
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                    <p className="mb-5 text-justify  text-xl bg-white">
+                    <p className="mb-5 text-justify  text-xl ">
                         { locales[locale].solar_energy.components.solar_energy.p1 }
                     </p>
-                    <p className="mb-5 text-justify  text-xl bg-white">
+                    <p className="mb-5 text-justify  text-xl ">
                         { locales[locale].solar_energy.components.solar_energy.p2 }
                     </p>
-                    <p className="mb-5 text-justify  text-xl bg-white">
+                    <p className="mb-5 text-justify  text-xl ">
                         { locales[locale].solar_energy.components.solar_energy.p3 }
                     </p>
-                    <p className="mb-5 text-justify  text-xl bg-white">
+                    <p className="mb-5 text-justify  text-xl ">
                         { locales[locale].solar_energy.components.solar_energy.p4 }
                     </p>
                 </div>

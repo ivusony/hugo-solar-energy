@@ -31,10 +31,10 @@ export default function IntroductionSegment() {
     return (
         <div className={styles.IntroductionSegment}>
             <div className={styles.IntroMediaSegmentContainer}>
-                <h2 className={`sm:text-xl md:text-4xl font-bold text-center sm:mb-3 md:mb-10`}>{locales[locale].home.components.IntroductionSegment.title}</h2>
-                <p className={`sm:text-xl md:text-2xl text-center leading-normal `}>{locales[locale].home.components.IntroductionSegment.text}</p>
+                <h2 className={`text-2xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.IntroductionSegment.title}</h2>
+                <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.IntroductionSegment.text}</h3>
                 {/* Change grid to 4 columns on large screens */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mt-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mt-5">
                     <IntroductionBox 
                         key={`intro-box-1`}
                         icon={
@@ -50,7 +50,7 @@ export default function IntroductionSegment() {
                     <IntroductionBox
                         key={`intro-box-2`}
                         icon={
-                            <svg width="80px" height="80px" viewBox="0 0 24 24" className={styles.IntroductionBoxIcon}>
+                            <svg width="70px" height="70px" viewBox="0 0 24 24" className={styles.IntroductionBoxIcon}>
                                 <rect class="cls-1" x="6.6" y="9.98" width="10.8" height="4.05" transform="translate(-4.97 12) rotate(-45)"/>
                                 <circle class="cls-1" cx="18.68" cy="5.32" r="3.82"/>
                                 <circle class="cls-1" cx="5.32" cy="18.68" r="3.82"/>

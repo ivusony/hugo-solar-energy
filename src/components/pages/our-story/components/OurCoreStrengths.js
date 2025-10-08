@@ -48,11 +48,11 @@ export default function OurCoreStrengths() {
                 key={1}
                 variants={item}
             >     
-                <h2 className="text-xl md:text-2xl font-semibold mb-10 text-justify md:text-center font-italic bg-white">
+                <h2 className="text-xl md:text-2xl font-semibold mb-10 text-justify md:text-center font-italic ">
                     { locales[locale].our_story.components.OurCoreStrengths.h2 }
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                    <div className="mb-5 text-justify  text-xl bg-white">
+                    <div className="mb-5 text-justify  text-xl ">
                         <div className='h-20'>
                             <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
                                 <path className='stroke-[var(--color-secondary)]' d="M11.1459 7.02251C11.5259 6.34084 11.7159 6 12 6C12.2841 6 12.4741 6.34084 12.8541 7.02251L12.9524 7.19887C13.0603 7.39258 13.1143 7.48944 13.1985 7.55334C13.2827 7.61725 13.3875 7.64097 13.5972 7.68841L13.7881 7.73161C14.526 7.89857 14.895 7.98205 14.9828 8.26432C15.0706 8.54659 14.819 8.84072 14.316 9.42898L14.1858 9.58117C14.0429 9.74833 13.9714 9.83191 13.9392 9.93531C13.9071 10.0387 13.9179 10.1502 13.9395 10.3733L13.9592 10.5763C14.0352 11.3612 14.0733 11.7536 13.8435 11.9281C13.6136 12.1025 13.2682 11.9435 12.5773 11.6254L12.3986 11.5431C12.2022 11.4527 12.1041 11.4075 12 11.4075C11.8959 11.4075 11.7978 11.4527 11.6014 11.5431L11.4227 11.6254C10.7318 11.9435 10.3864 12.1025 10.1565 11.9281C9.92674 11.7536 9.96476 11.3612 10.0408 10.5763L10.0605 10.3733C10.0821 10.1502 10.0929 10.0387 10.0608 9.93531C10.0286 9.83191 9.95713 9.74833 9.81418 9.58117L9.68403 9.42898C9.18097 8.84072 8.92945 8.54659 9.01723 8.26432C9.10501 7.98205 9.47396 7.89857 10.2119 7.73161L10.4028 7.68841C10.6125 7.64097 10.7173 7.61725 10.8015 7.55334C10.8857 7.48944 10.9397 7.39258 11.0476 7.19887L11.1459 7.02251Z" strokeWidth="1.5"/>
@@ -66,7 +66,7 @@ export default function OurCoreStrengths() {
                             { locales[locale].our_story.components.OurCoreStrengths.p1.text }
                         </p>
                     </div>
-                    <div className="mb-5 text-justify  text-xl bg-white">
+                    <div className="mb-5 text-justify  text-xl ">
                         <div className='h-20'>
                             <svg className="fill-[var(--color-secondary)]" width="50px" height="50px" viewBox="0 0 72 72" enableBackground="new 0 0 72 72">
                                 <g>
@@ -94,7 +94,7 @@ export default function OurCoreStrengths() {
                             { locales[locale].our_story.components.OurCoreStrengths.p2.text }
                         </p>
                     </div>
-                    <div className="mb-5 text-justify  text-xl bg-white">
+                    <div className="mb-5 text-justify  text-xl ">
                         <div className='h-20'>
                             <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
                                 <path className="stroke-[var(--color-secondary)]" d="M22 12C22 13.3132 21.7413 14.6136 21.2388 15.8268C20.7362 17.0401 19.9997 18.1425 19.0711 19.0711C18.1425 19.9997 17.0401 20.7362 15.8268 21.2388C14.6136 21.7413 13.3132 22 12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C4.00035 18.1425 3.26375 17.0401 2.7612 15.8268C2.25866 14.6136 2 13.3132 2 12C2 10.6868 2.25866 9.38642 2.76121 8.17316C3.26375 6.95991 4.00035 5.85752 4.92893 4.92893C5.85752 4.00035 6.95991 3.26375 8.17317 2.7612C9.38642 2.25866 10.6868 2 12 2C13.3132 2 14.6136 2.25866 15.8268 2.76121C17.0401 3.26375 18.1425 4.00035 19.0711 4.92893C19.9997 5.85752 20.7362 6.95991 21.2388 8.17317C21.7413 9.38642 22 10.6868 22 12L22 12Z" strokeWidth="1.5"/>
@@ -107,7 +107,7 @@ export default function OurCoreStrengths() {
                             { locales[locale].our_story.components.OurCoreStrengths.p3.text }
                         </p>
                     </div>
-                    <div className="mb-5 text-justify  text-xl bg-white">
+                    <div className="mb-5 text-justify  text-xl ">
                         <div className='h-20'>
                             <svg className='fill-[var(--color-secondary)]' width="50px" height="50px" viewBox="0 0 512 512">
                                 <g>

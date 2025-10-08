@@ -1,9 +1,13 @@
+import { useLocales } from "@components/hooks/useLocales";
 import styles from "@styles/components/shared/Drawer.module.css"
 import { useAppContext } from "components/hooks/useAppContext"
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Drawer() {
 
+    let { locale } = useRouter();
+    let locales = useLocales();
     let { state, setState, toggleDrawer } = useAppContext();
     let { drawerVisible } = state;
 
@@ -46,6 +50,38 @@ export default function Drawer() {
                         </svg>
                     </button>
                 </div>
+
+                <ul className={styles.navbarDrawerLinks}>
+                    <li className="mb-3 ">
+                        <a 
+                            href="/" 
+                            onClick={toggleDrawer}
+                            className="py-2 pl-0 text-xl font-semibold underline-offset-4 hover-underline hover:text-[var(--color-secondary)] tracking-wider"
+                        >
+                            {`${ locales[locale].menu.home }`.toUpperCase()}
+                        </a>
+                    </li>
+                    <li className="mb-3 hover:color-[var(--color-secondary)]">
+                        <a 
+                            href="/our-story" 
+                            onClick={toggleDrawer}
+                            className="px-3 py-2 pl-0 text-xl font-semibold underline-offset-4 hover:text-[var(--color-secondary)] tracking-wider"
+                        >
+                            {`${ locales[locale].menu.company }`.toUpperCase()}
+                        </a>
+                    </li>
+                    <li className="mb-3 hover:color-[var(--color-secondary)]">
+                        <a 
+                            href="/solar-energy" 
+                            onClick={toggleDrawer}
+                            className="px-3 py-2 pl-0 text-xl font-semibold underline-offset-4 hover:text-[var(--color-secondary)] tracking-wider"
+                        >
+                            {`${ locales[locale].menu.solar_energy }`.toUpperCase()}
+                        </a>
+                    </li>
+                </ul>
+
+                
             </div>
         </div>
     )

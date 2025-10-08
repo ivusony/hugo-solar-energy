@@ -72,8 +72,8 @@ export default function AboutIndustrySegment() {
 
     return (
         <div className={styles.AboutIndustrySegment}>
-            <h2 className={`sm:text-xl md:text-4xl font-bold text-center sm:mb-3 md:mb-10`}>{locales[locale].home.components.AboutIndustrySegment.title}</h2>
-            <p className={`sm:text-xl md:text-2xl text-center leading-normal `}>{locales[locale].home.components.AboutIndustrySegment.description}</p>
+            <h2 className={`text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.AboutIndustrySegment.title}</h2>
+            <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.AboutIndustrySegment.description}</h3>
             <motion.div
                 ref={ref}
                 variants={container}
