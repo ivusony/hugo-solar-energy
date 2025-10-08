@@ -12,6 +12,9 @@
     margin: 0 0;
 }
 
+.IntroductionBox:hover .IntroductionBoxIcon{
+    fill: var(--color-secondary);
+}
 
 
 .IntroductionBoxIcon {

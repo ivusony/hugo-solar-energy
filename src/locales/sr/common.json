@@ -1,0 +1,10 @@
+{
+    "routes" : {
+        "home": "/",
+        "our_story": "/nasa-prica",
+        "solar_energy": "/solarna-energija",
+        "services": "/usluge",
+        "projects": "/projekti",
+        "contact": "/kontakt"
+    }
+}

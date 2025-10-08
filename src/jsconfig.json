@@ -10,7 +10,9 @@
 
             "@locales/*": ["locales/*"],
 
-            "@components/*": ["components/*"]
+            "@components/*": ["components/*"],
+
+            "@lib/*": ["lib/*"]
         }
     }
 }

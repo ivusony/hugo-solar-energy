@@ -7,17 +7,19 @@ import { useRouter } from "next/router";
 function IntroductionBox({
     icon, title, url
 }){
+   
     return(
-        <Link href={url} className="no-underline text-inherit">
-            <div className="flex flex-col items-center justify-center h-52 hover:scale-120 transition-all duration-300 cursor-pointer p-4 rounded">
-                {/* icon must be in fixed size div, centered, so that the title can be aligned properly */}
-                <div className="flex items-center justify-center w-24 h-24 mb-2">
-                    { icon }
+        <div className={styles.IntroductionBox}>
+            <Link href={url} className="no-underline text-inherit">
+                <div className="flex flex-col items-center justify-center h-52 hover:scale-120 transition-all duration-300 cursor-pointer p-4 rounded">
+                    {/* icon must be in fixed size div, centered, so that the title can be aligned properly */}
+                    <div className="flex items-center justify-center w-24 h-24 mb-2">
+                        { icon }
+                    </div>
+                    <h3 className="text-lg font-semibold">{title}</h3>
                 </div>
-                <h3 className="text-lg font-semibold">{title}</h3>
-            </div>
-        </Link>
-        
+            </Link>
+        </div>
     )
 }
 

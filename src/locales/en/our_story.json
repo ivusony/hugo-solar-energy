@@ -1,0 +1,31 @@
+{
+    "components" : {
+        "AboutUsSegment" : {
+            "h1" : "Our Story",
+            "h2" : "HUGO SOLAR ENERGY is a leading company dedicated to the design and turnkey construction of high-performance solar power systems for residential, commercial, and industrial applications.",
+            "p1" : "Hugo Solar Energy is a specialized company focused on the design, installation, and maintenance of solar power plants. Our mission is to enable the transition to clean, sustainable, and cost-efficient energy through state-of-the-art solar technology solutions.",
+            "p2" : "We proudly collaborate with leading companies in Serbia engaged in renewable energy development, ensuring quality, reliability, and long-term energy efficiency in every project we deliver.",
+            "p3" : "Our team of electricians and engineers combines years of experience with the latest technological advancements, providing professional installation of solar panels that maximizes electricity production and significantly reduces consumption costs.",
+            "p4" : "Driven by innovation and a strong commitment to sustainability, Hugo Solar Energy continuously enhances its expertise and invests in cutting-edge technologies. Our goal is to help households, businesses, and industries achieve energy independence and contribute to a greener future for generations to come."
+        },
+        "OurCoreStrengths" : {
+            "h2" : "Our Core Strengths",
+            "p1" : {
+                "title" : "Proven solar expertise",
+                "text" : "With years of experience in the design and installation of solar power systems, HUGO SOLAR ENERGY has built a strong reputation for quality, efficiency, and innovation. Our engineers and technicians deliver high-performance photovoltaic systems tailored to each client’s needs, ensuring maximum energy yield and long-term reliability."
+            },
+            "p2" : {
+                "title" : "Sustainability that powers the future",
+                "text" : "At HUGO SOLAR ENERGY, we believe in creating a cleaner and more sustainable world. Our mission is to harness the power of the sun to reduce carbon emissions and promote renewable energy solutions that protect both the environment and future generations. Each project we complete contributes to energy independence and a greener Serbia."
+            },
+            "p3" : {
+                "title" : "Local roots, global vision",
+                "text" : "Headquartered in Serbia, HUGO SOLAR ENERGY partners with leading European solar technology providers to offer top-quality components and innovative energy systems. Our combination of local expertise and international standards allows us to deliver efficient solar solutions adapted to the specific climate and market conditions of the region."
+            },
+            "p4" : {
+                "title" : "Innovation through technology",
+                "text" : "We continuously invest in modern solar technologies and smart energy management systems to enhance performance and durability. Through research, testing, and digital monitoring tools, HUGO SOLAR ENERGY ensures that every solar installation is optimized for efficiency, safety, and sustainability—meeting the evolving needs of our customers and the energy market."
+            }
+        }
+    }
+}

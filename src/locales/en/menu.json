@@ -1,0 +1,12 @@
+{
+    "home": "Home",
+    "company": "Company",
+    "solar_energy": "Solar Energy",
+    "services": {
+        "main" : "Services"
+    },
+    "projects": {
+        "main" : "Projects"
+    },
+    "contact": "Contact"
+}

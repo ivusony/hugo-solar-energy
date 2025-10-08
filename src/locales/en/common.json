@@ -1,0 +1,10 @@
+{
+    "routes" : {
+        "home": "/",
+        "our_story": "/our-story",
+        "solar_energy": "/solar-energy",
+        "services": "/services",
+        "projects": "/projects",
+        "contact": "/contact"
+    }
+}

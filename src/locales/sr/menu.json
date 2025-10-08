@@ -1,0 +1,12 @@
+{
+    "home": "Početna",
+    "company": "O Nama",
+    "solar_energy": "Solarna Energija",
+    "services": {
+        "main" : "Usluge"
+    },
+    "projects": {
+        "main" : "Projekti"
+    },
+    "contact": "Kontakt"
+}

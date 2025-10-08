@@ -1,0 +1,31 @@
+{
+    "components" : {
+        "AboutUsSegment" : {
+            "h1" : "Naša priča",
+            "h2" : "HUGO SOLAR ENERGY je vodeća kompanija posvećena projektovanju i izvođenju solarnih elektrana po sistemu “ključ u ruke”, namenjenih stambenim, komercijalnim i industrijskim objektima.",
+            "p1" : "Hugo Solar Energy je specijalizovana firma koja se bavi projektovanjem, ugradnjom i održavanjem solarnih elektrana. Naša misija je da omogućimo prelazak na čistu, održivu i isplativu energiju kroz najmodernija rešenja solarne tehnologije.",
+            "p2" : "S ponosom sarađujemo sa vodećim kompanijama u Srbiji iz oblasti obnovljivih izvora energije, obezbeđujući kvalitet, pouzdanost i dugoročnu energetsku efikasnost svakog sistema koji instaliramo.",
+            "p3" : "Naš stručni tim električara i inženjera kombinuje višegodišnje iskustvo sa najnovijim tehnološkim dostignućima, pružajući profesionalnu ugradnju solarnih panela koja maksimizuje proizvodnju električne energije i značajno smanjuje troškove potrošnje.",
+            "p4" : "Vođeni inovacijama i snažnom posvećenošću održivosti, Hugo Solar Energy kontinuirano unapređuje svoje znanje i ulaže u najsavremenije tehnologije. Naš cilj je da pomognemo domaćinstvima, preduzećima i industriji da postignu energetsku nezavisnost i doprinesu zelenijoj budućnosti za generacije koje dolaze."
+        },
+        "OurCoreStrengths" : {
+            "h2" : "Naše ključne prednosti",
+            "p1" : {
+                "title" : "Dokazana stručnost u solarnoj energiji",
+                "text" : "Sa višegodišnjim iskustvom u projektovanju i ugradnji solarnih elektrana, HUGO SOLAR ENERGY je izgradio snažnu reputaciju po kvalitetu, efikasnosti i inovativnosti. Naši inženjeri i tehničari realizuju fotovoltaične sisteme visokih performansi, prilagođene svakom klijentu, obezbeđujući maksimalan prinos energije i dugoročnu pouzdanost."
+            },
+            "p2" : {
+                "title" : "Održivost koja pokreće budućnost",
+                "text" : "U kompaniji HUGO SOLAR ENERGY verujemo u stvaranje čistijeg i održivijeg sveta. Naša misija je da iskoristimo snagu sunca za smanjenje emisije ugljenika i promociju obnovljivih izvora energije koji štite prirodu i buduće generacije. Svaki naš projekat doprinosi energetskoj nezavisnosti i zelenijoj Srbiji."
+            },
+            "p3" : {
+                "title" : "Lokalni koreni, globalna vizija",
+                "text" : "Sa sedištem u Srbiji, HUGO SOLAR ENERGY sarađuje sa vodećim evropskim proizvođačima solarne tehnologije, nudeći komponente vrhunskog kvaliteta i inovativne energetske sisteme. Spojem lokalnog znanja i međunarodnih standarda, isporučujemo efikasna solarna rešenja prilagođena specifičnim klimatskim i tržišnim uslovima regiona."
+            },
+            "p4" : {
+                "title" : "Inovacije kroz tehnologiju",
+                "text" : "Neprestano ulažemo u savremene solarne tehnologije i pametne sisteme za upravljanje energijom kako bismo poboljšali performanse i trajnost. Kroz istraživanja, testiranja i digitalni nadzor, HUGO SOLAR ENERGY osigurava da svaka solarna elektrana bude optimizovana za efikasnost, bezbednost i održivost, prateći potrebe naših klijenata i savremenog tržišta energije."
+            }
+        }
+    }
+}   

@@ -1,3 +1,5 @@
+/* lock footer to bottom even if content is short */
+
 .Footer {
     background-color: var(--color);
     color: white;
