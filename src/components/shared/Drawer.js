@@ -2,24 +2,21 @@ import { useLocales } from "@components/hooks/useLocales";
 import styles from "@styles/components/shared/Drawer.module.css"
 import { useAppContext } from "components/hooks/useAppContext"
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react"; // 👈 Import useState
+import React, { useEffect, useState } from "react";
 
-// --- Navigation Data Structure ---
-// Defines the links and sub-links for the drawer.
+
 const navLinksData = [
     {
         nameKey: 'home',
         href: '/',
     },
     {
-        nameKey: 'company', // Assuming 'company' maps to 'our-story'
+        nameKey: 'company', 
         href: '/our-story',
     },
     {
-        nameKey: 'solar_energy_general', // A general key for the main accordion item
-        // The presence of 'subLinks' tells the main component to use the AccordionItem
+        nameKey: 'solar_energy_general', 
         subLinks: [
-            // You'll need to ensure these keys exist in your locales[locale].menu object
             {
                 nameKey: 'solar_energy',
                 href: '/solar-energy',
@@ -34,12 +31,34 @@ const navLinksData = [
             },
         ]
     },
-    // Add any other top-level links or accordions here
+    {
+        nameKey: 'our_services',
+        subLinks: [
+            {
+                nameKey: 'our_services',
+                href: '/our_services'
+            },
+            {
+                nameKey: 'project_development',
+                href: '/our_services/project-development'
+            },
+            {
+                nameKey: 'engineering_and_build',
+                href: '/our_services/engineering_and_build'
+            },
+            {
+                nameKey: 'operation_and_maintenance',
+                href: '/our_services/operation-and-maintenance'
+            },
+            {
+                nameKey: 'sales_of_equipment',
+                href: '/our_services/sales-of-equipment'
+            }
+        ]
+    }
 ];
 
-// --- Reusable Link Components ---
 
-// Component for simple links without a dropdown
 const NavLink = ({ link, locale, locales, toggleDrawer }) => (
     <li className="mb-3">
         <a
@@ -59,7 +78,8 @@ const AccordionItem = ({ link, locale, locales, toggleDrawer }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAccordion = (e) => {
-        e.preventDefault(); // Crucial: Prevents the main link from navigating
+        e.preventDefault(); 
+        // Toggle the accordion state, close if already open
         setIsOpen(!isOpen);
     };
 
@@ -88,9 +108,9 @@ const AccordionItem = ({ link, locale, locales, toggleDrawer }) => {
                 </svg>
             </button>
 
-            {/* Accordion Content (The sub-links container) */}
+            
             <div
-                // Tailwind classes for smooth dropdown transition
+                
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}
             >
                 {/* Visual indicator for sub-links */}
