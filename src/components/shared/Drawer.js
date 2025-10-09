@@ -2,7 +2,118 @@ import { useLocales } from "@components/hooks/useLocales";
 import styles from "@styles/components/shared/Drawer.module.css"
 import { useAppContext } from "components/hooks/useAppContext"
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react"; // 👈 Import useState
+
+// --- Navigation Data Structure ---
+// Defines the links and sub-links for the drawer.
+const navLinksData = [
+    {
+        nameKey: 'home',
+        href: '/',
+    },
+    {
+        nameKey: 'company', // Assuming 'company' maps to 'our-story'
+        href: '/our-story',
+    },
+    {
+        nameKey: 'solar_energy_general', // A general key for the main accordion item
+        // The presence of 'subLinks' tells the main component to use the AccordionItem
+        subLinks: [
+            // You'll need to ensure these keys exist in your locales[locale].menu object
+            {
+                nameKey: 'solar_energy',
+                href: '/solar-energy',
+            },
+            {
+                nameKey: 'solar_roofs',
+                href: '/solar-energy/commercial-solar-roofs',
+            },
+            {
+                nameKey: 'solar_parks',
+                href: '/solar-energy/industrial-solar-parks',
+            },
+        ]
+    },
+    // Add any other top-level links or accordions here
+];
+
+// --- Reusable Link Components ---
+
+// Component for simple links without a dropdown
+const NavLink = ({ link, locale, locales, toggleDrawer }) => (
+    <li className="mb-3">
+        <a
+            href={locale !== 'sr' ? `/${locale}${link.href}` : link.href}
+            onClick={toggleDrawer} // Close drawer on link click
+            // Merged and cleaned Tailwind classes
+            className="py-2 pl-0 text-xl font-semibold tracking-wider transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
+        >
+            {`${locales[locale].menu[link.nameKey]}`.toUpperCase()}
+        </a>
+    </li>
+);
+
+// Component for links that open an accordion dropdown
+const AccordionItem = ({ link, locale, locales, toggleDrawer }) => {
+    // State to manage the open/close of the accordion
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleAccordion = (e) => {
+        e.preventDefault(); // Crucial: Prevents the main link from navigating
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <li className="mb-3">
+            {/* Accordion Header (The main clickable button) */}
+            <button
+                onClick={toggleAccordion}
+                className="flex justify-between items-center w-full  text-xl font-semibold tracking-wider transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
+            >
+                {`${locales[locale].menu[link.nameKey]}`.toUpperCase()}
+                {/* Chevron icon for visual feedback */}
+                <svg
+                    className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                    />
+                </svg>
+            </button>
+
+            {/* Accordion Content (The sub-links container) */}
+            <div
+                // Tailwind classes for smooth dropdown transition
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}
+            >
+                {/* Visual indicator for sub-links */}
+                <ul className="pl-4 border-l-2 border-[var(--color-secondary)]">
+                    {link.subLinks.map((subLink, index) => (
+                        <li key={index} className="mb-2">
+                            <a
+                                href={ locale !== 'sr' ? `/${locale}${subLink.href}` : subLink.href}
+                                onClick={toggleDrawer} // Close drawer when a sub-link is clicked
+                                className="block py-1 text-lg font-medium transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
+                            >
+                                {`${locales[locale].menu[subLink.nameKey]}`.toUpperCase()}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </li>
+    );
+};
+
+
+// --- Main Drawer Component ---
 
 export default function Drawer() {
 
@@ -37,51 +148,52 @@ export default function Drawer() {
         }
     }, [drawerVisible]);
 
+
     return (
         <div className={styles.navbarDrawer}>
             <div className={styles.navbarDrawerContainer}>
                 <div className={styles.navbarDrawerControls}>
-                    <button 
-                        onClick={toggleDrawer} 
+                    <button
+                        onClick={toggleDrawer}
                         className={styles.navbarDrawerCloseButton}
                     >
                         <svg height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z" fill="#080341"/>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z" fill="#080341" />
                         </svg>
                     </button>
                 </div>
 
+                {/* --- MAPPED NAVIGATION LINKS (The core change) --- */}
                 <ul className={styles.navbarDrawerLinks}>
-                    <li className="mb-3 ">
-                        <a 
-                            href="/" 
-                            onClick={toggleDrawer}
-                            className="py-2 pl-0 text-xl font-semibold underline-offset-4 hover-underline hover:text-[var(--color-secondary)] tracking-wider"
-                        >
-                            {`${ locales[locale].menu.home }`.toUpperCase()}
-                        </a>
-                    </li>
-                    <li className="mb-3 hover:color-[var(--color-secondary)]">
-                        <a 
-                            href="/our-story" 
-                            onClick={toggleDrawer}
-                            className="px-3 py-2 pl-0 text-xl font-semibold underline-offset-4 hover:text-[var(--color-secondary)] tracking-wider"
-                        >
-                            {`${ locales[locale].menu.company }`.toUpperCase()}
-                        </a>
-                    </li>
-                    <li className="mb-3 hover:color-[var(--color-secondary)]">
-                        <a 
-                            href="/solar-energy" 
-                            onClick={toggleDrawer}
-                            className="px-3 py-2 pl-0 text-xl font-semibold underline-offset-4 hover:text-[var(--color-secondary)] tracking-wider"
-                        >
-                            {`${ locales[locale].menu.solar_energy }`.toUpperCase()}
-                        </a>
-                    </li>
+                    {navLinksData.map((link, index) => {
+                        // Check if the link has sub-links defined in the data
+                        if (link.subLinks) {
+                            return (
+                                <AccordionItem
+                                    key={index}
+                                    link={link}
+                                    locale={locale}
+                                    locales={locales}
+                                    toggleDrawer={toggleDrawer}
+                                />
+                            );
+                        } else {
+                            // If not, render a simple link
+                            return (
+                                <NavLink
+                                    key={index}
+                                    link={link}
+                                    locale={locale}
+                                    locales={locales}
+                                    toggleDrawer={toggleDrawer}
+                                />
+                            );
+                        }
+                    })}
                 </ul>
+                {/* ------------------------------------------------ */}
 
-                
+
             </div>
         </div>
     )

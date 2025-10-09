@@ -1,7 +1,10 @@
 {
     "home": "Početna",
-    "company": "Kompanija",
-    "solar_energy": "Solarna Energija",
+    "company": "O Kompaniji",
+    "solar_energy_general": "Solarna Energija",
+    "solar_energy": "Šta je Solarna Energija",
+    "solar_roofs": "Komercijalni Solarni Krovovi",
+    "solar_parks": "Industrijski Solarni Parkovi",
     "services": {
         "main" : "Usluge"
     },

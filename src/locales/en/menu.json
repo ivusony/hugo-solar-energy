@@ -1,7 +1,10 @@
 {
     "home": "Home",
-    "company": "Company",
-    "solar_energy": "Solar Energy",
+    "company": "About Company",
+    "solar_energy_general": "Solar Energy",
+    "solar_energy": "What is Solar Energy",
+    "solar_roofs": "Commercial Solar Roofs",
+    "solar_parks": "Industrial Solar Parks",
     "services": {
         "main" : "Services"
     },
