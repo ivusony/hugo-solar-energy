@@ -82,6 +82,15 @@ export default function Footer(){
                         <img src="/assets/hugo_logo.png" alt="Hugo Solar Energy Logo" className="h-30"/>
                     </div>
                 </div>
+
+                <div id="useful-links" className="pt-10 pb-10 border-b-1 border-blue-900">
+                    <a href="https://re.jrc.ec.europa.eu" target="_blank" rel="noopener noreferrer" className="underline mr-4">PVGIS - European Commission</a>
+                    <a href="https://energetskiportal.rs/" target="_blank" rel="noopener noreferrer" className="underline mr-4">Energetski Portal</a>
+                    <a href="https://ems.rs/" target="_blank" rel="noopener noreferrer" className="underline mr-4">EMS</a>
+                    <a href="https://elektrodistribucija.rs/" target="_blank" rel="noopener noreferrer" className="underline mr-4">EPS Distribucija</a>
+                    <a href="https://aers.rs/" target="_blank" rel="noopener noreferrer" className="underline mr-4">AERS</a>
+                </div>
+               
                 <div id="copyright_and_development" className="pt-10 pb-">
                     <p>© 2025 Hugo Solar Energy. All rights reserved.</p>
                     <p>Website by <a href="https://radevix.com" target="_blank" rel="noopener noreferrer" className="underline">RADEVIX</a></p>
