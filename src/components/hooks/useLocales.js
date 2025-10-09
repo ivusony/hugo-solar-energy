@@ -8,6 +8,8 @@ import en_solar_energy from "@locales/en/solar_energy.json"
 import sr_solar_energy from "@locales/sr/solar_energy.json"
 import en_industrial_solar_parks from "@locales/en/industrial_solar_parks.json"
 import sr_industrial_solar_parks from "@locales/sr/industrial_solar_parks.json"
+import en_commercial_solar_roofs from "@locales/en/commercial_solar_roofs.json"
+import sr_commercial_solar_roofs from "@locales/sr/commercial_solar_roofs.json"
 
 
 export function useLocales() {
@@ -17,14 +19,16 @@ export function useLocales() {
             home: en_home,
             our_story: en_our_story,
             solar_energy: en_solar_energy,
-            industrial_solar_parks: en_industrial_solar_parks
+            industrial_solar_parks: en_industrial_solar_parks,
+            commercial_solar_roofs: en_commercial_solar_roofs
         },
         sr: {
             menu: sr_menu,
             home: sr_home,
             our_story: sr_our_story,
             solar_energy: sr_solar_energy,
-            industrial_solar_parks: sr_industrial_solar_parks
+            industrial_solar_parks: sr_industrial_solar_parks,
+            commercial_solar_roofs: sr_commercial_solar_roofs
         }
     }
 

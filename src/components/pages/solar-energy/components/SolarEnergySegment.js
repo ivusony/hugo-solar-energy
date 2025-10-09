@@ -10,7 +10,7 @@ export default function SolarEnergySegment() {
     let locales = useLocales();
 
       const controls = useAnimation();
-    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [ref, inView] = useInView({ threshold: 0.1 });
 
     const container = {
         hidden: {},

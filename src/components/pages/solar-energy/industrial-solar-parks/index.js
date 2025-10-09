@@ -1,104 +1,89 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useInView, InView } from "react-intersection-observer";
 import { useRouter } from "next/router";
 import { useLocales } from "@components/hooks/useLocales";
+import SolarCarousel from "@components/shared/SolarCarousel";
+import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMakeLink";
 
-const images = [
-  { src: "/assets/images/stock/solar-park-1.jpg", alt: "Commercial solar roof" },
-  { src: "/assets/images/stock/solar-park-2.jpg", alt: "Industrial solar park" },
-  { src: "/assets/images/stock/solar-park-3.jpg", alt: "Residential solar system" },
-  { src: "/assets/images/stock/solar-park-4.jpg", alt: "Clean energy panels" },
-];
-
-function SolarCarousel() {
-  const [current, setCurrent] = useState(0);
-
-    // Auto-slide every 5 seconds
-    useEffect(() => {
-        const interval = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % images.length);
-        }, 7000);
-        return () => clearInterval(interval);
-    }, []);
-
-    return (
-        <div className="relative w-full h-full overflow-hidden  shadow-lg">
-            <div
-                className="flex transition-transform duration-700 ease-in-out h-full"
-                style={{ transform: `translateX(-${current * 100}%)` }}
-            >
-                {images.map((img, i) => (
-                    <div key={i} className="min-w-full relative h-full">
-                        <Image
-                            src={img.src}
-                            alt={img.alt}
-                            fill
-                            className="object-cover"
-                            priority={i === 0}
-                        />
-                    </div>
-                ))}
-            </div>
-
-            {/* Navigation arrows */}
-            <button
-                onClick={() => setCurrent((current - 1 + images.length) % images.length)}
-                className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full"
-            >
-                ‹
-            </button>
-            <button
-                onClick={() => setCurrent((current + 1) % images.length)}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full"
-            >
-                ›
-            </button>
-
-            {/* Dots */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                {images.map((_, i) => (
-                <button
-                    key={i}
-                    onClick={() => setCurrent(i)}
-                    className={`w-3 h-3 rounded-full ${
-                    i === current ? "bg-[var(--color-secondary)]" : "bg-white/50"
-                    }`}
-                ></button>
-                ))}
-            </div>
-        </div>
-    );
-}
 
 function  WhyUs(){
     let { locale } = useRouter();
     let locales = useLocales();
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ threshold: 0.1 });
+
+    const container = {
+        hidden: {},
+        visible: {
+        transition: {
+            staggerChildren: 0.25,
+        },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 40 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.3, ease: "easeOut" },
+        },
+    };
+
+    useEffect(() => {
+        if (inView) controls.start("visible");
+    }, [controls, inView]);
+
     return(
-        <div className="max-w-7xl mx-auto text-center mt-10 bg-[#EEF1F3] py-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-5">{ locales[locale].industrial_solar_parks.why_us_segment.title}</h2>
+        <motion.div
+            ref={ref}
+            variants={container}
+            initial="hidden"
+            animate={controls}
+            id="solar-industry-segment"
+            className="max-w-7xl mx-auto text-center mt-10 bg-[#EEF1F3] py-10"
+        >
+            <motion.div
+                key={0}
+                variants={item}
+            > 
+                <h2 className="text-2xl md:text-3xl font-bold mb-5">{ locales[locale].industrial_solar_parks.why_us_segment.title}</h2>
+            </motion.div>
             {/* three columns stackable grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-10 px-5">
-                <div className="text-xl bg-white p-5 rounded-lg shadow-md">
+                <motion.div
+                    key={1}
+                    variants={item}
+                    className="text-xl bg-white p-5 rounded-lg shadow-md"
+                > 
                     <div className="paragraph-icon mb-5">
                         <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
                             <path className="fill-[var(--color-secondary)]" fillRule="evenodd" clipRule="evenodd" d="M6 6C5.17157 6 4.5 6.67157 4.5 7.5C4.5 8.32843 5.17157 9 6 9L6 6ZM6 10.5C4.34315 10.5 3 9.15685 3 7.5C3 5.84315 4.34315 4.5 6 4.5H18C19.6569 4.5 21 5.84315 21 7.5C21 9.15685 19.6569 10.5 18 10.5V11.3308C18 13.9668 15.7097 16.142 12.75 16.46V18.75H15V20.25H9V18.75H11.25V16.46C8.29027 16.142 6 13.9668 6 11.3308L6 10.5ZM12 15C14.7029 15 16.5 13.1552 16.5 11.3308V6H7.5V11.3308C7.5 13.1552 9.29713 15 12 15ZM19.5 7.5C19.5 8.32843 18.8284 9 18 9V6C18.8284 6 19.5 6.67157 19.5 7.5Z" />
                         </svg>
                     </div>
                     <h3 className="font-bold mb-2 text-left h-15">{ locales[locale].industrial_solar_parks.why_us_segment.p1.title }</h3>
-                    <p className="text-justify">{ locales[locale].industrial_solar_parks.why_us_segment.p1.text }</p>
-                </div>
-                <div className="text-xl bg-white p-5 rounded-lg shadow-md">
+                    <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].industrial_solar_parks.why_us_segment.p1.text) }</p>
+                </motion.div>
+                <motion.div
+                    key={2}
+                    variants={item}
+                    className="text-xl bg-white p-5 rounded-lg shadow-md"
+                >
                     <div className="paragraph-icon mb-5">
                         <svg className="fill-[var(--color-secondary)]" width="50px" height="50px" viewBox="0 0 32 32">
                             <path d="M 15 4 L 15 6.59375 L 13.1875 4.8125 L 11.8125 6.1875 L 13.59375 8 L 11 8 L 11 10 L 13.59375 10 L 11.8125 11.8125 L 13.1875 13.1875 L 15 11.40625 L 15 14 L 17 14 L 17 11.40625 L 18.8125 13.1875 L 20.1875 11.8125 L 18.40625 10 L 21 10 L 21 8 L 18.40625 8 L 20.1875 6.1875 L 18.8125 4.8125 L 17 6.59375 L 17 4 Z M 16 7 C 17.101563 7 18 7.898438 18 9 C 18 10.101563 17.101563 11 16 11 C 14.898438 11 14 10.101563 14 9 C 14 7.898438 14.898438 7 16 7 Z M 6.21875 16 L 4 24.875 L 4 28 L 28 28 L 28 24.875 L 25.78125 16 Z M 7.78125 18 L 24.21875 18 L 26 25.125 L 26 26 L 6 26 L 6 25.125 Z M 9 19 L 8.59375 20.8125 L 10.6875 20.8125 L 11 19 Z M 13 19 L 12.8125 20.8125 L 14.90625 20.8125 L 15 19 Z M 17 19 L 17.09375 20.8125 L 19.1875 20.8125 L 19 19 Z M 21 19 L 21.3125 20.8125 L 23.40625 20.8125 L 23 19 Z M 8.1875 22.8125 L 7.8125 25 L 10.09375 25 L 10.40625 22.8125 Z M 12.6875 22.8125 L 12.5 25 L 14.8125 25 L 14.90625 22.8125 Z M 17.09375 22.8125 L 17.1875 25 L 19.5 25 L 19.3125 22.8125 Z M 21.59375 22.8125 L 21.90625 25 L 24.1875 25 L 23.8125 22.8125 Z"/>
                         </svg>
                     </div>
                     <h3 className="font-bold mb-2 text-left h-15">{ locales[locale].industrial_solar_parks.why_us_segment.p2.title }</h3>
-                    <p className="text-justify">{ locales[locale].industrial_solar_parks.why_us_segment.p2.text }</p>
-                </div>
-                <div className="text-xl bg-white p-5 rounded-lg shadow-md">
+                    <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].industrial_solar_parks.why_us_segment.p2.text) }</p>
+                </motion.div>
+                <motion.div
+                    key={3}
+                    variants={item}
+                    className="text-xl bg-white p-5 rounded-lg shadow-md"
+                >
                     <div className="paragraph-icon mb-5">
                         <svg height="50px" width="50px"  viewBox="0 0 512 512"  >
                             <g>
@@ -170,10 +155,10 @@ function  WhyUs(){
                         </svg>
                     </div>
                     <h3 className="font-bold mb-2 text-left h-15">{ locales[locale].industrial_solar_parks.why_us_segment.p3.title }</h3>
-                    <p className="text-justify">{ locales[locale].industrial_solar_parks.why_us_segment.p3.text }</p>
-                </div>
+                    <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].industrial_solar_parks.why_us_segment.p3.text) }</p>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
@@ -182,7 +167,7 @@ export default function IndustrialSolarParks() {
     let locales = useLocales();
 
     const controls = useAnimation();
-    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [ref, inView] = useInView({ threshold: 0.1 });
 
     const container = {
         hidden: {},
@@ -203,14 +188,33 @@ export default function IndustrialSolarParks() {
     };
 
     useEffect(() => {
-        if (inView) controls.start("visible");
-    }, [controls, inView]);
+        if (inView ) controls.start("visible");
+    }, [controls, inView]); 
 
     return (
         <div id="IndustrialSolarParks" >
             <div className="pt-[100px] bg-[var(--color)]">
                 <div className={` relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] `}>
-                    <SolarCarousel />
+                    <SolarCarousel 
+                        images={[
+                            {
+                                url : "/assets/images/stock/solar-park-1.jpg",
+                                alt : locale == "sr" ? "Industrijski solarni park 1" : "Industrial Solar Park 1"
+                            },
+                            {
+                                url : "/assets/images/stock/solar-park-2.jpg",
+                                alt : locale == "sr" ? "Industrijski solarni park 2" : "Industrial Solar Park 2"
+                            },
+                            {
+                                url : "/assets/images/stock/solar-park-3.jpg",
+                                alt : locale == "sr" ? "Industrijski solarni park 3" : "Industrial Solar Park 3"
+                            },
+                            {
+                                url : "/assets/images/stock/solar-park-4.jpg",
+                                alt : locale == "sr" ? "Industrijski solarni park 4" : "Industrial Solar Park 4"
+                            }
+                        ]}
+                    />
                 </div>
             </div>
 
@@ -285,7 +289,7 @@ export default function IndustrialSolarParks() {
                         </div>
                         <div className="mb-5 text-justify  text-xl">
                             <h3 className="font-bold mb-2">{ locales[locale].industrial_solar_parks.p2.title }</h3>
-                            <p>{ locales[locale].industrial_solar_parks.p2.text }</p>
+                            <p>{ findCompanyTitleAndMakeLink(locales[locale].industrial_solar_parks.p2.text) }</p>
                         </div>
                     </div>
                 </motion.div>
@@ -303,12 +307,8 @@ export default function IndustrialSolarParks() {
 
                 </motion.div>
 
-                <motion.div
-                    key={4}
-                    variants={item}
-                >
-                    <WhyUs />
-                </motion.div>
+                {/* Why Us section */}
+                <WhyUs />
 
             </motion.div>
 

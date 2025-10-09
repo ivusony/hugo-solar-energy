@@ -126,7 +126,7 @@ export default function AboutIndustrySegment() {
                         <div className="mt-4 flex justify-center">
                             <a 
                                 className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-7 py-3`}
-                                href="/solar-energy/comercial-solar-roofs"
+                                href="/solar-energy/commercial-solar-roofs"
                             >
                                 { locale == "sr" ? "Saznaj više" : "Learn more" }
                             </a>
