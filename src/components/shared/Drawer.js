@@ -91,64 +91,78 @@ const NavLink = ({ route, locale, toggleDrawer }) => (
   </li>
 );
 
-// Main Drawer Component
 export default function Drawer() {
-  const { locale } = useRouter();
-  const { state, toggleDrawer } = useAppContext();
-  const { drawerVisible } = state;
+    const { locale } = useRouter();
+    const { state, toggleDrawer } = useAppContext();
+    const { drawerVisible } = state;
 
-  useEffect(() => {
-    function handleScroll() {
-      const navbarDrawerControls = document.querySelector(
-        `.${styles.navbarDrawerControls}`
-      );
-      if (window.scrollY > 0) {
-        navbarDrawerControls.classList.add(styles.scrolled);
-      } else {
-        navbarDrawerControls.classList.remove(styles.scrolled);
-      }
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
-  useEffect(() => {
-    const drawer = document.querySelector(`.${styles.navbarDrawer}`);
-    if (drawerVisible) {
-      drawer.classList.add(styles.visible);
-    } else {
-      drawer.classList.remove(styles.visible);
-    }
-  }, [drawerVisible]);
+    // if document is clicked outside of drawer and drawer is open, close the drawer
+    useEffect(() => {
+        function handleClickOutside(event) {
+            const drawer = document.querySelector(`.${styles.navbarDrawer}`);
+            if (drawerVisible && !drawer.contains(event.target)) {
+                toggleDrawer();
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [drawerVisible, toggleDrawer]);
 
-  const renderDrawerItems = (routesObj) => {
-    return Object.keys(routesObj).map((key) => {
-      const route = routesObj[key];
-
-      // If object has children (like /solar-energy)
-      const childrenRoutes = { ...route };
-      delete childrenRoutes.path;
-      delete childrenRoutes.name;
-
-      const hasChildren = Object.keys(childrenRoutes).length > 0;
-
-      if (hasChildren) {
-        const mainRoute = childrenRoutes.index;
-        delete childrenRoutes.index;
-        return (
-          <AccordionItem
-            key={mainRoute.path}
-            mainRoute={mainRoute}
-            childrenRoutes={childrenRoutes}
-            locale={locale}
-            toggleDrawer={toggleDrawer}
-          />
+    useEffect(() => {
+        function handleScroll() {
+        const navbarDrawerControls = document.querySelector(
+            `.${styles.navbarDrawerControls}`
         );
-      } else {
-        return <NavLink key={route.path} route={route} locale={locale} toggleDrawer={toggleDrawer} />;
-      }
-    });
-  };
+        if (window.scrollY > 0) {
+            navbarDrawerControls.classList.add(styles.scrolled);
+        } else {
+            navbarDrawerControls.classList.remove(styles.scrolled);
+        }
+        }
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+        const drawer = document.querySelector(`.${styles.navbarDrawer}`);
+        if (drawerVisible) {
+        drawer.classList.add(styles.visible);
+        } else {
+        drawer.classList.remove(styles.visible);
+        }
+    }, [drawerVisible]);
+
+    const renderDrawerItems = (routesObj) => {
+        return Object.keys(routesObj).map((key) => {
+        const route = routesObj[key];
+
+        // If object has children (like /solar-energy)
+        const childrenRoutes = { ...route };
+        delete childrenRoutes.path;
+        delete childrenRoutes.name;
+
+        const hasChildren = Object.keys(childrenRoutes).length > 0;
+
+        if (hasChildren) {
+            const mainRoute = childrenRoutes.index;
+            delete childrenRoutes.index;
+            return (
+            <AccordionItem
+                key={mainRoute.path}
+                mainRoute={mainRoute}
+                childrenRoutes={childrenRoutes}
+                locale={locale}
+                toggleDrawer={toggleDrawer}
+            />
+            );
+        } else {
+            return <NavLink key={route.path} route={route} locale={locale} toggleDrawer={toggleDrawer} />;
+        }
+        });
+    };
 
   return (
     <div className={`${styles.navbarDrawer} bg-[#EEF1F3]`}>

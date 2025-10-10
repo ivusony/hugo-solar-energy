@@ -29,7 +29,7 @@ export default function OurServices() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] "
+                className="max-w-7xl mx-auto"
             >
                 <div className="pb-[var(--segment-padding-bottom)]">
                     <Breadcrumb/>

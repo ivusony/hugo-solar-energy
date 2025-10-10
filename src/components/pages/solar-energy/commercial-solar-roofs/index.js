@@ -240,7 +240,7 @@ export default function CommercialSolarRoofs() {
                 initial="hidden"
                 animate={controls}
                 id="solar-industry-segment"
-                className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] py-10 "
+                className="mx-auto max-w-7xl py-10 "
             >
                 <Breadcrumb />
                 

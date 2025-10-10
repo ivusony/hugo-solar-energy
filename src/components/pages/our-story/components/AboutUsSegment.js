@@ -44,7 +44,7 @@ export default function AboutUsSegment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className={`mt-10 mb-10 ${styles.AboutUsSegment}`}
+            className={`mx-auto max-w-7xl mt-10 mb-10 ${styles.AboutUsSegment}`}
         >
 
             <Breadcrumb />

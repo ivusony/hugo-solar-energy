@@ -38,7 +38,7 @@ export default function PhotoAlbumSegment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] mt-20 mb-20 auto-rows-[150px] sm:auto-rows-[200px] lg:auto-rows-[180px]`}
+            className={`mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] mt-20 mb-20 auto-rows-[150px] sm:auto-rows-[200px] lg:auto-rows-[180px]`}
         >
             <motion.div
                 key={1}

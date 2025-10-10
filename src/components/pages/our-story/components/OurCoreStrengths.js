@@ -42,7 +42,7 @@ export default function OurCoreStrengths() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className={`mt-10 mb-10 ${styles.OurCoreStrengths}`}
+            className={`mx-auto max-w-7xl mt-10 mb-10 ${styles.OurCoreStrengths}`}
         >       
             <motion.div
                 key={1}
