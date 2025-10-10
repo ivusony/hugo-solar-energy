@@ -1,220 +1,182 @@
-import { useLocales } from "@components/hooks/useLocales";
-import styles from "@styles/components/shared/Drawer.module.css"
-import { useAppContext } from "components/hooks/useAppContext"
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import { useAppContext } from "components/hooks/useAppContext";
+import { useEffect, useState } from "react";
+import styles from "@styles/components/shared/Drawer.module.css";
+import routes from "@lib/routes";
 
+// Helper to generate href with locale
+const getHref = (locale, path) => (locale !== "sr" ? `/${locale}${path}` : path);
 
-const navLinksData = [
-    {
-        nameKey: 'home',
-        href: '/',
-    },
-    {
-        nameKey: 'company', 
-        href: '/our-story',
-    },
-    {
-        nameKey: 'solar_energy_general', 
-        subLinks: [
-            {
-                nameKey: 'solar_energy',
-                href: '/solar-energy',
-            },
-            {
-                nameKey: 'solar_roofs',
-                href: '/solar-energy/commercial-solar-roofs',
-            },
-            {
-                nameKey: 'solar_parks',
-                href: '/solar-energy/industrial-solar-parks',
-            },
-        ]
-    },
-    {
-        nameKey: 'our_services_general',
-        subLinks: [
-            {
-                nameKey: 'our_services',
-                href: '/our-services'
-            },
-            {
-                nameKey: 'project_development',
-                href: '/our-services/project-development'
-            },
-            {
-                nameKey: 'engineering_and_build',
-                href: '/our-services/engineering-and-build'
-            },
-            {
-                nameKey: 'operation_and_maintenance',
-                href: '/our-services/operation-and-maintenance'
-            },
-            {
-                nameKey: 'sales_of_equipment',
-                href: '/our-services/sales-of-equipment'
-            }
-        ]
-    }
-];
+// Accordion for nested routes
+const AccordionItem = ({ mainRoute, childrenRoutes, locale, toggleDrawer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleAccordion = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
 
-
-const NavLink = ({ link, locale, locales, toggleDrawer }) => (
+  return (
     <li className="mb-3">
-        <a
-            href={locale !== 'sr' ? `/${locale}${link.href}` : link.href}
-            onClick={toggleDrawer} // Close drawer on link click
-            // Merged and cleaned Tailwind classes
-            className="py-2 pl-0 text-xl font-semibold tracking-wider transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
+      <button
+        onClick={toggleAccordion}
+        className="flex justify-between items-center w-full text-xl font-semibold tracking-wider transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
+      >
+        {mainRoute.name[locale].toUpperCase()}
+        <svg
+          className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-            {`${locales[locale].menu[link.nameKey]}`.toUpperCase()}
-        </a>
-    </li>
-);
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
 
-// Component for links that open an accordion dropdown
-const AccordionItem = ({ link, locale, locales, toggleDrawer }) => {
-    // State to manage the open/close of the accordion
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleAccordion = (e) => {
-        e.preventDefault(); 
-        // Toggle the accordion state, close if already open
-        setIsOpen(!isOpen);
-    };
-
-    return (
-        <li className="mb-3">
-            {/* Accordion Header (The main clickable button) */}
-            <button
-                onClick={toggleAccordion}
-                className="flex justify-between items-center w-full  text-xl font-semibold tracking-wider transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="pl-4 border-l-2 border-[var(--color-secondary)]">
+          {/* Render index page first */}
+          <li className="mb-2">
+            <a
+              href={getHref(locale, mainRoute.path)}
+              onClick={toggleDrawer}
+              className="block py-1 text-lg font-medium transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
             >
-                {`${locales[locale].menu[link.nameKey]}`.toUpperCase()}
-                {/* Chevron icon for visual feedback */}
-                <svg
-                    className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+              {mainRoute.name[locale].toUpperCase()}
+            </a>
+          </li>
+
+          {/* Render remaining children */}
+          {Object.keys(childrenRoutes).map((key) => {
+            const child = childrenRoutes[key];
+            return (
+              <li key={child.path} className="mb-2">
+                <a
+                  href={getHref(locale, child.path)}
+                  onClick={toggleDrawer}
+                  className="block py-1 text-lg font-medium transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
                 >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                    />
-                </svg>
-            </button>
-
-            
-            <div
-                
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}
-            >
-                {/* Visual indicator for sub-links */}
-                <ul className="pl-4 border-l-2 border-[var(--color-secondary)]">
-                    {link.subLinks.map((subLink, index) => (
-                        <li key={index} className="mb-2">
-                            <a
-                                href={ locale !== 'sr' ? `/${locale}${subLink.href}` : subLink.href}
-                                onClick={toggleDrawer} // Close drawer when a sub-link is clicked
-                                className="block py-1 text-lg font-medium transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
-                            >
-                                {`${locales[locale].menu[subLink.nameKey]}`.toUpperCase()}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </li>
-    );
+                  {child.name[locale].toUpperCase()}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </li>
+  );
 };
 
+// Simple NavLink
+const NavLink = ({ route, locale, toggleDrawer }) => (
+  <li className="mb-3">
+    <a
+      href={getHref(locale, route.path)}
+      onClick={toggleDrawer}
+      className="py-2 pl-0 text-xl font-semibold tracking-wider transition-colors duration-200 ease-in-out hover:text-[var(--color-secondary)]"
+    >
+      {route.name[locale].toUpperCase()}
+    </a>
+  </li>
+);
 
-// --- Main Drawer Component ---
-
+// Main Drawer Component
 export default function Drawer() {
+  const { locale } = useRouter();
+  const { state, toggleDrawer } = useAppContext();
+  const { drawerVisible } = state;
 
-    let { locale } = useRouter();
-    let locales = useLocales();
-    let { state, setState, toggleDrawer } = useAppContext();
-    let { drawerVisible } = state;
-
-    // define function: if scrollY > 0 add class 'scrolled' to .mainNavi
+  useEffect(() => {
     function handleScroll() {
-        const navbarDrawerControls = document.querySelector(`.${styles.navbarDrawerControls}`);
-        if (window.scrollY > 0) {
-            navbarDrawerControls.classList.add(styles.scrolled);
-        } else {
-            navbarDrawerControls.classList.remove(styles.scrolled);
-        }
-    };
+      const navbarDrawerControls = document.querySelector(
+        `.${styles.navbarDrawerControls}`
+      );
+      if (window.scrollY > 0) {
+        navbarDrawerControls.classList.add(styles.scrolled);
+      } else {
+        navbarDrawerControls.classList.remove(styles.scrolled);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+  useEffect(() => {
+    const drawer = document.querySelector(`.${styles.navbarDrawer}`);
+    if (drawerVisible) {
+      drawer.classList.add(styles.visible);
+    } else {
+      drawer.classList.remove(styles.visible);
+    }
+  }, [drawerVisible]);
 
-    useEffect(() => {
-        const drawer = document.querySelector(`.${styles.navbarDrawer}`);
-        if (drawerVisible) {
-            drawer.classList.add(styles.visible);
-        } else {
-            drawer.classList.remove(styles.visible);
-        }
-    }, [drawerVisible]);
+  const renderDrawerItems = (routesObj) => {
+    return Object.keys(routesObj).map((key) => {
+      const route = routesObj[key];
 
+      // If object has children (like /solar-energy)
+      const childrenRoutes = { ...route };
+      delete childrenRoutes.path;
+      delete childrenRoutes.name;
 
-    return (
-        <div className={`${styles.navbarDrawer} bg-[#EEF1F3]`}>
-            <div className={styles.navbarDrawerContainer}>
-                <div className={`h-[100px] flex items-center transition-height duration-300 ease bg-[#fff] pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] ${styles.navbarDrawerControls}`}>
-                    <button
-                        onClick={toggleDrawer}
-                        className={styles.navbarDrawerCloseButton}
-                    >
-                        <svg height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z" fill="#080341" />
-                        </svg>
-                    </button>
-                </div>
+      const hasChildren = Object.keys(childrenRoutes).length > 0;
 
-               
-                <ul className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
-                    {navLinksData.map((link, index) => {
-                       
-                        if (link.subLinks) {
-                            return (
-                                <AccordionItem
-                                    key={index}
-                                    link={link}
-                                    locale={locale}
-                                    locales={locales}
-                                    toggleDrawer={toggleDrawer}
-                                />
-                            );
-                        } else {
-                            
-                            return (
-                                <NavLink
-                                    key={index}
-                                    link={link}
-                                    locale={locale}
-                                    locales={locales}
-                                    toggleDrawer={toggleDrawer}
-                                />
-                            );
-                        }
-                    })}
-                </ul>
-                {/* ------------------------------------------------ */}
+      if (hasChildren) {
+        const mainRoute = childrenRoutes.index;
+        delete childrenRoutes.index;
+        return (
+          <AccordionItem
+            key={mainRoute.path}
+            mainRoute={mainRoute}
+            childrenRoutes={childrenRoutes}
+            locale={locale}
+            toggleDrawer={toggleDrawer}
+          />
+        );
+      } else {
+        return <NavLink key={route.path} route={route} locale={locale} toggleDrawer={toggleDrawer} />;
+      }
+    });
+  };
 
-
-            </div>
+  return (
+    <div className={`${styles.navbarDrawer} bg-[#EEF1F3]`}>
+      <div className={styles.navbarDrawerContainer}>
+        <div
+          className={`h-[100px] flex items-center transition-height duration-300 ease bg-[#fff] pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] ${styles.navbarDrawerControls}`}
+        >
+          <button onClick={toggleDrawer} className={styles.navbarDrawerCloseButton}>
+            <svg
+              height="30px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z"
+                fill="#080341"
+              />
+            </svg>
+          </button>
         </div>
-    )
+
+        <ul className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
+          {renderDrawerItems(routes)}
+        </ul>
+      </div>
+    </div>
+  );
 }

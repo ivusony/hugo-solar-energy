@@ -2,6 +2,7 @@ import { useLocales } from "@components/hooks/useLocales";
 import styles from "@styles/components/shared/Footer.module.css"
 import Link from "next/link";
 import { useRouter } from "next/router";
+import routes from "@lib/routes";
 
 
 export default function Footer(){
@@ -62,14 +63,30 @@ export default function Footer(){
                         </a>
                     </div>
                     {/* should be hidden on mobile */}
-                    <div id="quick-links" className="hidden md:flex md:justify-end ">
-                        <Link href="/" locale={locale} className="mr-4 p-3 pl-0" title="Go to Home page" aria-description="Go to Home page" aria-label="Home page" onClick={scrollToTop}>{ locales[locale].menu.home }</Link>
-                        <Link href="/our-story" className="mr-4 p-3" title="Learn more about our company" aria-description="Learn more about our company" aria-label="Company information">{ locales[locale].menu.company }</Link>
-                        <Link href="/solar-energy" className="mr-4 p-3" title="Learn more about solar energy" aria-description="Learn more about solar energy" aria-label="Solar Energy">{ locales[locale].menu.solar_energy }</Link>
-                        <Link href="/our_services" className="mr-4 p-3" title="View our services" aria-description="View our services" aria-label="Services">{ locales[locale].menu.our_services }</Link>
-                        <Link href="/projects" className="mr-4 p-3" title="See our projects" aria-description="See our projects" aria-label="Projects">{ locales[locale].menu.projects.main }</Link>
-                        <Link href="/contact" className="p-3 pr-0" title="Contact us" aria-description="Contact us" aria-label="Contact page">{ locales[locale].menu.contact }</Link>
+                    <div id="quick-links" className="hidden 2xl:flex 2xl:justify-end">
+                        {Object.keys(routes).map((key) => {
+                            const route = routes[key];
+
+                            // main link
+                            const mainLink = route.path || route.index?.path;
+                            const mainName = route.name?.[locale] || route.index?.name?.[locale];
+
+                          
+
+                            return (
+                                <Link
+                                    key={key}
+                                    href={mainLink}
+                                    className="mr-4 p-3"
+                                    title={mainName}
+                                    onClick={key === "/" ? scrollToTop : undefined}
+                                >
+                                    {`${mainName}`}
+                                </Link>
+                            );
+                        })}
                     </div>
+
                 </div>
 
                 <div id="company-info" className="relative pt-10 pb-10 sm:text-center md:text-left">

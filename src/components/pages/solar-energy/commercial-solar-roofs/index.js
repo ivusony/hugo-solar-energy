@@ -5,6 +5,7 @@ import { useInView, InView } from "react-intersection-observer";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMakeLink";
+import Breadcrumb from "@components/shared/Breadcrumb";
 
  const container = {
     hidden: {},
@@ -241,39 +242,8 @@ export default function CommercialSolarRoofs() {
                 id="solar-industry-segment"
                 className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] py-10 "
             >
-                {/* page navigation */}
-                <nav className="flex text-sm text-gray-500 " aria-label="Breadcrumb">
-                    <div className="bg-white pt-2 pb-2">
-                        <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                            <li>
-                                <a href="/" class="inline-flex items-center text-gray-700 hover:text-[var(--color-secondary)] font-medium ">
-                                    hugosolarenergy.rs
-                                </a>
-                            </li>
-                            <li>
-                                <div class="flex items-center">
-                                    <span class="mx-2 text-gray-400">›</span>
-                                    <a href="/solar-energy" class="text-gray-700 hover:text-[var(--color-secondary)] font-medium">
-                                        {
-                                            locale ==  "sr" ? "Solarna energija" : "Solar Energy"
-                                        }
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center">
-                                    <span class="mx-2 text-gray-400">›</span>
-                                    <a href="/solar-energy/commercial-solar-roofs" class="text-gray-700 hover:text-[var(--color-secondary)] font-medium">
-                                        {
-                                            locale ==  "sr" ? "Solarni krovovi" : "Solar Roofs"
-                                        }
-                                    </a>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
-                </nav>
-
+                <Breadcrumb />
+                
                 {/* h1 & h2 */}
                 <motion.div
                     key={1}

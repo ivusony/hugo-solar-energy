@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from 'react';
+import Breadcrumb from "@components/shared/Breadcrumb";
 
 export default function SolarEnergySegment() {
 
@@ -43,27 +44,7 @@ export default function SolarEnergySegment() {
             id="solar-industry-segment"
             className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] py-10 "
         >   
-            <nav className="flex text-sm text-gray-500 " aria-label="Breadcrumb">
-                <div className="bg-white pt-2 pb-2">
-                    <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                        <li>
-                            <a href="/" class="inline-flex items-center text-gray-700 hover:text-[var(--color-secondary)] font-medium ">
-                                hugosolarenergy.rs
-                            </a>
-                        </li>
-                        <li>
-                            <div class="flex items-center">
-                                <span class="mx-2 text-gray-400">›</span>
-                                <a href="/solar-energy" class="text-gray-700 hover:text-[var(--color-secondary)] font-medium">
-                                    {
-                                        locale ==  "sr" ? "Solarna energija" : "Solar Energy"
-                                    }
-                                </a>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
-            </nav>
+            <Breadcrumb />
 
             <motion.div
                 key={1}

@@ -7,6 +7,7 @@ import CentralServiceElemetsSegment from "./components/CentralServiceElemetsSegm
 import EndMessageSegment from "./components/EndMessageSegment";
 import container from "@components/shared/MotionContainer";
 import item from "@components/shared/MotionItem";
+import Breadcrumb from "@components/shared/Breadcrumb";
 
 export default function OurServices() {
 
@@ -31,27 +32,7 @@ export default function OurServices() {
                 className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] "
             >
                 <div className="pb-[var(--segment-padding-bottom)]">
-                    <nav className="flex text-sm text-gray-500 " aria-label="Breadcrumb">
-                        <div className="bg-white pt-2 pb-2">
-                            <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                                <li>
-                                    <a href="/" class="inline-flex items-center text-gray-700 hover:text-[var(--color-secondary)] font-medium ">
-                                        hugosolarenergy.rs
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="flex items-center">
-                                        <span class="mx-2 text-gray-400">›</span>
-                                        <a href="/our-services" class="text-gray-700 hover:text-[var(--color-secondary)] font-medium">
-                                            {
-                                                locale ==  "sr" ? "Naše usluge" : "Our Services"
-                                            }
-                                        </a>
-                                    </div>
-                                </li>
-                            </ol>
-                        </div>
-                    </nav>
+                    <Breadcrumb/>
 
                     <motion.div
                         key={1}
