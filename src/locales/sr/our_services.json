@@ -1,0 +1,26 @@
+{
+  "h1": "Naše usluge",
+  "h2": "Jasan plan. Profesionalna realizacija. Siguran uspeh.",
+  "h3": "HUGO SOLAR ENERGY je pouzdan partner za komercijalna i industrijska solarna rešenja, koji vodi kompanije ka energetskoj nezavisnosti od prvog koraka i isporučuje pouzdane, budućnosti spremne rezultate.",
+  "p1": "Zajedno osmišljavamo, planiramo i realizujemo vaš solarni projekat – od početne ideje do potpuno funkcionalnog sistema po principu „ključ u ruke“. Uz naše usluge razvoja projekta i dugoročnu podršku u radu i održavanju, možete se osloniti na više od 10 godina iskustva u solarnoj industriji.",
+  "p2": "Naše usluge pokrivaju ceo životni ciklus fotonaponskog sistema – od razvoja projekta i izgradnje, preko integracije tehnologija za skladištenje energije, do tehničkog upravljanja i asset menadžmenta. Brinemo da vaš solarni sistem bude održiva investicija u vašu budućnost.",
+  "CentralServiceElemetsSegment" : {
+        "title": "Naše osnovne usluge",
+        "project_development": {
+        "title": "Razvoj projekta",
+        "text": "Vodimo vaš solarni projekat od ideje do realizacije, brinući se o planiranju, dozvolama i koordinaciji sa zainteresovanim stranama za glatke i efikasne rezultate."
+        },
+        "engineering_and_build": {
+        "title": "Inženjering i izgradnja",
+        "text": "Naš stručni tim dizajnira i gradi visokokvalitetne, efikasne solarne sisteme prilagođene vašim specifičnim potrebama i uslovima lokacije."
+        },
+        "operation_and_maintenance": {
+        "title": "Rad i održavanje",
+        "text": "Brinemo da vaš solarni sistem radi na vrhunskom nivou uz redovno održavanje, nadzor i brzo rešavanje problema."
+        },
+        "sales_of_equipment": {
+        "title": "Prodaja opreme",
+        "text": "Obezbeđujemo vrhunsku solarnu opremu, uključujući panele, invertere i sisteme za montažu, nabavljenu od vodećih proizvođača za optimalne performanse."
+        }
+    }
+}

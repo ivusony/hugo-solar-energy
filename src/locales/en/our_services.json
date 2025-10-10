@@ -1,0 +1,26 @@
+{
+    "h1" : "Our Services",
+    "h2" : "Clear Plan. Professional Execution. Assured Success.",
+    "h3" : "HUGO SOLAR ENERGY is a trusted partner for commercial and industrial solar solutions, guiding businesses on their path to energy independence from the very first step and delivering reliable, future-ready results.",
+    "p1" : "Together, we design, plan and deliver your solar project – from the first idea to a fully operational turnkey system. With our project development services and long-term operation & maintenance support, you can rely on more than 10 years of experience in the solar industry.",
+    "p2" : "Our services cover the complete lifecycle of a photovoltaic system – from project development and construction to the integration of storage technologies, technical operation and asset management. We ensure that your solar system becomes a sustainable investment in your future.",
+    "CentralServiceElemetsSegment" : {
+        "title" : "Our Core Services",
+        "project_development" : {
+            "title" : "Project Development",
+            "text" : "We guide your solar project from idea to execution, handling planning, permits, and stakeholder coordination for a smooth, efficient outcome."
+        },
+        "engineering_and_build" : {
+            "title" : "Engineering & Build",
+            "text" : "Our expert team designs and constructs high-quality, efficient solar systems tailored to your specific needs and site conditions."
+        },
+        "operation_and_maintenance" : {
+            "title" : "Operation & Maintenance",
+            "text" : "We ensure your solar system operates at peak performance with regular maintenance, monitoring, and prompt issue resolution."
+        },
+        "sales_of_equipment" : {
+            "title" : "Sales of Equipment",
+            "text" : "We provide top-tier solar equipment, including panels, inverters, and mounting systems, sourced from leading manufacturers for optimal performance."
+        }
+    }
+}

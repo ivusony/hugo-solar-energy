@@ -12,9 +12,9 @@
 }
 
 .navbarDrawerContainer {
-    padding-left: 3vw;
+    /* padding-left: 3vw;
     padding-right: 3vw;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255); */
 }
 
 .visible {
@@ -33,11 +33,11 @@
 }
 
 .navbarDrawerControls {
-   height: 100px;
+   /* height: 100px;
    display: flex;
    align-items: center;
    transition: height 0.3s ease;
-   background-color: rgb(255, 255, 255);
+   background-color: #EEF1F3; */
 }
 .navbarDrawerControls.scrolled {
    height: 60px;

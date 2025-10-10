@@ -32,27 +32,27 @@ const navLinksData = [
         ]
     },
     {
-        nameKey: 'our_services',
+        nameKey: 'our_services_general',
         subLinks: [
             {
                 nameKey: 'our_services',
-                href: '/our_services'
+                href: '/our-services'
             },
             {
                 nameKey: 'project_development',
-                href: '/our_services/project-development'
+                href: '/our-services/project-development'
             },
             {
                 nameKey: 'engineering_and_build',
-                href: '/our_services/engineering_and_build'
+                href: '/our-services/engineering-and-build'
             },
             {
                 nameKey: 'operation_and_maintenance',
-                href: '/our_services/operation-and-maintenance'
+                href: '/our-services/operation-and-maintenance'
             },
             {
                 nameKey: 'sales_of_equipment',
-                href: '/our_services/sales-of-equipment'
+                href: '/our-services/sales-of-equipment'
             }
         ]
     }
@@ -170,9 +170,9 @@ export default function Drawer() {
 
 
     return (
-        <div className={styles.navbarDrawer}>
+        <div className={`${styles.navbarDrawer} bg-[#EEF1F3]`}>
             <div className={styles.navbarDrawerContainer}>
-                <div className={styles.navbarDrawerControls}>
+                <div className={`h-[100px] flex items-center transition-height duration-300 ease bg-[#fff] pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] ${styles.navbarDrawerControls}`}>
                     <button
                         onClick={toggleDrawer}
                         className={styles.navbarDrawerCloseButton}
@@ -183,10 +183,10 @@ export default function Drawer() {
                     </button>
                 </div>
 
-                {/* --- MAPPED NAVIGATION LINKS (The core change) --- */}
-                <ul className={styles.navbarDrawerLinks}>
+               
+                <ul className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
                     {navLinksData.map((link, index) => {
-                        // Check if the link has sub-links defined in the data
+                       
                         if (link.subLinks) {
                             return (
                                 <AccordionItem
@@ -198,7 +198,7 @@ export default function Drawer() {
                                 />
                             );
                         } else {
-                            // If not, render a simple link
+                            
                             return (
                                 <NavLink
                                     key={index}

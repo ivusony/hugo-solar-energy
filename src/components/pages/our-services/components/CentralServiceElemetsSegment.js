@@ -1,0 +1,97 @@
+import { useLocales } from "@components/hooks/useLocales";
+import { useRouter } from "next/router";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from 'react';
+
+const container = {
+    hidden: {},
+    visible: {
+    transition: {
+        staggerChildren: 0.25,
+    },
+    },
+};
+
+const item = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.3, ease: "easeOut" },
+    },
+};
+
+export default function CentralServiceElemetsSegment() {
+
+    let { locale } = useRouter();
+    let locales = useLocales();
+
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ threshold: 0.1 });
+
+    useEffect(() => {
+        if (inView) controls.start("visible");
+    }, [controls, inView]);
+
+    return(
+        <motion.div
+            ref={ref}
+            variants={container}
+            initial="hidden"
+            animate={controls}
+            className="bg-[#EEF1F3] py-10 md:py-20"
+        >
+            <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
+                <motion.div
+                    key={1}
+                    variants={item}
+                > 
+                    <a href="/our-services/project-development" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.project_development.title}</h3>
+                            <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.project_development.text}</p>
+                        </div>
+                        <div className="mt-4 text-[var(--color-secondary)] font-semibold">{ locale == "sr" ? "Saznaj više" : "Learn More" } &rarr;</div>
+                    </a>
+                </motion.div>
+                <motion.div
+                    key={2}
+                    variants={item}
+                >
+                    <a href="/our-services/engineering-and-build" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.engineering_and_build.title}</h3>
+                            <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.engineering_and_build.text}</p>
+                        </div>
+                        <div className="mt-4 text-[var(--color-secondary)] font-semibold">{ locale == "sr" ? "Saznaj više" : "Learn More" } &rarr;</div>
+                    </a>
+                </motion.div>
+                <motion.div
+                    key={3}
+                    variants={item}
+                >
+                    <a href="/our-services/operation-and-maintenance" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.operation_and_maintenance.title}</h3>
+                            <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.operation_and_maintenance.text}</p>
+                        </div>
+                        <div className="mt-4 text-[var(--color-secondary)] font-semibold">{ locale == "sr" ? "Saznaj više" : "Learn More" } &rarr;</div>
+                    </a>
+                </motion.div>
+                <motion.div
+                    key={3}
+                    variants={item}
+                >
+                    <a href="/our-services/sales-of-equipment" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.sales_of_equipment.title}</h3>
+                            <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.sales_of_equipment.text}</p>
+                        </div>
+                        <div className="mt-4 text-[var(--color-secondary)] font-semibold">{ locale == "sr" ? "Saznaj više" : "Learn More" } &rarr;</div>
+                    </a>
+                </motion.div>
+            </div>
+        </motion.div>
+    )
+}
