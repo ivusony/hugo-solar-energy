@@ -29,7 +29,7 @@ export default function IntroductionSegment() {
     let locales = useLocales();
 
     return (
-        <div className={styles.IntroductionSegment}>
+        <div className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-[var(--segment-padding-top)] pb-[var(--segment-padding-bottom)] bg-white min-h-[100vh] flex items-center justify-center">
             <div className={styles.IntroMediaSegmentContainer}>
                 <h2 className={`text-2xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.IntroductionSegment.title}</h2>
                 <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.IntroductionSegment.text}</h3>
@@ -45,7 +45,7 @@ export default function IntroductionSegment() {
                             </svg>
                         } 
                         title={locales[locale].home.components.IntroductionSegment.boxes.box1.title} 
-                        url={locales[locale].home.components.IntroductionSegment.boxes.box1.url} 
+                        url={ `${ locale == "sr" ? "" : "/" + locale }/our-services/project-development` } 
                     />
                     <IntroductionBox
                         key={`intro-box-2`}

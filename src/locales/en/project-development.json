@@ -1,0 +1,33 @@
+{
+    "h1" : "Project Development",
+    "h2" : "A livable, sustainable future starts with renewable energy, and we build its foundation from the very first step of project development.",
+    "p1" : "We ensure reliable energy supply by developing large, high-performance solar systems. From the first idea to turnkey handover, we lay a solid foundation for sustainable solar projects and future battery storage solutions, guiding you every step of the way.",
+    "p2" : "Our promise: At HUGO SOLAR ENERGY, with 10 years of solar experience, we create optimal conditions for sustainable, high-yield solar systems. Our goal: To accelerate the growth of renewable energy and operate power plants efficiently, making a lasting contribution to the transition to green energy.",
+    "DevelopmentStepsSegment" : {
+        "title" : "Comprehensive Project Development from Start to Finish",
+        "description" : "During project development, we build the foundation for every solar project’s success. From site selection and grid connection to approvals, we guide you systematically and reliably. From first contact to completion, you can rely on our experience and expertise every step of the way.",
+        "steps" : {
+            "1":  {
+                "title" : "Location Check",
+                "description" : "We evaluate land suitability, sunlight exposure, and grid access."
+            },
+            "2":  {
+                "title" : "Preliminary Planning",
+                "description" : "We design initial layouts and estimate production and investment."
+            },
+            "3":  {
+                "title" : "Authorization",
+                "description" : "We obtain permits, meet regulations, and secure grid approvals."
+            },
+            "4":  {
+                "title" : "Final Design",
+                "description" : "We create detailed engineering plans and technical specifications."
+            }
+        }
+    },
+    "AdvantagesOfSolarParksSegment" : {
+        "title" : "Advantages of Solar Parks",
+        "description" : "Developing large-scale solar projects is a key driver of a sustainable and resilient energy future. Sunlight is free, widely available and reliable—making solar power one of the most strategic renewable sources. Through smart project development, HUGO SOLAR ENERGY transforms open land into high-performance solar parks that operate silently, produce no emissions and actively support climate protection. \n Our development process goes beyond energy production. We design projects that create local value, support regional economies and offer long-term stability for investors, landowners and communities. By optimizing land use and engineering efficient photovoltaic systems, we maximize output while minimizing environmental impact. \n Sustainability is at the heart of our approach. After their service life, solar systems can be renewed or dismantled without harming the environment, allowing the land to be restored to its original purpose. At HUGO SOLAR ENERGY, we ensure that every project is carefully planned, environmentally responsible and built to deliver lasting results—from the first idea to full operation."
+    },
+    "contactUsButton" : "Contact Us"
+}

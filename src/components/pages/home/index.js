@@ -1,15 +1,21 @@
+import { useRouter } from "next/router";
 import AboutIndustrySegment from "./components/AboutIndustrySegment";
 import HugoInNumbersSegment from "./components/HugoInNumbersSegment";
-import IntroMediaSegment from "./components/IntroMediaSegment";
+import IntroMediaParallaxSegment from "./components/IntroMediaParallaxSegment";
 import IntroductionSegment from "./components/IntroductionSegment";
+import LandingSegment from "./components/LandingSegment";
 import ProjectHighlightsSegment from "./components/ProjectHighlightsSegment";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 
 export default function Home() {
+    let { locale } = useRouter  ();
     return (
-        <div>
+        <div className="bg-white ">
             {/* intro media video segment */}
-            <IntroMediaSegment />
+            <IntroMediaParallaxSegment />
+
+            <LandingSegment />
 
             {/* about the company segment */}
             <IntroductionSegment />
@@ -23,8 +29,8 @@ export default function Home() {
             {/* hugo solar in figures segment */}
             <HugoInNumbersSegment />
 
-            {/* news from hugo solar segment */}
-            {/* <div>news from hugo solar segment</div> */}
+            <ScrollToTopButton />
+          
         </div>
     );
 }

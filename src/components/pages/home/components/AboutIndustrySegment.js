@@ -22,7 +22,7 @@ export default function AboutIndustrySegment() {
         hidden: {},
         visible: {
         transition: {
-            staggerChildren: 0.25,
+            staggerChildren: 0.1,
         },
         },
     };
@@ -71,8 +71,8 @@ export default function AboutIndustrySegment() {
     }, [controls, inView]);
 
     return (
-        <div className={styles.AboutIndustrySegment}>
-            <h2 className={`text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.AboutIndustrySegment.title}</h2>
+        <div id="about-industry-segment" className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pb-5 bg-white ">
+            <h2 className={`text-3xl md:text-4xl font-bold pt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.AboutIndustrySegment.title}</h2>
             <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.AboutIndustrySegment.description}</h3>
             <motion.div
                 ref={ref}
@@ -87,7 +87,7 @@ export default function AboutIndustrySegment() {
                     className={`col-span-3 row-span-2 bg-cover  bg-center rounded-2xl min-h-70 md:min-h-0 ${cardStyles.card}`}
                 >
                     <Image
-                        src="/assets/images/stock/solar-park-4.jpg"
+                        src="/assets/images/stock/solar-park-3.jpg"
                         className={` ${cardStyles.cardImage}`}
                         alt={ locale == "sr" ? "Solarni parkovi" : "Solar Parks" }
                         layout="fill"
@@ -114,7 +114,7 @@ export default function AboutIndustrySegment() {
                     className={`col-span-3 row-span-2 bg-cover  bg-center rounded-2xl min-h-70 md:min-h-0 ${cardStyles.card}`}
                 >
                     <Image
-                        src="/assets/images/stock/solar-roof-2.jpg"
+                        src="/assets/images/stock/solar-roof-1.jpg"
                         className={` ${cardStyles.cardImage}`}
                         alt={ locale == "sr" ? "Solarni krovovi" : "Solar Roofs" }
                         layout="fill"

@@ -4,25 +4,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from 'react';
 import CentralServiceElemetsSegment from "./components/CentralServiceElemetsSegment";
-
-
-const container = {
-    hidden: {},
-    visible: {
-    transition: {
-        staggerChildren: 0.25,
-    },
-    },
-};
-
-const item = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.3, ease: "easeOut" },
-    },
-};
+import EndMessageSegment from "./components/EndMessageSegment";
+import container from "@components/shared/MotionContainer";
+import item from "@components/shared/MotionItem";
 
 export default function OurServices() {
 
@@ -88,10 +72,10 @@ export default function OurServices() {
                             }
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                            <p className="mb-5 text-justify  text-xl border-l-2 border-[var(--color)] pl-4">
+                            <p className="mb-5 text-justify  text-xl">
                                 { locales[locale].our_services.p1 }
                             </p>
-                            <p className="mb-5 text-justify  text-xl border-l-2 border-[var(--color)] pl-4">
+                            <p className="mb-5 text-justify  text-xl ">
                                 { locales[locale].our_services.p2 }
                             </p>
                            
@@ -99,6 +83,9 @@ export default function OurServices() {
                     </motion.div>
 
                     <CentralServiceElemetsSegment />
+
+                    <EndMessageSegment />
+                    
                 </div>
             </motion.div>
         </>

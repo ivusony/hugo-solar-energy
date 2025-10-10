@@ -40,14 +40,21 @@ export default function CentralServiceElemetsSegment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="bg-[#EEF1F3] py-10 md:py-20"
+            className="bg-[#EEF1F3] py-10 md:py-15 "
         >
+            <motion.div
+                key={0}
+                variants={item}
+            >
+                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10">{locales[locale].our_services.CentralServiceElemetsSegment.title}</h2>
+            </motion.div>
+
             <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
                 <motion.div
                     key={1}
                     variants={item}
-                > 
-                    <a href="/our-services/project-development" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                >
+                    <a href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/project-development` } className="h-full bg-white p-5 rounded-lg shadow transform scale-100 transition-transform transition-shadow duration-300 ease hover:shadow-lg hover:scale-105 flex flex-col justify-between">
                         <div>
                             <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.project_development.title}</h3>
                             <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.project_development.text}</p>
@@ -59,7 +66,7 @@ export default function CentralServiceElemetsSegment() {
                     key={2}
                     variants={item}
                 >
-                    <a href="/our-services/engineering-and-build" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                    <a href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/engineering-and-build` } className="h-full bg-white p-5 rounded-lg shadow transform scale-100 transition-transform transition-shadow duration-300 ease hover:shadow-lg hover:scale-105 flex flex-col justify-between">
                         <div>
                             <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.engineering_and_build.title}</h3>
                             <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.engineering_and_build.text}</p>
@@ -71,7 +78,7 @@ export default function CentralServiceElemetsSegment() {
                     key={3}
                     variants={item}
                 >
-                    <a href="/our-services/operation-and-maintenance" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                    <a href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/operation-and-maintenance` } className="h-full bg-white p-5 rounded-lg shadow transform scale-100 transition-transform transition-shadow duration-300 ease hover:shadow-lg hover:scale-105 flex flex-col justify-between">
                         <div>
                             <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.operation_and_maintenance.title}</h3>
                             <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.operation_and_maintenance.text}</p>
@@ -83,7 +90,7 @@ export default function CentralServiceElemetsSegment() {
                     key={3}
                     variants={item}
                 >
-                    <a href="/our-services/sales-of-equipment" className="h-full bg-white p-5 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease flex flex-col justify-between">
+                    <a href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/sales-of-equipment` } className="h-full bg-white p-5 rounded-lg shadow transform scale-100 transition-transform transition-shadow duration-300 ease hover:shadow-lg hover:scale-105 flex flex-col justify-between">
                         <div>
                             <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.sales_of_equipment.title}</h3>
                             <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.sales_of_equipment.text}</p>

@@ -18,7 +18,7 @@ export default function Footer(){
 
 
     return (
-        <div className={`pb-5 ${styles.Footer}`}>
+        <div className={`relative pb-5 ${styles.Footer}`}>
             <div className={styles.FooterContent}>
                 {/* two even columns, stackabe on small screens - grid with 1 column on small screens, 2 columns on medium and larger screens.  */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 pb-5 border-b-1 border-blue-900">

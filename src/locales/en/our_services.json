@@ -5,7 +5,7 @@
     "p1" : "Together, we design, plan and deliver your solar project – from the first idea to a fully operational turnkey system. With our project development services and long-term operation & maintenance support, you can rely on more than 10 years of experience in the solar industry.",
     "p2" : "Our services cover the complete lifecycle of a photovoltaic system – from project development and construction to the integration of storage technologies, technical operation and asset management. We ensure that your solar system becomes a sustainable investment in your future.",
     "CentralServiceElemetsSegment" : {
-        "title" : "Our Core Services",
+        "title" : "Key Service Areas",
         "project_development" : {
             "title" : "Project Development",
             "text" : "We guide your solar project from idea to execution, handling planning, permits, and stakeholder coordination for a smooth, efficient outcome."
@@ -22,5 +22,10 @@
             "title" : "Sales of Equipment",
             "text" : "We provide top-tier solar equipment, including panels, inverters, and mounting systems, sourced from leading manufacturers for optimal performance."
         }
+    },
+    "EndMessageSegment" : {
+        "title" : "Ready to harness the power of the sun?",
+        "text" : "Contact us today to discuss your solar project and discover how HUGO SOLAR ENERGY can help you achieve energy independence and sustainability.",
+        "button_text" : "Contact Us"
     }
 }

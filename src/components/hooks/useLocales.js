@@ -12,6 +12,8 @@ import en_commercial_solar_roofs from "@locales/en/commercial_solar_roofs.json"
 import sr_commercial_solar_roofs from "@locales/sr/commercial_solar_roofs.json"
 import en_our_services from "@locales/en/our_services.json"
 import sr_our_services from "@locales/sr/our_services.json"
+import en_project_development from "@locales/en/project-development.json"
+import sr_project_development from "@locales/sr/project-development.json"
 
 
 export function useLocales() {
@@ -23,7 +25,8 @@ export function useLocales() {
             solar_energy: en_solar_energy,
             industrial_solar_parks: en_industrial_solar_parks,
             commercial_solar_roofs: en_commercial_solar_roofs,
-            our_services: en_our_services
+            our_services: en_our_services,
+            project_development: en_project_development
         },
         sr: {
             menu: sr_menu,
@@ -32,7 +35,8 @@ export function useLocales() {
             solar_energy: sr_solar_energy,
             industrial_solar_parks: sr_industrial_solar_parks,
             commercial_solar_roofs: sr_commercial_solar_roofs,
-            our_services: sr_our_services
+            our_services: sr_our_services,
+            project_development: sr_project_development
         }
     }
 

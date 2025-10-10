@@ -15,7 +15,7 @@ export default function HugoInNumbersSegment() {
     let { locale } = useRouter();
     let locales = useLocales();
 
-    const [ref, inView] = useInView({ threshold: .6 });
+    const [ref, inView] = useInView({ threshold: .3 });
 
     Chart.register( CategoryScale );
     Chart.register( LinearScale );
@@ -56,12 +56,12 @@ export default function HugoInNumbersSegment() {
     }, [inView]);
 
     return (
-        <div ref={ref} className={`mt-20 ${styles.HugoInNumbersSegment}`}>
+        <div id="hugo-in-numbers-segment" ref={ref} className={`relative bg-white pt-20 ${styles.HugoInNumbersSegment}`}>
             <h2 className={`text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.HugoInNumbersSegment.title}</h2>
             <p className={`text-xl md:text-2xl font-normal mb-10 text-center  font-italic`}>{locales[locale].home.components.HugoInNumbersSegment.description}</p>
 
             {/* five column grid, stackable on mobile: years active, megawatts of power delivered, experts in team,number of projects,  solar panels installed */}
-            <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-20 mb-20 text-center`}>
+            <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-20 pb-20 text-center`}>
                 <div>
                     <div
                         style={{
@@ -230,6 +230,7 @@ export default function HugoInNumbersSegment() {
                     <p className={`text-2xl mt-5`}>{ locale == 'sr' ? 'SOLARNIH PANELA' : 'SOLAR PANELS' }</p>
                 </div>
             </div>
+
         </div>
     );
 }

@@ -1,0 +1,33 @@
+{
+    "h1" : "Razvoj Projekta",
+    "h2" : "Održiva i kvalitetna budućnost počinje obnovljivom energijom, a mi postavljamo njen temelj već od prvog koraka razvoja projekta.",
+    "p1" : "Obezbeđujemo pouzdanu isporuku energije razvijanjem velikih, visokoperformantnih solarnih sistema. Od prve ideje do predaje “ključ u ruke”, postavljamo čvrst temelj za održive solarne projekte i buduća rešenja za skladištenje energije, uz podršku u svakom koraku.",
+    "p2" : "Naše obećanje: HUGO SOLAR ENERGY, sa 10 godina iskustva u solarnoj industriji, postavlja optimalne uslove za održive i visokorentabilne solarne sisteme. Naš cilj: Da ubrzamo razvoj obnovljivih izvora i efikasno upravljamo elektranama, čineći trajni doprinos prelasku na zelenu energiju.",
+    "DevelopmentStepsSegment" : {
+        "title" : "Sveobuhvatan razvoj projekta od početka do kraja",
+        "description" : "Tokom razvoja projekta, postavljamo temelje za uspeh svakog solarnog projekta. Od odabira lokacije i priključka na mrežu do dobijanja odobrenja, vodimo vas sistematski i pouzdano. Od prvog kontakta do realizacije, možete računati na naše iskustvo i stručnost u svakom koraku.",
+        "steps" : {
+            "1":  {
+                "title" : "Provera Lokacije",
+                "description" : "Procena pogodnosti zemljišta, izloženosti suncu i pristupa mreži."
+            },
+            "2":  {
+                "title" : "Preliminarno Planiranje",
+                "description" : "Dizajn početnih rasporeda i procena proizvodnje i investicija."
+            },
+            "3":  {
+                "title" : "Dozvole",
+                "description" : "Dobijanje dozvola, ispunjavanje propisa i obezbeđivanje odobrenja za priključak na mrežu."
+            },
+            "4":  {
+                "title" : "Finalni Dizajn",
+                "description" : "Izrada detaljnih inženjerskih planova i tehničkih specifikacija."
+            }
+        }
+    },
+    "AdvantagesOfSolarParksSegment" : {
+        "title" : "Prednosti Solarnih Parkova",
+        "description" : "Razvoj velikih solarnih projekata ključan je za održivu i stabilnu energetsku budućnost. Sunčeva energija je besplatna, dostupna i pouzdana, što je čini jednom od najvažnijih obnovljivih izvora. Kroz pametan razvoj projekata, HUGO SOLAR ENERGY pretvara otvorene površine u visokoperformantne solarne parkove koji rade tiho, ne emituju zagađenje i aktivno doprinose zaštiti klime. \n  Naš proces razvoja ne odnosi se samo na proizvodnju energije. Kreiramo projekte koji stvaraju lokalnu vrednost, jačaju regionalnu ekonomiju i obezbeđuju dugoročnu stabilnost za investitore, vlasnike zemljišta i zajednice. Optimizacijom prostora i efikasnim fotonaponskim sistemima, maksimalno povećavamo proizvodnju uz minimalan ekološki otisak. \n Održivost je u centru našeg pristupa. Nakon isteka životnog veka, solarni sistemi se mogu obnoviti ili ukloniti bez negativnog uticaja na okolinu, čime se zemljište lako vraća u prvobitnu namenu. U kompaniji HUGO SOLAR ENERGY svaki projekat pažljivo planiramo, ekološki odgovorno realizujemo i gradimo da traje – od prve ideje do pune operativnosti."
+    },
+    "contactUsButton" : "Kontaktirajte Nas"
+}
