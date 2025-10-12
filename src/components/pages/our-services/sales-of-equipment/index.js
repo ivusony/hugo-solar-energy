@@ -7,11 +7,12 @@ import container from "@components/shared/MotionContainer";
 import item from "@components/shared/MotionItem";
 import Breadcrumb from "@components/shared/Breadcrumb";
 import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMakeLink";
-import Operation from "./components/Operation";
+import SalesEquipment from "./components/Equipment";
 import EndMessageSegment from "./components/EndMessageSegment";
-import Image from "next/image";
 
-export default function SupportAndMaintenance() {
+
+
+export default function SalesOfEquipment() {
 
     let { locale } = useRouter();
     let locales = useLocales();
@@ -34,7 +35,7 @@ export default function SupportAndMaintenance() {
                 animate={controls}
                 className="max-w-7xl mx-auto"
             >
-                <div className="pb-[var(--segment-padding-bottom)]">
+                <div className="pb-[var(--segment-padding-bottom)] px-2 md:px-0">
                     <Breadcrumb/>
                 </div>
 
@@ -46,22 +47,32 @@ export default function SupportAndMaintenance() {
                     id="header"
                 > 
                     <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                        <h1 className="bg-white p-1">{ locales[locale].support_and_maintenance.h1 }</h1>
+                        <h1 className="bg-white p-1">{ locales[locale].sales_of_equipment.h1 }</h1>
                     </div>
                     <h2 className="text-2xl md:text-3xl font-normal mb-10  font-italic text-justify md:text-center">
                         {
-                            findCompanyTitleAndMakeLink(locales[locale].support_and_maintenance.h2)
+                            findCompanyTitleAndMakeLink(locales[locale].sales_of_equipment.h2)
                         }
                     </h2>
                 </motion.div>
 
+                <motion.div
+                    key={2}
+                    variants={item}
+                    className="max-w-7xl mx-auto grid grid-cols-1 gap-10 mb-10 px-2 md:px-0"
+                > 
+                    <p className="mb-5 text-justify md:text-center text-xl ">
+                        { findCompanyTitleAndMakeLink(locales[locale].sales_of_equipment.p1) }
+                    </p>
+                </motion.div>
 
-                <Operation/>
 
-                <EndMessageSegment/>
 
             </motion.div>
 
+            <SalesEquipment/>
+
+            <EndMessageSegment/>
 
         </>
     )

@@ -22,7 +22,7 @@ export default function Footer(){
         <div className={`relative pb-5 ${styles.Footer}`}>
             <div className={styles.FooterContent}>
                 {/* two even columns, stackabe on small screens - grid with 1 column on small screens, 2 columns on medium and larger screens.  */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 pb-5 border-b-1 border-blue-900">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 pb-5 border-b-1 border-[var(--color-darker)]">
                     <div id="social" className={`flex justify-center md:justify-start`}>
                         <a 
                             href="https://www.facebook.com/hugo.solar.energy" 
@@ -100,7 +100,7 @@ export default function Footer(){
                     </div>
                 </div>
 
-                <div id="useful-links" className="pt-10 pb-10 border-b-1 border-blue-900">
+                <div id="useful-links" className="pt-10 pb-10 border-b-1 border-[var(--color-darker)]">
                     <a href="https://re.jrc.ec.europa.eu" target="_blank" rel="noopener noreferrer" className="underline mr-4">PVGIS - European Commission</a>
                     <a href="https://energetskiportal.rs/" target="_blank" rel="noopener noreferrer" className="underline mr-4">Energetski Portal</a>
                     <a href="https://ems.rs/" target="_blank" rel="noopener noreferrer" className="underline mr-4">EMS</a>

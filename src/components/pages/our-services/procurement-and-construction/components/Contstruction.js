@@ -34,7 +34,7 @@ export default function Contstruction() {
                 className="relative w-full h-[200px] md:h-[200px] lg:h-[300px] border-t-8  border-[var(--color-secondary)]"
             >
                 <Image
-                    src="/assets/images/stock/solar-park-7.jpg"
+                    src="/assets/images/stock/solar-construction-3.jpg"
                     alt="Solar Panels"
                     fill
                     className="object-cover object-center w-full mb-10"

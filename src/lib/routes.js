@@ -40,7 +40,11 @@ export default  {
         support_and_maintenance : {
             path : '/our-services/support-and-maintenance',
             name : { en : 'Support and Maintenance', sr : 'Podrška i Održavanje' }
-        }
+        },
+        sales_of_equipment : {
+            path : '/our-services/sales-of-equipment',
+            name : { en : 'Equipment Sales', sr : 'Prodaja Opreme' }
+        },
     },
 
     '/our-projects' : {

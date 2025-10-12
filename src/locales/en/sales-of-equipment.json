@@ -1,0 +1,29 @@
+{
+    "h1": "Solar Energy Equipment",
+    "h2": "Solar Energy Equipment: The Key to Efficiency and Reliability",
+    "h3": "Choose Top-Quality Components for Your Solar System",
+    "p1": "As a reliable partner on the path to energy independence, HUGO SOLAR ENERGY offers you only verified and tested equipment for solar power plants. We specialize in the sales and delivery of high-quality components that meet the highest global standards in the renewable energy sector. We collaborate with renowned international manufacturers to provide you with long-term efficiency and a maximum return on investment. Our assortment covers everything you need to build a stable and productive solar power plant, from panels and inverters to complete mounting solutions. Along with a quality guarantee, we offer fast delivery and technical support from our expert team.",
+    "equipment": [
+        {
+            "category": "SOLAR PANELS",
+            "focus": "Latest generation panels with high efficiency and resistance to extreme weather conditions. Choose panels with an extended warranty for residential, commercial, and industrial projects."
+        },
+        {
+            "category": "INVERTERS",
+            "focus": "The heart of every system. We offer smart on-grid and hybrid inverters from leading global manufacturers. Ensure optimal energy conversion with advanced monitoring and management functions."
+        },
+        {
+            "category": "MOUNTING STRUCTURES",
+            "focus": "Robust and reliable structures made of aluminium and steel. Designed for all types of roofs and terrains, they guarantee the stability and longevity of your installation."
+        },
+        {
+            "category": "EQUIPMENT AND CABLES",
+            "focus": "Specialized DC cables resistant to UV radiation, connectors, and complete equipment for safe and efficient energy transfer. Crucial for maximum safety and reduced losses."        }
+    ],
+
+    "EndMessageSegment" : {
+        "title": "Focus on Top Quality",
+        "text": "Don't waste time on compromises – the key to a successful solar power plant lies in its components.",
+        "button_text": "Request Catalog and Prices"
+    }
+}

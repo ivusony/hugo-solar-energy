@@ -57,11 +57,23 @@ export default function Operation() {
                 </p>
             </motion.div>
 
-            
+            <motion.div
+                    key={2}
+                    variants={item}
+                    className="relative w-full h-[200px] md:h-[200px] lg:h-[300px] border-t-8  border-[var(--color-secondary)]"
+                >
+                    <Image
+                        src="/assets/images/team/473785699_911935471130261_7930744259815660623_n.jpg"
+                        alt="Solar Panels"
+                        fill
+                        className="object-cover object-center w-full mb-10"
+                        priority
+                    />
+                </motion.div>
 
             <div className="bg-[#EEF1F3] p-4 mt-15">
                 <motion.div
-                    key={4}
+                    key={3}
                     variants={item}
                     className="px-2 md:px-0 "
                 >

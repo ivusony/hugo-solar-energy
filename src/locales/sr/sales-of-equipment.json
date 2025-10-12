@@ -1,0 +1,29 @@
+{
+    "h1": "Oprema za Solarne Elektrane",
+    "h2": "Oprema za Solarnu Energiju: Ključ za Efikasnost i Pouzdanost",
+    "h3": "Izaberite Vrhunske Komponente za Vaš Solarni Sistem",
+    "p1": "Kao pouzdan partner na putu ka energetskoj nezavisnosti, HUGO SOLAR ENERGY Vam nudi isključivo proverenu i testiranu opremu za solarne elektrane. Specijalizovani smo za prodaju i isporuku visokokvalitetnih komponenti koje zadovoljavaju najviše globalne standarde u sektoru obnovljivih izvora energije. Sarađujemo sa renomiranim svetskim proizvođačima kako bismo Vam obezbedili dugoročnu efikasnost i maksimalan povrat investicije. Naš asortiman pokriva sve što Vam je potrebno za izgradnju stabilne i produktivne solarne elektrane, od panela i pretvarača, do kompletnih montažnih rešenja. Uz garanciju kvaliteta, nudimo i brzu dostavu, kao i tehničku podršku našeg stručnog tima.",
+    "equipment": [
+        {
+            "category": "SOLARNI PANELI",
+            "focus": "Najnovija generacija panela, visoke efikasnosti i otpornosti na ekstremne vremenske uslove. Odaberite panele sa produženom garancijom za stambene, komercijalne i industrijske projekte."
+        },
+        {
+            "category": "INVERTERI",
+            "focus": "Srce svakog sistema. Nudimo pametne mrežne (on-grid) i hibridne pretvarače od vodećih svetskih proizvođača. Osigurajte optimalnu konverziju energije uz napredne funkcije nadzora i upravljanja."
+        },
+        {
+            "category": "NOSIVE KONSTRUKCIJE",
+            "focus": "Robusne i pouzdane konstrukcije od aluminijuma i čelika. Dizajnirane za sve vrste krovova i terena, garantuju stabilnost i dugovečnost Vaše instalacije."         
+        },
+        {
+            "category": "OPREMA I KABLOVI",
+            "focus": "Specijalizovani DC kablovi otporni na UV zračenje, konektori i kompletna oprema za siguran i efikasan prenos energije. Ključno za maksimalnu sigurnost i smanjenje gubitaka."
+        }
+    ],
+    "EndMessageSegment" : {
+        "title": "Fokus na vrhunski kvalitet",
+        "text": "Ne gubite vreme na kompromise – ključ kvalitetne solarne elektrane je u njenim komponentama.",
+        "button_text": "Zatražite katalog i cene"
+    }
+}
