@@ -27,6 +27,11 @@
             "Careful assembly with full respect for your property and infrastructure.",
             "Complete restoration of the site after installation as standard practice."
         ]
+    },
+    "EndMessageSegment" : {
+        "title" : "Ready to realize your solar project?",
+        "text" : "Contact us today to begin the journey from concept to installation. Discover how HUGO SOLAR ENERGY can help you ensure optimal design, reliable procurement, and efficient construction of your solar system.",
+        "button_text" : "Start Your Project Today!"
     }
         
 }

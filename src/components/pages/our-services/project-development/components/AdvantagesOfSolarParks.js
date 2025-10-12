@@ -25,7 +25,7 @@ export default function AdvantagesOfSolarParks() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="relative w-full mx-auto py-20"
+            className="relative w-full mx-auto py-20 px-2 md:px-0"
         >
             <div className="max-w-7xl mx-auto w-full  text-center mb-12">
                 <h2 className="text-3xl font-extrabold text-[var(--color)] mb-7">

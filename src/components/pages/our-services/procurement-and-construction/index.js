@@ -8,6 +8,7 @@ import item from "@components/shared/MotionItem";
 import Breadcrumb from "@components/shared/Breadcrumb";
 import Procurement from "./components/Procurement";
 import Contstruction from "./components/Contstruction";
+import EndMessageSegment from "./components/EndMessageSegment";
 
 export default function ProcurementAndConstruction() {
 
@@ -68,6 +69,8 @@ export default function ProcurementAndConstruction() {
             <Procurement/>
 
             <Contstruction/>
+
+            <EndMessageSegment />
         </>
     )
 }

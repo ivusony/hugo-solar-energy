@@ -9,7 +9,7 @@ import item from "@components/shared/MotionItem";
 import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMakeLink";
 
 
-export default function Contstruction() {
+export default function Operation() {
     let { locale } = useRouter();
     let locales = useLocales();
 
@@ -26,7 +26,7 @@ export default function Contstruction() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="max-w-7xl mx-auto mt-10"
+            className="max-w-7xl mx-auto mt-10 mb-5"
         >
             <motion.div
                 key={1}
@@ -34,16 +34,16 @@ export default function Contstruction() {
                 className="relative w-full h-[200px] md:h-[200px] lg:h-[300px] border-t-8  border-[var(--color-secondary)]"
             >
                 <Image
-                    src="/assets/images/stock/solar-park-7.jpg"
+                    src="/assets/images/team/474743537_917069923950149_5326844373437376252_n.jpg"
                     alt="Solar Panels"
                     fill
                     className="object-cover object-center w-full mb-10"
                     priority
                 />
                 <div className="relative w-full h-full flex justify-center items-center">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white p-2 tracking-wider bg-[var(--color)]/40">
-                        { locales[locale].procurement_and_construction.construction.h2 }
-                    </h2>
+                    <h3 className="text-2xl md:text-3xl font-bold text-center text-white p-2 tracking-wider bg-[var(--color)]/40">
+                        { locales[locale].support_and_maintenance.operation.h3 }
+                    </h3>
                 </div>
             </motion.div>
 
@@ -52,46 +52,23 @@ export default function Contstruction() {
                 variants={item}
                 className="mt-10 px-2 md:px-0"
             >
-                <h3 className="mb-5 text-center text-xl md:text-2xl font-bold">
-                    { locales[locale].procurement_and_construction.construction.h3 }
-                </h3>
-            </motion.div>
-
-            <motion.div
-                key={2}
-                variants={item}
-                className="px-2 md:px-0"
-            >
                 <p className="mb-5 text-justify md:text-center text-xl">
-                    { findCompanyTitleAndMakeLink(locales[locale].procurement_and_construction.construction.p1) }
-                </p>
-            </motion.div>
-
-            <motion.div
-                key={3}
-                variants={item}
-                className="px-2 md:px-0"
-            >
-                <p className="mb-5 text-justify md:text-center text-xl">
-                    { findCompanyTitleAndMakeLink(locales[locale].procurement_and_construction.construction.p2) }
+                    { findCompanyTitleAndMakeLink(locales[locale].support_and_maintenance.operation.h4) }
                 </p>
             </motion.div>
 
             
-                
-
-           
 
             <div className="bg-[#EEF1F3] p-4 mt-15">
                 <motion.div
                     key={4}
                     variants={item}
-                    className="px-2 md:px-0"
+                    className="px-2 md:px-0 "
                 >
-                    <h4 className="font-semibold text-xl mb-6">{ locales[locale].procurement_and_construction.construction.h4 }</h4>
+                        <h4 className="font-semibold text-xl mb-6">{ locales[locale].support_and_maintenance.operation.list_title }</h4>
                 </motion.div>
                 {
-                    locales[locale].procurement_and_construction.construction.list.map((listItem, index) => (
+                    locales[locale].support_and_maintenance.operation.list.map((listItem, index) => (
                         <motion.div
                             key={index}
                             variants={item}
@@ -102,7 +79,7 @@ export default function Contstruction() {
                     ))
                 }
             </div>
-            
+        
 
         </motion.div>
     )

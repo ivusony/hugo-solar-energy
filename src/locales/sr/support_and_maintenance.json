@@ -1,0 +1,26 @@
+{
+    "h1" : "Podrška i održavanje",
+    "h2" : "Kada vaš solarni sistem počne sa radom, HUGO SOLAR ENERGY postaje vaš dugoročni partner u upravljanju sistemom, obezbeđujući očuvanje vrednosti, maksimalnu pouzdanost i stabilan energetski prinos uz bezbednost, održivost i isplativost kao prioritet.",
+    "operation" : {
+        "h3" : "Održavanje vrhunskih performansi vašeg sistema",
+        "h4" : "Efikasan rad solarnog sistema je ključ dugoročne uspešnosti, zbog čega su kontinuirano praćenje, stručna kontrola i prilagođavanje rada neophodni za očuvanje vrednosti, pouzdanost i maksimalan energetski prinos. Uz profesionalnu podršku tima kompanije HUGO SOLAR ENERGY fokusirane na operativnu izvrsnost, vaša fotonaponska elektrana radi na vrhunskom nivou, ostaje bezbedna i operativna tokom celog životnog ciklusa.",
+        "list_title" : "Ključne karakteristike profesionalne podrške i održavanja solarnog sistema",
+        "list" : [
+            "24/7 nadzor sistema i praćenje performansi",
+            "Preventivno održavanje radi sprečavanja zastoja i kvarova",
+            "Brza reakcija i dolazak na teren po potrebi",
+            "Optimizacija proizvodnje energije na osnovu podataka",
+            "Izveštavanje o performansama i potpuna transparentnost",
+            "Inspekcija komponenti i upravljanje garancijama",
+            "Čišćenje i održavanje fotonaponskih modula",
+            "Prediktivna analiza za maksimalnu efikasnost tokom životnog veka",
+            "Usklađenost sa propisima i garancija bezbednosti",
+            "Dugoročna zaštita vrednosti investicije"
+        ]
+    },
+    "EndMessageSegment" : {
+        "title" : "Želite da vaša solarna elektrana radi besprekorno",
+        "text" : "Kontaktirajte nas danas za kompletnu podršku i održavanje sistema. Saznajte kako vam HUGO SOLAR ENERGY može pomoći da obezbedite maksimalnu efikasnost i dugoročnu pouzdanost vaše investicije.",
+        "button_text" : "Zatražite podršku"
+    }
+}

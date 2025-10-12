@@ -27,5 +27,10 @@
             "Pažljiva montaža uz puno poštovanje vaše imovine i infrastrukture.",
             "Potpuna sanacija lokaliteta nakon instalacije kao standardna praksa."
         ]
+    },
+    "EndMessageSegment" : {
+        "title" : "Spremni za realizaciju vašeg solarnog projekta?",
+        "text" : "Kontaktirajte nas danas kako biste započeli put od koncepta do instalacije. Otkrijte kako HUGO SOLAR ENERGY može pomoći da osigurate optimalan dizajn, pouzdanu nabavku i efikasnu izgradnju vašeg solarnog sistema.",
+        "button_text" : "Započnite projekat danas!"
     }
 }

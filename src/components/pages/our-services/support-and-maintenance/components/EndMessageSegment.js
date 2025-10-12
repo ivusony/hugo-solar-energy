@@ -31,14 +31,14 @@ export default function EndMessageSegment() {
                 key={0}
                 variants={item}
             >
-                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-5">{locales[locale].our_services.EndMessageSegment.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-5">{locales[locale].support_and_maintenance.EndMessageSegment.title}</h2>
             </motion.div>
 
             <motion.div
                 key={1}
                 variants={item}
             >
-                <p className="max-w-3xl mx-auto text-center text-lg md:text-xl">{ findCompanyTitleAndMakeLink(locales[locale].our_services.EndMessageSegment.text) }</p>
+                <p className="max-w-3xl mx-auto text-center text-lg md:text-xl">{ findCompanyTitleAndMakeLink(locales[locale].support_and_maintenance.EndMessageSegment.text) }</p>
             </motion.div>
 
             {/* center align <a> tag button, secondary color, white text, sharp corners, large - contact us */}
@@ -48,7 +48,7 @@ export default function EndMessageSegment() {
                 className="text-center"
             >
                 <a href="/contact" className="inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease">
-                    {locales[locale].our_services.EndMessageSegment.button_text}
+                    {locales[locale].support_and_maintenance.EndMessageSegment.button_text}
                 </a>
             </motion.div>
         </motion.div>

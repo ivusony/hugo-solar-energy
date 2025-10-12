@@ -37,9 +37,9 @@ export default  {
             path : '/our-services/procurement-and-construction',
             name : { en : 'Procurement and Construction', sr : 'Nabavka i Izgradnja' }
         },
-        operarion_and_maintenance : {
-            path : '/our-services/operation-and-maintenance',
-            name : { en : 'Operation and Maintenance', sr : 'Rad i Održavanje' }
+        support_and_maintenance : {
+            path : '/our-services/support-and-maintenance',
+            name : { en : 'Support and Maintenance', sr : 'Podrška i Održavanje' }
         }
     },
 
