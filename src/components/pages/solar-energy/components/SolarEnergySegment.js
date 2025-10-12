@@ -42,7 +42,7 @@ export default function SolarEnergySegment() {
             initial="hidden"
             animate={controls}
             id="solar-industry-segment"
-            className="py-10 mx-auto max-w-7xl"
+            className="py-5 mx-auto max-w-7xl px-2 md:px-0"
         >   
             <Breadcrumb />
 

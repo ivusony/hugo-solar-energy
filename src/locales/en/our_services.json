@@ -10,9 +10,9 @@
             "title" : "Project Development",
             "text" : "We guide your solar project from idea to execution, handling planning, permits, and stakeholder coordination for a smooth, efficient outcome."
         },
-        "engineering_and_build" : {
-            "title" : "Engineering & Build",
-            "text" : "Our expert team designs and constructs high-quality, efficient solar systems tailored to your specific needs and site conditions."
+        "procurement_and_construction" : {
+            "title" : "Procurement & Construction",
+            "text" : "We manage the sourcing of high-quality components and oversee the construction and installation of your solar system, ensuring reliability and performance."
         },
         "operation_and_maintenance" : {
             "title" : "Operation & Maintenance",

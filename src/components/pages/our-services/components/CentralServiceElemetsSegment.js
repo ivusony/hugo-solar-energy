@@ -66,10 +66,10 @@ export default function CentralServiceElemetsSegment() {
                     key={2}
                     variants={item}
                 >
-                    <a href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/engineering-and-build` } className="h-full bg-white p-5 rounded-lg shadow transform scale-100 transition-transform transition-shadow duration-300 ease hover:shadow-lg hover:scale-105 flex flex-col justify-between">
+                    <a href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/procurement-and-construction` } className="h-full bg-white p-5 rounded-lg shadow transform scale-100 transition-transform transition-shadow duration-300 ease hover:shadow-lg hover:scale-105 flex flex-col justify-between">
                         <div>
-                            <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.engineering_and_build.title}</h3>
-                            <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.engineering_and_build.text}</p>
+                            <h3 className="text-xl font-semibold mb-3">{locales[locale].our_services.CentralServiceElemetsSegment.procurement_and_construction.title}</h3>
+                            <p className="text-gray-600">{locales[locale].our_services.CentralServiceElemetsSegment.procurement_and_construction.text}</p>
                         </div>
                         <div className="mt-4 text-[var(--color-secondary)] font-semibold">{ locale == "sr" ? "Saznaj više" : "Learn More" } &rarr;</div>
                     </a>

@@ -227,16 +227,18 @@ export default function IndustrialSolarParks() {
                 initial="hidden"
                 animate={controls}
                 id="solar-industry-segment"
-                className="py-10 mx-auto max-w-7xl"
+                className="py-5 mx-auto max-w-7xl"
             >
                 {/* page navigation */}
-                <Breadcrumb />
+                <div className="px-2 md:px-0">
+                    <Breadcrumb />
+                </div>
 
                 {/* h1 & h2 */}
                 <motion.div
                     key={1}
                     variants={item}
-                    className="max-w-7xl mx-auto text-center"
+                    className="max-w-7xl mx-auto text-center px-2 md:px-0"
                 > 
                     <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
                         <h1 className="bg-white p-1">{ locales[locale].industrial_solar_parks.h1 }</h1>
@@ -252,17 +254,17 @@ export default function IndustrialSolarParks() {
                 <motion.div
                     key={2}
                     variants={item}
-                    className="max-w-7xl mx-auto text-center"
+                    className="max-w-7xl mx-auto text-center px-2 md:px-0"
                 > 
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                        <div className="mb-5 text-justify  text-xl">
-                            <h3 className="font-bold mb-2">{ locales[locale].industrial_solar_parks.p1.title }</h3>
-                            <p>{ locales[locale].industrial_solar_parks.p1.text }</p>
+                        <div className="mb-5  text-xl">
+                            <h3 className="font-bold text-center mb-5">{ locales[locale].industrial_solar_parks.p1.title }</h3>
+                            <p className="text-justify">{ locales[locale].industrial_solar_parks.p1.text }</p>
                         </div>
-                        <div className="mb-5 text-justify  text-xl">
-                            <h3 className="font-bold mb-2">{ locales[locale].industrial_solar_parks.p2.title }</h3>
-                            <p>{ findCompanyTitleAndMakeLink(locales[locale].industrial_solar_parks.p2.text) }</p>
+                        <div className="mb-5 text-xl">
+                            <h3 className="font-bold text-center mb-5">{ locales[locale].industrial_solar_parks.p2.title }</h3>
+                            <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].industrial_solar_parks.p2.text) }</p>
                         </div>
                     </div>
                 </motion.div>

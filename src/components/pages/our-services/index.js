@@ -31,7 +31,7 @@ export default function OurServices() {
                 animate={controls}
                 className="max-w-7xl mx-auto"
             >
-                <div className="pb-[var(--segment-padding-bottom)]">
+                <div className="pb-[var(--segment-padding-bottom)] px-2 md:px-0">
                     <Breadcrumb/>
 
                     <motion.div
@@ -39,7 +39,7 @@ export default function OurServices() {
                         variants={item}
                         className="max-w-7xl mx-auto text-center"
                     > 
-                        <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
+                        <div className="text-3xl md:text-4xl font-bold mt-5 mb-10  flex justify-center">
                             <h1 className="bg-white p-1">{ locales[locale].our_services.h1 }</h1>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-normal mb-10  font-italic text-center">
@@ -47,7 +47,7 @@ export default function OurServices() {
                                 locales[locale].our_services.h2
                             }
                         </h2>
-                        <h3 className="text-lg md:text-2xl font-normal mb-10 text-center  font-italic">
+                        <h3 className="text-lg md:text-2xl font-normal mb-10 text-justify md:text-center  font-italic">
                             {
                                 locales[locale].our_services.h3
                             }

@@ -240,15 +240,17 @@ export default function CommercialSolarRoofs() {
                 initial="hidden"
                 animate={controls}
                 id="solar-industry-segment"
-                className="mx-auto max-w-7xl py-10 "
+                className="mx-auto max-w-7xl py-5"
             >
-                <Breadcrumb />
+                <div className="px-2 md:px-0">
+                    <Breadcrumb />
+                </div>
                 
                 {/* h1 & h2 */}
                 <motion.div
                     key={1}
                     variants={item}
-                    className="max-w-7xl mx-auto text-center"
+                    className="max-w-7xl mx-auto text-center px-2 md:px-0"
                 > 
                     <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
                         <h1 className="bg-white p-1">{ locales[locale].commercial_solar_roofs.h1 }</h1>
@@ -264,7 +266,7 @@ export default function CommercialSolarRoofs() {
                 <motion.div
                     key={2}
                     variants={item}
-                    className="max-w-7xl mx-auto text-center"
+                    className="max-w-7xl mx-auto text-center px-2 md:px-0"
                 > 
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">

@@ -1,0 +1,31 @@
+{
+    "h1" : "Nabavka i Izgradnja",
+    "h2" : "Pokrenite svoje preduzeće ka čistoj energetskoj budućnosti uz HUGO SOLAR ENERGY. Od stručnog planiranja i kvalitetnih komponenti do pouzdane izgradnje — isporučujemo kompletna solarna rešenja koja obezbeđuju dugoročnu energetsku nezavisnost i maksimalan povraćaj investicije.",
+    "h3" : "Bilo da se radi o fotonaponskom krovu, solarnoj elektrani na zemlji ili napajanju vaše firme—svaki solarni projekat zahteva pouzdane temelje da bi radio efikasno.Ti temelji se zasnivaju na nabavci i izgradnji, dva ključna stuba koja obezbeđuju dugoročnu pouzdanost i uspeh projekta.",
+    "procurement" : {
+        "h2" : "NABAVKA OPREME",
+        "h3" : "Kvalitet i pouzdanost",
+        "p1" : "Osigurajte uspeh svoje solarne elektrane uz profesionalnu nabavku opreme uz HUGO SOLAR ENERGY. Nabavljamo visokokvalitetne, sertifikovane komponente od proverenih proizvođača širom sveta — za maksimalnu pouzdanost i vrhunski energetski učinak svakog projekta.",
+        "p2" : "Saradjujemo sa stručnim partnerima i koristimo napredne softverske simulacije sa stvarnim vremenskim podacima kako bismo isplanirali i optimizovali vaš solarni sistem, obezbeđujući vrhunske performanse komponenti, maksimalnu efikasnost i dugoročan energetski prinos.",
+        "p3" : "Naš proces nabavke zasniva se na stručnom iskustvu u kupovini, kontinuiranoj kontroli kvaliteta i rigoroznoj selekciji proizvoda i dobavljača—što obezbeđuje siguran i pouzdan lanac snabdevanja. Koristimo samo visokokvalitetne komponente i sami vodimo izgradnju i instalaciju, čime garantujemo maksimalne performanse sistema, nesmetan tok projekta i poverenje investitora. Zahvaljujući našem iskustvu i obimu poslovanja, obezbeđujemo premium proizvode po najboljim cenama na tržištu."
+    },
+    "construction" : {
+        "h2" : "IZGRADNJA",
+        "h3" : "Izgradnja za dugoročni uspeh",
+        "p1" : "Naše solarne elektrane se grade sa preciznošću i pod nadzorom naših visoko kvalifikovanih inženjera. Korišćenjem digitalnih alata i jasnom komunikacijom među svim timovima, osiguravamo da svaki faza izgradnje ispunjava najviše standarde kvaliteta i pouzdanosti.",
+        "p2" : "Standardizujemo naše procese implementacije kako bismo maksimizirali efikasnost u svakom koraku. Sa sveobuhvatnim nadzorom kvaliteta tokom cele faze izgradnje, garantujemo nesmetanu realizaciju i dugoročne performanse vašeg fotonaponskog sistema.",
+        "h4" : "Za nas implementacija uključuje:",
+        "list" : [
+            "Stručno upravljanje gradilištem.",
+            "Inspekcija svih komponenti radi osiguranja usklađenosti i kvaliteta.",
+            "Prefabrikovana i inženjerska rešenja sistema za bržu montažu.",
+            "Kompletna projektna dokumentacija u skladu sa međunarodnim standardima i najboljim praksama.",
+            "Strogo poštovanje propisa o zdravlju, bezbednosti i zaštiti životne sredine.",
+            "Detaljna analiza rizika za svaku fazu projekta.",
+            "Optimizovano planiranje logistike i koordinacija na licu mesta.",
+            "Obuka o sistemu i dugoročna podrška za operatore sistema.",
+            "Pažljiva montaža uz puno poštovanje vaše imovine i infrastrukture.",
+            "Potpuna sanacija lokaliteta nakon instalacije kao standardna praksa."
+        ]
+    }
+}

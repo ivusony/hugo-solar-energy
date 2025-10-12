@@ -48,7 +48,7 @@ function IndustryBoxes(){
             <motion.div
                 key={1}
                 variants={item}
-                className="col-span-1 row-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden rounded-2xl group relative cursor-pointer"
+                className="col-span-1 row-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden  group relative cursor-pointer"
             > 
                 <Link
                     href="/solar-energy/commercial-solar-roofs"
@@ -62,13 +62,13 @@ function IndustryBoxes(){
             <motion.div
                 key={2}
                 variants={item}
-                className="col-span-1 row-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden rounded-2xl group relative cursor-pointer "
+                className="col-span-1 row-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden  group relative cursor-pointer "
             >
                 <Link
                     href="/solar-energy/industrial-solar-parks"
                 >
                     <h3 className="absolute text-white font-bold top-4 left-4 z-10 text-xl md:text-xl drop-shadow-lg  px-3 py-1 rounded-md tracking-wider">{ locales[locale].solar_energy.components.solar_industry.solar_parks.h3 }</h3>
-                    <Image src="/assets/images/stock/solar-park-5.jpg" fill alt="Industrial solar park" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"/>
+                    <Image src="/assets/images/stock/solar-park-6.jpg" fill alt="Industrial solar park" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"/>
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-[var(--color-secondary)]/60 transition-all duration-500"></div>
                 </Link>
             </motion.div>

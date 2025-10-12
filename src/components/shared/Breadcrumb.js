@@ -72,13 +72,13 @@ export default function Breadcrumb() {
                                 <div className="flex items-center">
                                     <span className="mx-2 text-gray-400">›</span>
                                     {i === segments.length - 1 ? (
-                                        <span className="text-gray-700 font-medium">
+                                        <span className="text-gray-700 font-medium whitespace-nowrap">
                                             {label}
                                         </span>
                                     ) : (
                                         <a
                                             href={href}
-                                            className="text-gray-700 hover:text-[var(--color-secondary)] font-medium"
+                                            className="text-gray-700 hover:text-[var(--color-secondary)] font-medium whitespace-nowrap"
                                         >
                                             {label}
                                         </a>

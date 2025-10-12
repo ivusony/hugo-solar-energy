@@ -84,10 +84,10 @@ export default function AboutIndustrySegment() {
                 <motion.div
                     key={1}
                     variants={item}
-                    className={`col-span-3 row-span-2 bg-cover  bg-center rounded-2xl min-h-70 md:min-h-0 ${cardStyles.card}`}
+                    className={`col-span-3 row-span-2 bg-cover  bg-center  min-h-70 md:min-h-0 ${cardStyles.card}`}
                 >
                     <Image
-                        src="/assets/images/stock/solar-park-3.jpg"
+                        src="/assets/images/stock/solar-park-7.jpg"
                         className={` ${cardStyles.cardImage}`}
                         alt={ locale == "sr" ? "Solarni parkovi" : "Solar Parks" }
                         layout="fill"
@@ -111,10 +111,10 @@ export default function AboutIndustrySegment() {
                 <motion.div
                     key={2}
                     variants={item}
-                    className={`col-span-3 row-span-2 bg-cover  bg-center rounded-2xl min-h-70 md:min-h-0 ${cardStyles.card}`}
+                    className={`col-span-3 row-span-2 bg-cover  bg-center min-h-70 md:min-h-0 ${cardStyles.card}`}
                 >
                     <Image
-                        src="/assets/images/stock/solar-roof-1.jpg"
+                        src="/assets/images/stock/solar-roof-5.jpg"
                         className={` ${cardStyles.cardImage}`}
                         alt={ locale == "sr" ? "Solarni krovovi" : "Solar Roofs" }
                         layout="fill"

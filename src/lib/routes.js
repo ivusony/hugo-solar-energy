@@ -33,6 +33,14 @@ export default  {
             path : '/our-services/project-development',
             name : { en : 'Project Development', sr : 'Razvoj Projekata' }
         },
+        procurement_and_construction : {
+            path : '/our-services/procurement-and-construction',
+            name : { en : 'Procurement and Construction', sr : 'Nabavka i Izgradnja' }
+        },
+        operarion_and_maintenance : {
+            path : '/our-services/operation-and-maintenance',
+            name : { en : 'Operation and Maintenance', sr : 'Rad i Održavanje' }
+        }
     },
 
     '/our-projects' : {
