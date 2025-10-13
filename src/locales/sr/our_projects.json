@@ -60,7 +60,7 @@
             ]
         },
         {
-            "slug": "d-express-belgrade-warehouse",
+            "slug": "d-express-beograd-skladiste",
             "name": "D EXPRESS BEOGRAD",
             "solar_power_plant_capacity": "840 KW",
             "solar_panels": 1870,
@@ -88,7 +88,7 @@
             ]
         },
         {
-            "slug": "shipyard-kladovo",
+            "slug": "brodogradiliste-kladovo",
             "name": "BRODOGRADILIŠTE KLADOVO",
             "solar_power_plant_capacity": "700 KW",
             "solar_panels": 1282,
@@ -116,7 +116,7 @@
             ]
         },
         {
-            "slug": "toyo-tire-indjija",
+            "slug": "toyo-tires-indjija",
             "name": "TOYO TIRES",
             "solar_power_plant_capacity": "7.2 MWH",
             "solar_panels": 12900,
@@ -140,13 +140,13 @@
                 "phone_number": "(+381) 60 588 94 40"
             },
             "imgs" : [
+                "toyo-tires-indjija-09.jpg",
                 "IMG-891695925b7190d0815bf1cfc7cfdb0c-V.jpg",
-                "toyo-tires-indjija-01.jpg",
-                "toyo-tires-indjija-09.jpg"
+                "toyo-tires-indjija-01.jpg"
             ]
         },
         {
-            "slug": "solar-park-petnjik",
+            "slug": "solarni-park-petnjik",
             "name": "SOLARNI PARK PETNJIK",
             "solar_power_plant_capacity": "40 MW",
             "solar_panels": 75000,

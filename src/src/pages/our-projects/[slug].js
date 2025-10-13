@@ -1,6 +1,5 @@
 import { useLocales } from "@components/hooks/useLocales";
 import Project from "@components/pages/our-projects/Project";
-import { notFound } from "next/navigation";
 
 export async function getServerSideProps(ctx) {
     const locales = useLocales();
