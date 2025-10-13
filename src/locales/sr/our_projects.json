@@ -1,0 +1,229 @@
+{
+    "h1": "Naši Projekti",
+    "h2": "Realizacija solarnih rešenja: naš dokazani portfolio projekata",
+    "p1" : "Naš obiman portfolio solarnih instalacija, obuhvatajući solarne krovove na industrijskim objektima i javnim zgradama, kao i velike solarne parkove, odražava našu nepokolebljivu posvećenost uspehu klijenata i prikazuje naša značajna dostignuća u sektoru obnovljive energije. Ovakav uspešan rezultat je vaša garancija naše industrijske ekspertize. Posvećeni smo izgradnji održive budućnosti, jedan megavat za drugim. Više o detaljima naših najznačajnijih projekata saznajte ovde.",
+    "projects": [
+        {
+            "slug": "pik-becej-flora",
+            "name": "PIK BEČEJ FLORA",
+            "solar_power_plant_capacity": "1.2 MW",
+            "solar_panels": 2470,
+            "value": "1.2 MIL. EUROS",
+            "work_performance_period": "01.03.2022 – 01.05.2022",
+            "investor": {
+                "name": "MK GROUP DOO",
+                "address": {
+                    "street": "NOVOSADSKA 155",
+                    "place": "BECEJ",
+                    "zip_code": "21220"
+                }
+            },
+            "contractor": {
+                "name": "GREEN ENERGY 360",
+                "phone_number": "(+381) 668772200",
+                "email": "info@greenenergy360.com"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "imgs" : [
+                "IMG-8925ee388d02f60ebf3ba2efb9811385-V-1.jpg"
+            ]
+        },
+        {
+            "slug": "agrounija-fruit-krcedin",
+            "name": "AGROUNIJA FRUIT KRČEDIN",
+            "solar_power_plant_capacity": "570 KW",
+            "solar_panels": 1270,
+            "value": "600.000 EURA",
+            "work_performance_period": "10.03.2022 – 01.04.2022",
+            "investor": {
+                "name": "MK GROUP DOO",
+                "address": {
+                    "street": "DUNAVSKA",
+                    "place": "KRCEDIN",
+                    "zip_code": "22325"
+                }
+            },
+            "contractor": {
+                "name": "GREEN ENERGY 360",
+                "phone_number": "(+381) 668772200",
+                "email": "info@greenenergy360.com"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "imgs" : [
+                "IMG-312525d0582517b2d969a2655a793a6d-V.jpg"
+            ]
+        },
+        {
+            "slug": "d-express-belgrade-warehouse",
+            "name": "D EXPRESS BEOGRAD",
+            "solar_power_plant_capacity": "840 KW",
+            "solar_panels": 1870,
+            "value": "900 THOUSAND EUROS",
+            "work_performance_period": "01.06.2022 – 01.07.2022",
+            "investor": {
+                "name": "D EXPRESS",
+                "address": {
+                    "street": "ZAGE MALIVUK 1",
+                    "place": "BELGRADE",
+                    "zip_code": "11060"
+                }
+            },
+            "contractor": {
+                "name": "MT-KOMEX",
+                "phone_number": "(+381) 11 77 04 566",
+                "email": "info@mt-komex.co.rs"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "imgs" : [
+                "IMG-a0c1f75d523aa9b287c37b8c256df636-V.jpg"
+            ]
+        },
+        {
+            "slug": "shipyard-kladovo",
+            "name": "BRODOGRADILIŠTE KLADOVO",
+            "solar_power_plant_capacity": "700 KW",
+            "solar_panels": 1282,
+            "value": "750 THOUSAND EUROS",
+            "work_performance_period": "01.04.2022 – 01.05.2022",
+            "investor": {
+                "name": "SHIPYARD KLADOVO D.O.O",
+                "address": {
+                    "street": "DJERDAPSKI PUT BB",
+                    "place": "KLADOVO",
+                    "zip_code": "19320"
+                }
+            },
+            "contractor": {
+                "name": "MT-KOMEX",
+                "phone_number": "(+381) 11 77 04 566",
+                "email": "info@mt-komex.co.rs"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "imgs" : [
+                "IMG-5dba30677f0bafa95fb5a0413b4f28d3-V.jpg"
+            ]
+        },
+        {
+            "slug": "toyo-tire-indjija",
+            "name": "TOYO TIRES",
+            "solar_power_plant_capacity": "7.2 MWH",
+            "solar_panels": 12900,
+            "value": "8 MILLION EUROS",
+            "work_performance_period": "01.11.2022 – 01.03.2023",
+            "investor": {
+                "name": "TOYO TIRE SERBIA DOO INDJIJA",
+                "address": {
+                    "street": "INDUSTRIJSKA 3",
+                    "place": "INDJIJA",
+                    "zip_code": "22320"
+                }
+            },
+            "contractor": {
+                "name": "MT-KOMEX",
+                "phone_number": "(+381) 11 77 04 566",
+                "email": "info@mt-komex.co.rs"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "imgs" : [
+                "IMG-891695925b7190d0815bf1cfc7cfdb0c-V.jpg",
+                "toyo-tires-indjija-01.jpg",
+                "toyo-tires-indjija-09.jpg"
+            ]
+        },
+        {
+            "slug": "solar-park-petnjik",
+            "name": "SOLARNI PARK PETNJIK",
+            "solar_power_plant_capacity": "40 MW",
+            "solar_panels": 75000,
+            "value": "40 MIL. EUROS",
+            "work_performance_period": "01.06.2022 – 01.12.2023",
+            "contractor": {
+                "name": "GP Toming",
+                "phone_number": "(+381) 11 77 04 566",
+                "email": "info@mt-komex.co.rs"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "address": {
+                "place": "Grude",
+                "country": "Bosnia & Herzegovina"
+            },
+            "imgs" : [
+                "IMG-ea26e37a48e28eba3ba73ce58872a1b5-V.jpg",
+                "FNE_petnjik_1-770x387.jpg"
+            ]
+        },
+        {
+            "slug": "ctp-yanfeng-kragujevac",
+            "name": "CTP YANFENG KRAGUJEVAC",
+            "solar_power_plant_capacity": "9 MW",
+            "solar_panels": 17000,
+            "value": "9.000.000 EUROS",
+            "work_performance_period": "16.07.2022 – 21.12.2023",
+            "investor": {
+                "name": "CTP",
+                "address": {
+                "street": "CTP PARK KRAGUJEVAC",
+                "place": "KRAGUJEVAC"
+                }
+            },
+            "contractor": {
+                "name": "GREEN ENERGY 360",
+                "phone_number": "+381668772200",
+                "email": "info@greenenergy360.com"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "imgs" : [
+                "ctp_kragujevac_1.jpg",
+                "ctp_kragujevac_2.jpg"
+            ]
+        },
+        {
+            "slug": "bojnik-lebane",
+            "name": "BOJNIK LEBANE",
+            "solar_power_plant_capacity": "8 MW",
+            "solar_panels": 18000,
+            "value": "8.000.000 EUROS",
+            "work_performance_period": "25.05.2023 – 01.09.2023",
+            "investor": {
+                "name": "KODAR ENERGOMONTAZA",
+                "address": {
+                "street": "BOJNIK",
+                "place": "BOJNIK LEBANE"
+                }
+            },
+            "contractor": {
+                "name": "KODAR ENERGO",
+                "phone_number": "011 3814900",
+                "email": "office@kodar.rs"
+            },
+            "subcontractor": {
+                "name": "HUGO ELEKTRO",
+                "phone_number": "(+381) 60 588 94 40"
+            },
+            "imgs" : [
+                "bojnik_lebane.jpg"
+            ]
+        }
+    ]
+}

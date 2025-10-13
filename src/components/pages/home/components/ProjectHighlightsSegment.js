@@ -79,12 +79,12 @@ export default function ProjectHighlightsSegment() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="grid grid-cols-6 grid-rows-9 md:grid-cols-6 md:grid-rows-3 mt-20 gap-3 h-[600px]"
+                className="grid grid-cols-6 grid-rows-9 md:grid-cols-6 md:grid-rows-3 mt-20 gap-6 h-[600px]"
             >
                 <motion.div
                     key={1}
                     variants={item}
-                    className={` col-span-3 row-span-3 md:col-span-2 md:row-span-2 bg-cover bg-center rounded-2xl ${cardStyles.card}`}
+                    className={` col-span-3 row-span-3 md:col-span-2 md:row-span-2 bg-cover bg-center ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/projects/IMG-5dba30677f0bafa95fb5a0413b4f28d3-V.jpg"
@@ -106,9 +106,9 @@ export default function ProjectHighlightsSegment() {
                             <div className="mt-4 flex justify-start">
                                 <a 
                                     className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
-                                    href="/projects"
+                                    href={`${ locale == "sr" ? "" : "/" + locale }/our-projects` }
                                 >
-                                    { locale == "sr" ? "Više" : "See more" }
+                                    { locale == "sr" ? "Vidi više" : "See more" }
                                 </a>
                             </div>
                         </div>
@@ -117,7 +117,7 @@ export default function ProjectHighlightsSegment() {
                 <motion.div
                     key={2}
                     variants={item}
-                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-1 bg-cover bg-center rounded-2xl ${cardStyles.card}`}
+                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-1 bg-cover bg-center  ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/projects/IMG-8925ee388d02f60ebf3ba2efb9811385-V-1.jpg"
@@ -137,9 +137,9 @@ export default function ProjectHighlightsSegment() {
                             <div className="mt-4 flex justify-start">
                                 <a 
                                     className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
-                                    href="/projects"
+                                    href={`${ locale == "sr" ? "" : "/" + locale }/our-projects` }
                                 >
-                                    { locale == "sr" ? "Više" : "See more" }
+                                    { locale == "sr" ? "Vidi više" : "See more" }
                                 </a>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ export default function ProjectHighlightsSegment() {
                 <motion.div
                     key={3}
                     variants={item}
-                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-2 bg-cover bg-center rounded-2xl ${cardStyles.card}`}
+                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-2 bg-cover bg-center  ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/projects/IMG-312525d0582517b2d969a2655a793a6d-V.jpg"
@@ -168,9 +168,9 @@ export default function ProjectHighlightsSegment() {
                             <div className="mt-4 flex justify-start">
                                 <a 
                                     className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
-                                    href="/projects"
+                                    href={`${ locale == "sr" ? "" : "/" + locale }/our-projects`}
                                 >
-                                    { locale == "sr" ? "Više" : "See more" }
+                                    { locale == "sr" ? "Vidi više" : "See more" }
                                 </a>
                             </div>
                         </div>
@@ -179,7 +179,7 @@ export default function ProjectHighlightsSegment() {
                 <motion.div
                     key={4}
                     variants={item}
-                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-2 bg-cover bg-center rounded-2xl ${cardStyles.card}`}
+                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-2 bg-cover bg-center  ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/projects/IMG-a0c1f75d523aa9b287c37b8c256df636-V.jpg"
@@ -199,9 +199,9 @@ export default function ProjectHighlightsSegment() {
                             <div className="mt-4 flex justify-start">
                                 <a 
                                     className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
-                                    href="/projects"
+                                    href={`${ locale == "sr" ? "" : "/" + locale }/our-projects`}
                                 >
-                                    { locale == "sr" ? "Više" : "See more" }
+                                    { locale == "sr" ? "Vidi više" : "See more" }
                                 </a>
                             </div>
                         </div>
@@ -210,7 +210,7 @@ export default function ProjectHighlightsSegment() {
                 <motion.div
                     key={5}
                     variants={item}
-                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-1 bg-cover bg-center rounded-2xl ${cardStyles.card}`}
+                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-1 bg-cover bg-center  ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/projects/IMG-ea26e37a48e28eba3ba73ce58872a1b5-V.jpg"
@@ -230,9 +230,9 @@ export default function ProjectHighlightsSegment() {
                             <div className="mt-4 flex justify-start">
                                 <a 
                                     className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
-                                    href="/projects"
+                                    href={`${ locale == "sr" ? "" : "/" + locale }/our-projects` }
                                 >
-                                    { locale == "sr" ? "Više" : "See more" }
+                                    { locale == "sr" ? "Vidi više" : "See more" }
                                 </a>
                             </div>
                         </div>
@@ -241,7 +241,7 @@ export default function ProjectHighlightsSegment() {
                 <motion.div
                     key={6}
                     variants={item}
-                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-1 bg-cover bg-center rounded-2xl ${cardStyles.card}`}
+                    className={`col-span-3 row-span-3 md:col-span-2 md:row-span-1 bg-cover bg-center  ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/projects/IMG-891695925b7190d0815bf1cfc7cfdb0c-V.jpg"
@@ -261,9 +261,9 @@ export default function ProjectHighlightsSegment() {
                             <div className="mt-4 flex justify-start">
                                 <a 
                                     className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-3 py-1`}
-                                    href="/projects"
+                                    href={`${ locale == "sr" ? "" : "/" + locale }/our-projects`}
                                 >
-                                    { locale == "sr" ? "Više" : "See more" }
+                                    { locale == "sr" ? "Vidi više" : "See more" }
                                 </a>
                             </div>
                         </div>

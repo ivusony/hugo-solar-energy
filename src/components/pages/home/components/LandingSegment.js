@@ -57,7 +57,7 @@ export default function LandingSegment() {
                 {/* var(--color) button "OUR PROJECTS" text white, sharp edges */}
                 <Link 
                     className="mt-4 md:mt-8 bg-[var(--color)] text-white px-6 md:px-8 py-4 md:py-4 text-sm md:text-lg font-bold hover:brightness-90 transition-all duration-300 ease-in-out"
-                    href="/projects"
+                    href={`${ locale == "sr" ? "" : "/" + locale }/our-projects` }
                 >
                     {
                         locale == "sr" ? "NAŠI PROJEKTI" : "OUR PROJECTS"
