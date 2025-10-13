@@ -7,22 +7,28 @@
             "title" : "Pouzdani fotonaponski sistemi izgrađeni da rade i traju",
             "text" : "Hugo Solar Energy podržava preduzeća i investitore u njihovoj tranziciji na obnovljive izvore energije. Dizajniramo, instaliramo i održavamo kompletne solarne sisteme koji osiguravaju efikasnu proizvodnju energije i dugoročnu performansu. Sa godinama iskustva u solarnoj industriji, isporučujemo projekte koji su pažljivo planirani, održivi i isplativi - pomažući našim partnerima da smanje emisije i postignu pravu energetsku nezavisnost.",
             "boxes" : {
+                "title" : "Naše usluge",
+                "subtitle" : "Istražite usluge koje nudimo kako bismo podržali vaše putovanje ka obnovljivoj energiji.",
                 "box1" : {
                     "title" : "Razvoj projekta",
-                    "url" : "/test"
+                    "url" : "/our-services/project-development"
                 },
                 "box2" : {
-                    "title" : "Inženjering i izgradnja",
-                    "url" : "/test"
+                    "title" : "Nabavka i izgradnja",
+                    "url" : "/our-services/procurement-and-construction"
                 },
                 "box3" : {
-                    "title" : "Održavanje i podrška",
-                    "url" : "/test"
+                    "title" : "Podrška i održavanje",
+                    "url" : "/our-services/support-and-maintenance"
                 },
                 "box4" : {
-                    "title" : "Operativni menadžment",
-                    "url" : "/test"
+                    "title" : "Prodaja opreme",
+                    "url" : "/our-services/sales-of-equipment"
                 }
+            },
+            "discoverMoreButton" : {
+                "text" : "Saznaj više",
+                "url" : "/our-services"
             }
         },
         "AboutIndustrySegment" : {

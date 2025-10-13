@@ -125,7 +125,7 @@ export default function AboutIndustrySegment() {
                         <span className="text-lg text-justify text-white">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.text}</span>
                         <div className="mt-4 flex justify-center">
                             <a 
-                                className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-7 py-3`}
+                                className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-7 py-3 `}
                                 href="/solar-energy/commercial-solar-roofs"
                             >
                                 { locale == "sr" ? "Saznaj više" : "Learn more" }

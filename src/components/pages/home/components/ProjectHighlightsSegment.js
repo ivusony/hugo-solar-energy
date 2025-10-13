@@ -7,6 +7,8 @@ import { useInView } from "react-intersection-observer";
 import cardStyles from "@styles/components/shared/Card.module.css";
 import { useEffect } from "react";
 import Image from "next/image";
+import container from "@components/shared/MotionContainer";
+import item from "@components/shared/MotionItem";
 
 export default function ProjectHighlightsSegment() {
 
@@ -16,23 +18,7 @@ export default function ProjectHighlightsSegment() {
     const controls = useAnimation();
     const [ref, inView] = useInView({ threshold: 0.2 });
 
-    const container = {
-        hidden: {},
-        visible: {
-        transition: {
-            staggerChildren: 0.25,
-        },
-        },
-    };
 
-    const item = {
-        hidden: { opacity: 0, y: 40 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.3, ease: "easeOut" },
-        },
-    };
 
     function handleMouseEnter(e) {
         const cardOverlay = e.currentTarget.querySelector(`.${cardStyles.cardOverlay}`);

@@ -50,7 +50,7 @@ export default function LandingSegment() {
     }, []);
 
     return (
-        <div id="landing-segment" className="h-[100vh] relative ">
+        <div id="landing-segment" className="h-[100vh] relative bg-gradient-to-b from-transparent to-[black]/70">
             <div id="intro-media-text-box" className="absolute bottom-1/4  md:bottom-1/6  left-[calc(5vw)] md:left-[5vw] ">
                 <h1 className="text-white text-4xl md:text-7xl font-bold mb-4">HUGO SOLAR ENERGY</h1>
                 <h2 className="text-white text-xl md:text-4xl font-bold md:font-normal mb-8 md:mb-10">{locales[locale].home.components.IntroMediaSegment.introMediaTextBox}</h2>

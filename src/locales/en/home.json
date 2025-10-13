@@ -7,22 +7,28 @@
             "title" : "Reliable photovoltaic systems built to perform and last",
             "text" : "Hugo Solar Energy supports businesses and investors in their transition to renewable energy. We design, install, and maintain complete solar systems that ensure efficient power generation and long-term performance. With years of experience in the solar sector, we deliver projects that are thoughtfully planned, sustainable, and cost-effective — helping our partners reduce emissions and achieve true energy independence.",
             "boxes" : {
+                "title" : "Our Services",
+                "subtitle" : "Explore the range of services we offer to support your renewable energy journey.",
                 "box1" : {
                     "title" : "Project Development",
-                    "url" : "/test"
+                    "url" : "/en/our-services/project-development"
                 },
                 "box2" : {
-                    "title" : "Engineering and Construction",
-                    "url" : "/test"
+                    "title" : "Procurement and Construction",
+                    "url" : "/en/our-services/procurement-and-construction"
                 },
                 "box3" : {
-                    "title" : "Maintenance and Support",
-                    "url" : "/test"
+                    "title" : "Support and Maintenance",
+                    "url" : "/en/our-services/support-and-maintenance"
                 },
                 "box4" : {
-                    "title" : "Operational Management",
-                    "url" : "/test"
+                    "title" : "Sales of Equipment",
+                    "url" : "/en/our-services/sales-of-equipment"
                 }
+            },
+            "discoverMoreButton" : {
+                "text" : "Discover More",
+                "url" : "/en/our-services"
             }
         },
         "AboutIndustrySegment" : {
