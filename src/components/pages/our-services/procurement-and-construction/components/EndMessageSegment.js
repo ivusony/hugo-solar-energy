@@ -47,7 +47,10 @@ export default function EndMessageSegment() {
                 variants={item}
                 className="text-center"
             >
-                <a href="/contact" className="inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease">
+                <a 
+                    href={ `${locale == "sr" ? "" : "/en"}/contact-us` } 
+                    className="inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
+                >
                     {locales[locale].procurement_and_construction.EndMessageSegment.button_text}
                 </a>
             </motion.div>

@@ -55,9 +55,9 @@ export default  {
     },
 
 
-    '/contact' : {
-        path : '/contact',
-        name : { en : 'Contact', sr : 'Kontakt' }
+    '/contact-us' : {
+        path : '/contact-us',
+        name : { en : 'Contact Us', sr : 'Kontaktirajte Nas' }
     },
 
 

@@ -29,7 +29,8 @@
             },
             "imgs" : [
                 "IMG-8925ee388d02f60ebf3ba2efb9811385-V-1.jpg"
-            ]
+            ],
+            "about_project": "Solarna elektrana na krovu fabrike FLORA u Bečeju ima kapacitet od 1.2 MW i sastoji se od 2470 solarnih panela. Elektrana je izgrađena za samo dva meseca, od marta do maja 2022. godine, i očekuje se da će godišnje proizvoditi oko 1.5 GWh čiste energije. Ovaj projekat je deo šire strategije MK Grupe da ulaže u obnovljive izvore energije i smanji svoj ugljenični otisak."
         },
         {
             "slug": "agrounija-fruit-krcedin",
@@ -57,7 +58,8 @@
             },
             "imgs" : [
                 "IMG-312525d0582517b2d969a2655a793a6d-V.jpg"
-            ]
+            ],
+            "about_project": "Solarna elektrana na objektu AGROUNIJA FRUIT u Krčedinu ima kapacitet od 570 kW i sastoji se od 1270 solarnih panela. Elektrana je izgrađena u kratkom periodu od marta do aprila 2022. godine i očekuje se da će godišnje proizvoditi približno 0.7 GWh čiste energije. Ova instalacija je deo opredeljenja MK Grupe za održive prakse i smanjenje uticaja na životnu sredinu kroz ulaganja u obnovljive izvore energije."
         },
         {
             "slug": "d-express-beograd-skladiste",
@@ -85,7 +87,8 @@
             },
             "imgs" : [
                 "IMG-a0c1f75d523aa9b287c37b8c256df636-V.jpg"
-            ]
+            ],
+            "about_project": "Solarna elektrana na skladištu D EXPRESS u Beogradu ima kapacitet od 840 kW i sastoji se od 1870 solarnih panela. Elektrana je izgrađena između juna i jula 2022. godine i očekuje se da će godišnje proizvoditi oko 1 GWh čiste energije. Ovaj projekat ističe posvećenost D EXPRESS-a održivosti i smanjenju ekološkog otiska kroz usvajanje rešenja za obnovljivu energiju."
         },
         {
             "slug": "brodogradiliste-kladovo",
@@ -113,7 +116,8 @@
             },
             "imgs" : [
                 "IMG-5dba30677f0bafa95fb5a0413b4f28d3-V.jpg"
-            ]
+            ],
+            "about_project": "Solarna elektrana na objektu BRODOGRADILIŠTE KLADOVO ima kapacitet od 700 kW i sastoji se od 1282 solarnih panela. Elektrana je izgrađena od aprila do maja 2022. godine i očekuje se da će godišnje proizvoditi približno 0.8 GWh čiste energije. Ova instalacija je deo napora BRODOGRADILIŠTE KLADOVO da integriše održiva energetska rešenja u svoje operacije i smanji svoj uticaj na životnu sredinu."
         },
         {
             "slug": "toyo-tires-indjija",
@@ -143,7 +147,8 @@
                 "toyo-tires-indjija-09.jpg",
                 "IMG-891695925b7190d0815bf1cfc7cfdb0c-V.jpg",
                 "toyo-tires-indjija-01.jpg"
-            ]
+            ],
+            "about_project": "Solarna elektrana na objektu TOYO TIRES u Inđiji, Srbija ima kapacitet od 7.2 MWh i sastoji se od 12,900 solarnih panela. Elektrana je izgrađena tokom perioda od novembra 2022. do marta 2023. godine i očekuje se da će godišnje proizvoditi približno 8.5 GWh čiste energije. Ovaj projekat naglašava posvećenost TOYO TIRES-a održivosti i njegove napore da smanji svoj ugljenični otisak kroz usvajanje tehnologija obnovljive energije."
         },
         {
             "slug": "solarni-park-petnjik",
@@ -168,7 +173,8 @@
             "imgs" : [
                 "IMG-ea26e37a48e28eba3ba73ce58872a1b5-V.jpg",
                 "FNE_petnjik_1-770x387.jpg"
-            ]
+            ],
+            "about_project": "Solarni park PETNJIK u Bosni i Hercegovini je velika solarna elektrana sa kapacitetom od 40 MW, koja se sastoji od 75,000 solarnih panela. Projekat izvodi GP Toming i završen je u decembru 2023. godine. Park generiše značajne količine čiste energije, doprinoseći ciljevima regiona za obnovljivu energiju i smanjenju zavisnosti od fosilnih goriva."
         },
         {
             "slug": "ctp-yanfeng-kragujevac",
@@ -196,7 +202,8 @@
             "imgs" : [
                 "ctp_kragujevac_1.jpg",
                 "ctp_kragujevac_2.jpg"
-            ]
+            ],
+            "about_project": "Solarna elektrana na objektu CTP YANFENG u Kragujevcu ima kapacitet od 9 MW i sastoji se od 17,000 solarnih panela. Elektrana je izgrađena od jula 2022. do decembra 2023. godine i očekuje se da će godišnje proizvoditi oko 10 GWh čiste energije. Ovaj projekat je deo posvećenosti CTP-a održivosti i smanjenju uticaja na životnu sredinu kroz korišćenje obnovljivih izvora energije."
         },
         {
             "slug": "bojnik-lebane",
@@ -223,7 +230,8 @@
             },
             "imgs" : [
                 "bojnik_lebane.jpg"
-            ]
+            ],
+            "about_project": "Solarna elektrana u Bojniku Lebane ima kapacitet od 8 MW i sastoji se od 18,000 solarnih panela. Elektrana je izgrađena od maja do septembra 2023. godine i očekuje se da će godišnje proizvoditi oko 9 GWh čiste energije. Ovaj projekat je deo inicijative lokalne samouprave da promoviše obnovljivu energiju i smanji emisiju ugljenika u regionu."
         }
     ]
 }

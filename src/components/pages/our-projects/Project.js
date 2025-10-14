@@ -7,6 +7,7 @@ import container from "@components/shared/MotionContainer";
 import item from "@components/shared/MotionItem";
 import Breadcrumb from "@components/shared/Breadcrumb";
 import Image from "next/image";
+import SolarCarousel from "@components/shared/SolarCarousel";
 
 export default function Project({ project }) {
 
@@ -79,44 +80,44 @@ export default function Project({ project }) {
                 {/* Semantic Definition List styled as a table */}
                 <dl>
                     <DetailRow 
-                        label="Project Name" 
+                        label={ locale == "sr" ? "Naziv projekta" : "Project Name"} 
                         value={project.name} 
                         className="md:border-t-0"
                     />
                     
                     <DetailRow 
-                        label="Capacity" 
+                        label={ locale == "sr" ? "Kapacitet" : "Capacity"} 
                         value={project.solar_power_plant_capacity} 
                     />
                     
                     <DetailRow 
-                        label="Solar Panels" 
+                        label={ locale == "sr" ? "Solarni paneli" : "Solar Panels"} 
                         value={formattedSolarPanels} 
                     />
                     
                     <DetailRow 
-                        label="Project Value" 
+                        label={ locale == "sr" ? "Vrednost projekta" : "Project Value"} 
                         value={project.value} 
                     />
                     
                     <DetailRow 
-                        label="Work Period" 
+                        label={ locale == "sr" ? "Period izgradnje" : "Construction Time"} 
                         value={project.work_performance_period} 
                     />
 
                     {/* Nested Objects */}
                     <DetailRow 
-                        label="Contractor" 
+                        label={ locale == "sr" ? "Glavni izvođač" : "Contractor"} 
                         value={contractorInfo} 
                     />
 
                     <DetailRow 
-                        label="Subcontractor" 
+                        label={ locale == "sr" ? "Podizvođač" : "Subcontractor"} 
                         value={subcontractorInfo} 
                     />
 
                     <DetailRow 
-                        label="Location" 
+                        label={ locale == "sr" ? "Lokacija" : "Location"} 
                         value={addressInfo} 
                     />
                     
@@ -131,51 +132,76 @@ export default function Project({ project }) {
             {/* this div gives background to navbar */}
             <div className="h-[100px] bg-[var(--color)]"></div>
             {/* banner image */}
-                <div className="relative h-[200px] md:h-[600px] w-full mb-5 bg-black">
-                    <Image
-                        src={`/assets/images/projects/${project.imgs[0]}`}
-                        alt="Solar Energy Banner"
-                        layout="fill"
-                        objectFit="cover"
-                        
-                    />
+                <div className="relative h-[200px] md:h-[600px] w-full mb-5 ">
+                    {/* if project.imgs array has more than 1 image, render SolarCarousel: construct images array: [ { url : `/assets/images/projects/{img}, alt : "alt"` } ], esle reder one image */}
+                    { project.imgs && project.imgs.length > 1 ?
+                        <SolarCarousel 
+                            images={ project.imgs.map((img, index) => ({
+                                url: `/assets/images/projects/${img}`,
+                                alt: project.name ? `${project.name} - Image ${index + 1}` : `Project Image ${index + 1}`
+                            }))}
+                        />
+                    :
+                        project.imgs && project.imgs.length === 1 ?
+                        <Image
+                            src={`/assets/images/projects/${project.imgs[0]}`}
+                            alt="Solar Energy Banner"
+                            layout="fill"
+                            objectFit="cover"
+                            
+                        />
+                        : null
+                    }
                 </div>
-            <motion.div
-                ref={ref}
-                variants={container}
-                initial="hidden"
-                animate={controls}
-                className="max-w-7xl mx-auto px-2 md:px-0"
-            >
-
-                
-
-                <div className="pb-[var(--segment-padding-bottom)]">
-                    <Breadcrumb/>
-                </div>
-
 
                 <motion.div
-                    key={1}
-                    variants={item}
-                    className="max-w-7xl mx-auto text-center"
-                    id="header"
-                > 
-                    <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                        <h1 className="bg-white p-1">{ project.name }</h1>
-                    </div>
-                    
-                </motion.div>
-
-                <motion.div
-                    key={2}
-                    variants={item}
+                    ref={ref}
+                    variants={container}
+                    initial="hidden"
+                    animate={controls}
+                    className="max-w-7xl mx-auto px-2 md:px-0"
                 >
-                    <ProjectDetailsTable project={project} />
-                </motion.div>
-                
 
-            </motion.div>
+                    
+
+                    <div className="pb-[var(--segment-padding-bottom)]">
+                        <Breadcrumb/>
+                    </div>
+
+
+                    <motion.div
+                        key={1}
+                        variants={item}
+                        className="max-w-7xl mx-auto text-center"
+                        id="header"
+                    > 
+                        <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
+                            <h1 className="bg-white p-1">{ project.name }</h1>
+                        </div>
+                        
+                    </motion.div>
+
+                    <motion.div
+                        key={2}
+                        variants={item}
+                    >
+                        <ProjectDetailsTable project={project} />
+                    </motion.div>
+
+                    <motion.div
+                        key={3}
+                        variants={item}
+                        className="max-w-7xl mx-auto"
+                    >
+                        { project.about_project && 
+                            <div className="max-w-7xl mx-auto my-15 p-0 sm:p-4  bg-white ">
+                                <p className="text-[--var(--color)] text-xl mb-4 px-4">{ project.about_project }</p>
+                            </div>
+                        }
+                    </motion.div>
+                    
+
+                </motion.div>
 
 
 

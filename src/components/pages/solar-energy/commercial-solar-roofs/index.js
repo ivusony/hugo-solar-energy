@@ -290,11 +290,20 @@ export default function CommercialSolarRoofs() {
                 <motion.div
                     key={3}
                     variants={item}
-                    className="max-w-7xl mx-auto text-center mt-10"
+                    className="max-w-7xl mx-auto text-center my-10"
                 >
-                    {/* feel free to contact us link secondary color */}
-                    <a href="/contact" className="text-[var(--color-secondary)] font-medium text-xl ">
+                    <p
+                        className="max-w-7xl mx-auto text-center text-lg md:text-xl"
+                    >
                         { locales[locale].commercial_solar_roofs.contact_button }
+                    </p>
+                    <a 
+                        href={ `${locale == "sr" ? "" : "/en"}/contact-us` } 
+                        className="inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
+                    >
+                        {
+                            locale == "sr" ? "Kontaktirajte nas" : "Contact Us"
+                        }
                     </a>
 
                 </motion.div>

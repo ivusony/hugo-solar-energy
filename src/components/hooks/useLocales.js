@@ -22,6 +22,8 @@ import en_sales_of_equipment from "@locales/en/sales-of-equipment.json"
 import sr_sales_of_equipment from "@locales/sr/sales-of-equipment.json"
 import en_our_projects from "@locales/en/our_projects.json"
 import sr_our_projects from "@locales/sr/our_projects.json"
+import en_contact_us from "@locales/en/contact_us.json"
+import sr_contact_us from "@locales/sr/contact_us.json"
 
 
 export function useLocales() {
@@ -38,7 +40,8 @@ export function useLocales() {
             procurement_and_construction: en_procurement_and_construction,
             support_and_maintenance: en_support_and_maintenance,
             sales_of_equipment: en_sales_of_equipment,
-            our_projects: en_our_projects
+            our_projects: en_our_projects,
+            contact_us: en_contact_us
         },
         sr: {
             menu: sr_menu,
@@ -52,7 +55,8 @@ export function useLocales() {
             procurement_and_construction: sr_procurement_and_construction,
             support_and_maintenance: sr_support_and_maintenance,
             sales_of_equipment: sr_sales_of_equipment,
-            our_projects: sr_our_projects
+            our_projects: sr_our_projects,
+            contact_us: sr_contact_us
         }
     }
 

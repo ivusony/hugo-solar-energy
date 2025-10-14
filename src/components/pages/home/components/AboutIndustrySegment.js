@@ -71,7 +71,10 @@ export default function AboutIndustrySegment() {
     }, [controls, inView]);
 
     return (
-        <div id="about-industry-segment" className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pb-5 bg-white ">
+        <div 
+            id="about-industry-segment" 
+            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-10 pb-5 bg-white "
+        >
             <h2 className={`text-3xl md:text-4xl font-bold pt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.AboutIndustrySegment.title}</h2>
             <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.AboutIndustrySegment.description}</h3>
             <motion.div
@@ -98,7 +101,7 @@ export default function AboutIndustrySegment() {
                         <span className="text-lg text-justify text-white">{locales[locale].home.components.AboutIndustrySegment.solar_parks.text}</span>
                         <div className="mt-4 flex justify-center">
                             <a 
-                                className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-7 py-3`}
+                                className={`bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-dark)] hover:scale-105 transition-all duration-300 text-white text-xs md:text-sm px-7 py-3`}
                                 href="/solar-energy/industrial-solar-parks"
                             >
                                 { locale == "sr" ? "Saznaj više" : "Learn more" }
@@ -125,7 +128,7 @@ export default function AboutIndustrySegment() {
                         <span className="text-lg text-justify text-white">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.text}</span>
                         <div className="mt-4 flex justify-center">
                             <a 
-                                className={`bg-[var(--color-secondary)] text-white text-xs md:text-sm px-7 py-3 `}
+                                className={`bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-dark)] hover:scale-105 transition-all duration-300 text-white text-xs md:text-sm px-7 py-3 `}
                                 href="/solar-energy/commercial-solar-roofs"
                             >
                                 { locale == "sr" ? "Saznaj više" : "Learn more" }

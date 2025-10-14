@@ -29,7 +29,8 @@
             },
             "imgs" : [
                 "IMG-8925ee388d02f60ebf3ba2efb9811385-V-1.jpg"
-            ]
+            ],
+            "about_project": "The solar power plant on the roof of the PIK FLORA factory in Becej has a capacity of 1.2 MW and consists of 2470 solar panels. The plant was built in just two months, from March to May 2022, and is expected to produce around 1.5 GWh of clean energy annually. This project is part of MK Group's broader strategy to invest in renewable energy sources and reduce its carbon footprint."
         },
         {
             "slug": "agrounija-fruit-krcedin",
@@ -57,7 +58,8 @@
             },
             "imgs" : [
                 "IMG-312525d0582517b2d969a2655a793a6d-V.jpg"
-            ]
+            ],
+            "about_project": "The solar power plant at the AGROUNIJA FRUIT facility in Krcedin has a capacity of 570 kW and consists of 1270 solar panels. The plant was constructed in a short period from March to April 2022 and is expected to generate approximately 0.7 GWh of clean energy annually. This installation is part of MK Group's commitment to sustainable practices and reducing environmental impact through renewable energy investments."
         },
         {
             "slug": "d-express-belgrade-warehouse",
@@ -85,7 +87,8 @@
             },
             "imgs" : [
                 "IMG-a0c1f75d523aa9b287c37b8c256df636-V.jpg"
-            ]
+            ],
+            "about_project": "The solar power plant at the D EXPRESS warehouse in Belgrade has a capacity of 840 kW and consists of 1870 solar panels. The plant was constructed between June and July 2022 and is expected to produce around 1 GWh of clean energy annually. This project highlights D EXPRESS's dedication to sustainability and reducing its environmental footprint through the adoption of renewable energy solutions."
         },
         {
             "slug": "shipyard-kladovo",
@@ -113,7 +116,8 @@
             },
             "imgs" : [
                 "IMG-5dba30677f0bafa95fb5a0413b4f28d3-V.jpg"
-            ]
+            ],
+            "about_project": "The solar power plant at the SHIPYARD KLADOVO facility has a capacity of 700 kW and consists of 1282 solar panels. The plant was built from April to May 2022 and is expected to generate approximately 0.8 GWh of clean energy annually. This installation is part of SHIPYARD KLADOVO's efforts to incorporate sustainable energy solutions into its operations and reduce its environmental impact."
         },
         {
             "slug": "toyo-tire-indjija",
@@ -123,7 +127,7 @@
             "value": "8 MILLION EUROS",
             "work_performance_period": "01.11.2022 – 01.03.2023",
             "investor": {
-                "name": "TOYO TIRE SERBIA DOO INDJIJA",
+                "name": "TOYO TIRES SERBIA DOO INDJIJA",
                 "address": {
                     "street": "INDUSTRIJSKA 3",
                     "place": "INDJIJA",
@@ -143,7 +147,8 @@
                 "toyo-tires-indjija-09.jpg",
                 "IMG-891695925b7190d0815bf1cfc7cfdb0c-V.jpg",
                 "toyo-tires-indjija-01.jpg"
-            ]
+            ],
+            "about_project": "The solar power plant at the TOYO TIRES facility in Indjija, Serbia has a capacity of 7.2 MWh and consists of 12,900 solar panels. The plant was constructed over a period from November 2022 to March 2023 and is expected to produce approximately 8.5 GWh of clean energy annually. This project underscores TOYO TIRES commitment to sustainability and its efforts to reduce its carbon footprint through the adoption of renewable energy technologies."
         },
         {
             "slug": "solar-park-petnjik",
@@ -168,7 +173,8 @@
             "imgs" : [
                 "IMG-ea26e37a48e28eba3ba73ce58872a1b5-V.jpg",
                 "FNE_petnjik_1-770x387.jpg"
-            ]
+            ],
+            "about_project": "The Solar Park PETNJIK in Bosnia & Herzegovina is a large-scale solar power plant with a capacity of 40 MW, consisting of 75,000 solar panels. The project is being executed by GP Toming and is completed in December 2023. The park generates significant amounts of clean energy, contributing to the region's renewable energy goals and reducing reliance on fossil fuels."
         },
         {
             "slug": "ctp-yanfeng-kragujevac",
@@ -196,7 +202,8 @@
             "imgs" : [
                 "ctp_kragujevac_1.jpg",
                 "ctp_kragujevac_2.jpg"
-            ]
+            ],
+            "about_project": "The solar power plant at the CTP YANFENG facility in Kragujevac has a capacity of 9 MW and consists of 17,000 solar panels. The plant was constructed from July 2022 to December 2023 and is expected to produce around 10 GWh of clean energy annually. This project is part of CTP's commitment to sustainability and reducing its environmental impact through the use of renewable energy sources."
         },
         {
             "slug": "bojnik-lebane",
@@ -223,7 +230,8 @@
             },
             "imgs" : [
                 "bojnik_lebane.jpg"
-            ]
+            ],
+            "about_project": "The solar power plant in Bojnik Lebane has a capacity of 8 MW and consists of 18,000 solar panels. The plant was constructed from May to September 2023 and is expected to produce around 9 GWh of clean energy annually. This project is part of the local government's initiative to promote renewable energy and reduce carbon emissions in the region."
         }
     ]
 }

@@ -1,0 +1,12 @@
+{
+    "h1": "Contact Us",
+    "description": "We would love to hear from you! Please fill out the form below and we will get in touch with you shortly.",
+    "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Telephone",
+        "subject": "Subject",
+        "message": "Message",
+        "send_button": "Send Message"
+    }
+}

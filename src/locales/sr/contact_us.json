@@ -1,0 +1,12 @@
+{
+    "h1": "Kontaktirajte nas",
+    "description": "Voleli bismo da čujemo vaše mišljenje! Molimo vas da popunite donji formular i uskoro ćemo stupiti u kontakt sa vama.",
+    "form": {
+        "name": "Ime",
+        "email": "Email",
+        "phone": "Telefon",
+        "subject": "Naslov",
+        "message": "Poruka",
+        "send_button": "Pošalji poruku" 
+    }
+}
