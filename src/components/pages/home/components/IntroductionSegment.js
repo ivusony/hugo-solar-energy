@@ -25,7 +25,9 @@ function IntroductionBox({
                     <div className="flex items-center justify-center w-24 h-24 mb-2">
                         { icon }
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
+                    <div className="h-15 flex items-center justify-center">
+                        <h3 className="text-lg md:text-xl text-center font-semibold">{title}</h3>
+                    </div>
                 </div>
             </Link>
         </motion.div>
@@ -63,7 +65,7 @@ export default function IntroductionSegment() {
                     <p className={`text-md md:text-xl font-normal text-center flex justify-center`}>
                         {locales[locale].home.components.IntroductionSegment.boxes.subtitle}
                     </p>
-                    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mt-5">
+                    <div className="max-w-7xl mx-auto grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mt-5">
                         <IntroductionBox 
                             icon={
                                 <svg width="90px" height="90px" viewBox="0 0 512 512">

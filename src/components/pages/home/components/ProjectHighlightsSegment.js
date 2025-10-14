@@ -55,7 +55,7 @@ export default function ProjectHighlightsSegment() {
 
     return(
         <div 
-            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-[var(--segment-padding-top)] bg-white"
+            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-15 pb-10 bg-white "
             id="project-highlights-segment"
         >
             <h2 className={`text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.ProjectHighlightsSegment.title}</h2>

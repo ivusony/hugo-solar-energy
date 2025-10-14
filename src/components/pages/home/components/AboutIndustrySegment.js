@@ -73,7 +73,7 @@ export default function AboutIndustrySegment() {
     return (
         <div 
             id="about-industry-segment" 
-            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-10 pb-5 bg-white "
+            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-15 pb-10 bg-white "
         >
             <h2 className={`text-3xl md:text-4xl font-bold pt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.AboutIndustrySegment.title}</h2>
             <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.AboutIndustrySegment.description}</h3>
@@ -82,12 +82,12 @@ export default function AboutIndustrySegment() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="grid grid-cols-2 sm:grid-cols-6 grid-rows-2 gap-6 mt-20 h-auto md:h-[400px]"
+                className="grid grid-cols-2 sm:grid-cols-6 grid-rows-2 gap-8 mt-20 max-w-7xl mx-auto"
             >
                 <motion.div
                     key={1}
                     variants={item}
-                    className={`col-span-3 row-span-2 bg-cover  bg-center  min-h-70 md:min-h-0 ${cardStyles.card}`}
+                    className={`col-span-3 row-span-2 bg-cover  bg-center h-[400px] md:min-h-0 ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/stock/solar-park-7.jpg"
@@ -97,8 +97,8 @@ export default function AboutIndustrySegment() {
                         objectFit="cover"
                     />
                     <div className={` bg-black bg-opacity-30 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                        <h3 className="text-xl font-semibold text-white mb-3 mt-7 tracking-wider">{locales[locale].home.components.AboutIndustrySegment.solar_parks.title}</h3>
-                        <span className="text-lg text-justify text-white">{locales[locale].home.components.AboutIndustrySegment.solar_parks.text}</span>
+                        <h3 className="text-xl font-semibold text-white mb-6 mt-3 tracking-wider">{locales[locale].home.components.AboutIndustrySegment.solar_parks.title}</h3>
+                        <span className="text-md md:text-lg text-justify text-white ">{locales[locale].home.components.AboutIndustrySegment.solar_parks.text}</span>
                         <div className="mt-4 flex justify-center">
                             <a 
                                 className={`bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-dark)] hover:scale-105 transition-all duration-300 text-white text-xs md:text-sm px-7 py-3`}
@@ -114,7 +114,7 @@ export default function AboutIndustrySegment() {
                 <motion.div
                     key={2}
                     variants={item}
-                    className={`col-span-3 row-span-2 bg-cover  bg-center min-h-70 md:min-h-0 ${cardStyles.card}`}
+                    className={`col-span-3 row-span-2 bg-cover  bg-center h-[400px] md:min-h-0 ${cardStyles.card}`}
                 >
                     <Image
                         src="/assets/images/stock/solar-roof-5.jpg"
@@ -124,7 +124,7 @@ export default function AboutIndustrySegment() {
                         objectFit="cover"
                     />
                     <div className={` bg-black bg-opacity-30 p-4 text-center rounded-b-2xl ${cardStyles.cardOverlay}`}>
-                        <h3 className="text-xl font-semibold text-white mb-3 mt-7 tracking-wider">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.title}</h3>
+                        <h3 className="text-xl font-semibold text-white mb-6 mt-3 tracking-wider">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.title}</h3>
                         <span className="text-lg text-justify text-white">{locales[locale].home.components.AboutIndustrySegment.solar_roofs.text}</span>
                         <div className="mt-4 flex justify-center">
                             <a 
