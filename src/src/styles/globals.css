@@ -12,7 +12,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { */
   :root {
     --background: #ffffff;
     --foreground: #ededed;
@@ -29,7 +29,7 @@
     --segment-padding-left : 3vw;
     --segment-padding-right : 3vw;
   }
-}
+/* } */
 
 @font-face {
     font-family: 'Montserrat';
