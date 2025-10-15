@@ -22,8 +22,8 @@ export default function Footer(){
         <div className={`relative pb-5 ${styles.Footer}`}>
             <div className={styles.FooterContent}>
                 {/* two even columns, stackabe on small screens - grid with 1 column on small screens, 2 columns on medium and larger screens.  */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 pb-5 border-b-1 border-[var(--color-darker)]">
-                    <div id="social" className={`flex justify-center md:justify-start`}>
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4 pt-10 pb-5 border-b-1 border-[var(--color-darker)]">
+                    <div id="social" className="flex justify-center md:justify-start md:col-span-2">
                         <a 
                             href="https://www.facebook.com/hugo.solar.energy" 
                             target="_blank" 
@@ -63,15 +63,13 @@ export default function Footer(){
                         </a>
                     </div>
                     {/* should be hidden on mobile */}
-                    <div id="quick-links" className="hidden 2xl:flex 2xl:justify-end">
+                    <div id="quick-links" className="hidden 2xl:flex 2xl:justify-end md:col-span-3">
                         {Object.keys(routes).map((key) => {
                             const route = routes[key];
 
                             // main link
                             const mainLink = route.path || route.index?.path;
                             const mainName = route.name?.[locale] || route.index?.name?.[locale];
-
-                          
 
                             return (
                                 <Link
