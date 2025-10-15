@@ -98,40 +98,43 @@ export default function Drawer() {
 
 
     // if document is clicked outside of drawer and drawer is open, close the drawer
-    useEffect(() => {
-        function handleClickOutside(event) {
-            const drawer = document.querySelector(`.${styles.navbarDrawer}`);
-            if (drawerVisible && !drawer.contains(event.target)) {
-                toggleDrawer();
-            }
-        }
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [drawerVisible, toggleDrawer]);
+    // useEffect(() => {
+    //     function handleClickOutside(event) {
+    //         const drawer = document.querySelector(`#navbarDrawer`);
+    //         if (drawerVisible && !drawer.contains(event.target)) {
+    //             console.log('Clicked outside of drawer' + Date.now());
+    //             toggleDrawer();
+    //         }
+    //     }
+    //     document.addEventListener("mousedown", handleClickOutside);
+    //     return () => {
+    //         document.removeEventListener("mousedown", handleClickOutside);
+    //     };
+    // }, [drawerVisible, toggleDrawer]);
 
     useEffect(() => {
         function handleScroll() {
-        const navbarDrawerControls = document.querySelector(
-            `.${styles.navbarDrawerControls}`
-        );
-        if (window.scrollY > 0) {
-            navbarDrawerControls.classList.add(styles.scrolled);
-        } else {
-            navbarDrawerControls.classList.remove(styles.scrolled);
-        }
+            const navbarDrawerControls = document.querySelector(
+                `.${styles.navbarDrawerControls}`
+            );
+            if (window.scrollY > 0) {
+                navbarDrawerControls.classList.add(styles.scrolled);
+            } else {
+                navbarDrawerControls.classList.remove(styles.scrolled);
+            }
         }
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     useEffect(() => {
-        const drawer = document.querySelector(`.${styles.navbarDrawer}`);
+        const drawer = document.querySelector(`#navbarDrawer`);
         if (drawerVisible) {
-        drawer.classList.add(styles.visible);
+            drawer.classList.remove("translate-x-[-100%]");
+            drawer.classList.add("translate-x-0");
         } else {
-        drawer.classList.remove(styles.visible);
+            drawer.classList.remove("translate-x-0");
+            drawer.classList.add("translate-x-[-100%]");
         }
     }, [drawerVisible]);
 
@@ -165,32 +168,41 @@ export default function Drawer() {
     };
 
   return (
-    <div className={`${styles.navbarDrawer} bg-[#EEF1F3]`}>
-      <div className={styles.navbarDrawerContainer}>
+    <div
+        className="fixed top-0 left-0 h-[100vh] w-full md:w-[400px] z-[100] bg-[#EEF1F3]  transition-transform duration-300 ease"
+        id="navbarDrawer"
+    >
         <div
-          className={`h-[100px] flex items-center transition-height duration-300 ease bg-[#fff] pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] ${styles.navbarDrawerControls}`}
+            className="h-inherit"
         >
-          <button onClick={toggleDrawer} className={styles.navbarDrawerCloseButton}>
-            <svg
-              height="30px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+                className={`h-[100px] flex items-center transition-height duration-300 ease bg-[#fff] pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] ${styles.navbarDrawerControls}`}
             >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z"
-                fill="#080341"
-              />
-            </svg>
-          </button>
-        </div>
+                <button 
+                    onClick={toggleDrawer} 
+                    className="cursor-pointer"
+                >
+                    <svg
+                        height="35px"
+                        stroke="var(--color-secondary)"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="hover:stroke-[var(--color)] transition-colors duration-200 ease-in-out"
+                    >
+                        <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M10.9393 12L6.9696 15.9697L8.03026 17.0304L12 13.0607L15.9697 17.0304L17.0304 15.9697L13.0607 12L17.0303 8.03039L15.9696 6.96973L12 10.9393L8.03038 6.96973L6.96972 8.03039L10.9393 12Z"
+                        />
+                    </svg>
+                </button>
+            </div>
 
-        <ul className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
-          {renderDrawerItems(routes)}
-        </ul>
-      </div>
+            <ul className="pl-5 md:pl-[var(--segment-padding-left)] pr-10 md:pr-[var(--segment-padding-right)] pt-10 ">
+            {renderDrawerItems(routes)}
+            </ul>
+        </div>
     </div>
   );
 }

@@ -41,9 +41,14 @@ export default function MainNavi() {
                 <div className={styles.navbarMain}>
                     <button
                         className={styles.navbarToggler}
+                        onClick={
+                            e => {
+                                e.stopPropagation();
+                                toggleDrawer();
+                            }
+                        }
                     >   
                         <span
-                            onClick={toggleDrawer}
                             className={styles.navbarTogglerIconContainer}
                         >
                             <svg height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -16,6 +16,7 @@
   :root {
     --background: #fff;
     --foreground: #EEF1F3;
+    --foreground-darker: #C4C4C4;
     --color: #00366C;
     --color-darker: #00214A;
     --color-lighter: #336699;
