@@ -1,8 +1,9 @@
 import routes from "@lib/routes";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-// Flatten nested routes into { "/path": { en: "...", sr: "..." } }
 function flattenRoutes(obj, result = {}) {
     for (const key in obj) {
         const val = obj[key];
@@ -46,49 +47,65 @@ export default function Breadcrumb() {
         return locale !== "sr" ? `/${locale}${path}` : path;
     };
 
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ threshold: 0.1 });
+
+    useEffect(() => {
+        if (inView) controls.start("visible");
+    }, [controls, inView]);
+
     return (
-        <nav className="flex text-sm text-gray-500" aria-label="Breadcrumb">
-            <div className="bg-white pt-2 pb-2">
-                <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                    {/* Root */}
-                    <li>
-                        <a
-                            href={locale !== "sr" ? `/${locale}` : "/"}
-                            className="inline-flex items-center text-gray-700 hover:text-[var(--color-secondary)] font-medium"
-                        >
-                            hugosolarenergy.rs
-                        </a>
-                    </li>
+        <nav className="flex text-sm text-gray-500" ar="Breadcrumb">
+            <motion.div
+                ref={ref}
+                initial={{ x: -50, opacity: 0 }}
+                animate={controls}
+                variants={{
+                    visible: { x: 0, opacity: 1, transition: { duration: 0.4 } },
+                }}
+            >
+                <div className="bg-white pt-2 pb-2">
+                    <ol className="inline-flex items-center space-x-1 md:space-x-3">
+                        {/* Root */}
+                        <li>
+                            <a
+                                href={locale !== "sr" ? `/${locale}` : "/"}
+                                className="inline-flex items-center text-gray-700 hover:text-[var(--color-secondary)] font-medium"
+                            >
+                                hugosolarenergy.rs
+                            </a>
+                        </li>
 
-                    {/* Segments */}
-                    {segments.map((seg, i) => {
-                        const href = buildHref(i);
-                        const routeKey = "/" + segments.slice(0, i + 1).join("/");
-                        const nameObj = flatRoutes[routeKey];
-                        const label = nameObj ? nameObj[locale] : seg.replace(/-/g, " ");
+                        {/* Segments */}
+                        {segments.map((seg, i) => {
+                            const href = buildHref(i);
+                            const routeKey = "/" + segments.slice(0, i + 1).join("/");
+                            const nameObj = flatRoutes[routeKey];
+                            const label = nameObj ? nameObj[locale] : seg.replace(/-/g, " ");
 
-                        return (
-                            <li key={href}>
-                                <div className="flex items-center">
-                                    <span className="mx-2 text-gray-400">›</span>
-                                    {i === segments.length - 1 ? (
-                                        <span className="text-gray-700 font-medium whitespace-nowrap">
-                                            {label}
-                                        </span>
-                                    ) : (
-                                        <a
-                                            href={href}
-                                            className="text-gray-700 hover:text-[var(--color-secondary)] font-medium whitespace-nowrap"
-                                        >
-                                            {label}
-                                        </a>
-                                    )}
-                                </div>
-                            </li>
-                        );
-                    })}
-                </ol>
-            </div>
+                            return (
+                                <li key={href}>
+                                    <div className="flex items-center">
+                                        <span className="mx-2 text-gray-400">›</span>
+                                        {i === segments.length - 1 ? (
+                                            <span className="text-gray-700 font-medium whitespace-nowrap">
+                                                {label}
+                                            </span>
+                                        ) : (
+                                            <a
+                                                href={href}
+                                                className="text-gray-700 hover:text-[var(--color-secondary)] font-medium whitespace-nowrap"
+                                            >
+                                                {label}
+                                            </a>
+                                        )}
+                                    </div>
+                                </li>
+                            );
+                        })}
+                    </ol>
+                </div>
+            </motion.div>
         </nav>
     );
 }

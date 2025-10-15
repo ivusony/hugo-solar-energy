@@ -58,7 +58,7 @@ export default function IntroductionSegment() {
                 <h2 className={`text-2xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.IntroductionSegment.title}</h2>
                 <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.IntroductionSegment.text}</h3>
                 
-                <div className="bg-[#EEF1F3] py-10 w-full border-t-3 border-[var(--color)]">
+                <div className="bg-[var(--foreground)] py-10 w-full border-t-3 border-[var(--color)]">
                     <p className={`text-2xl md:text-3xl font-bold mt-5 mb-5 text-center flex justify-center`}>
                         {locales[locale].home.components.IntroductionSegment.boxes.title}
                     </p>
