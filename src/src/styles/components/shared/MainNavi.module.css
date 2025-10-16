@@ -65,12 +65,6 @@
     color: white; */
 }
 
-@media (max-width: 1000px) {
-    .navbarBrandName {
-        display: none;
-    }
-}
-
 .mainNaviLogo {
     max-height: 40px;
     float: right;
