@@ -28,10 +28,10 @@ export default function AdvantagesOfSolarParks() {
             className="relative w-full mx-auto py-20 px-2 md:px-0"
         >
             <div className="max-w-7xl mx-auto w-full  text-center mb-12">
-                <h2 className="text-3xl font-extrabold text-[var(--color)] mb-7">
+                <h2 className="hugo-h2">
                     { locales[locale].project_development.AdvantagesOfSolarParksSegment.title }
                 </h2>
-                <p className="mb-5 text-justify  text-xl ">
+                <p className="hugo-p-justify">
                     { locales[locale].project_development.AdvantagesOfSolarParksSegment.description }
                 </p>
 

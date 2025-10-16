@@ -32,12 +32,9 @@ export default function SupportAndMaintenance() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="max-w-7xl mx-auto"
+                className="bg-[var(--background)] py-5 mx-auto max-w-7xl px-2 md:px-0"
             >
-                <div className="pb-[var(--segment-padding-bottom)]">
-                    <Breadcrumb/>
-                </div>
-
+                <Breadcrumb/>
 
                 <motion.div
                     key={1}
@@ -45,10 +42,8 @@ export default function SupportAndMaintenance() {
                     className="max-w-7xl mx-auto text-center px-2 md:px-0"
                     id="header"
                 > 
-                    <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                        <h1 className="bg-white p-1">{ locales[locale].support_and_maintenance.h1 }</h1>
-                    </div>
-                    <h2 className="text-2xl md:text-3xl font-normal mb-10  font-italic text-justify md:text-center">
+                    <h1 className="hugo-h1">{ locales[locale].support_and_maintenance.h1 }</h1>
+                    <h2 className="hugo-h2">
                         {
                             findCompanyTitleAndMakeLink(locales[locale].support_and_maintenance.h2)
                         }

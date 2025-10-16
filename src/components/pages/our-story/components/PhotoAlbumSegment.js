@@ -52,13 +52,13 @@ export default function PhotoAlbumSegment() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="pt-10 pb-10 px-2 md:px-0"
+                className="bg-[var(--background)] pt-10 pb-10 px-2 md:px-0"
             >
                 <motion.div
                     key={0}
                     variants={item}
                 >
-                    <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
+                    <h2 className="hugo-h2">
                         { locales[locale].our_story.components.PhotoAlbumSegment.h2 }
                     </h2>
                 </motion.div>

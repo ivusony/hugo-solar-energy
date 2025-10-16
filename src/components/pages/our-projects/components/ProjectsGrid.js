@@ -63,7 +63,7 @@ export default function ProjectsGrid() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] mb-15"
+            className="relative  mb-15"
         >
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 grid-rows-32 sm:grid-rows-24 md:grid-rows-22 gap-3 md:gap-6 h-[1700px] md:h-[1000px] p-4">
 

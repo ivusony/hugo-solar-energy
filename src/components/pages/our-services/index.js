@@ -29,45 +29,41 @@ export default function OurServices() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="max-w-7xl mx-auto"
+                className="bg-[var(--background)] py-5 mx-auto max-w-7xl px-2 md:px-0"
             >
-                <div className="pb-[var(--segment-padding-bottom)] px-2 md:px-0">
-                    <Breadcrumb/>
+                <Breadcrumb/>
 
-                    <motion.div
-                        key={1}
-                        variants={item}
-                        className="max-w-7xl mx-auto text-center"
-                    > 
-                        <div className="text-3xl md:text-4xl font-bold mt-5 mb-10  flex justify-center">
-                            <h1 className="bg-white p-1">{ locales[locale].our_services.h1 }</h1>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-normal mb-10  font-italic text-center">
-                            {
-                                locales[locale].our_services.h2
-                            }
-                        </h2>
-                        <h3 className="text-lg md:text-2xl font-normal mb-10 text-justify md:text-center  font-italic">
-                            {
-                                locales[locale].our_services.h3
-                            }
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                            <p className="mb-5 text-justify  text-xl">
-                                { locales[locale].our_services.p1 }
-                            </p>
-                            <p className="mb-5 text-justify  text-xl ">
-                                { locales[locale].our_services.p2 }
-                            </p>
-                           
-                        </div>
-                    </motion.div>
+                <motion.div
+                    key={1}
+                    variants={item}
+                    className="max-w-7xl mx-auto text-center px-2 md:px-0"
+                > 
+                    <h1 className="hugo-h1">{ locales[locale].our_services.h1 }</h1>
+                    <h2 className="hugo-h2">
+                        {
+                            locales[locale].our_services.h2
+                        }
+                    </h2>
+                    <h3 className="hugo-h3">
+                        {
+                            locales[locale].our_services.h3
+                        }
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+                        <p className="hugo-p-justify">
+                            { locales[locale].our_services.p1 }
+                        </p>
+                        <p className="hugo-p-justify">
+                            { locales[locale].our_services.p2 }
+                        </p>
+                        
+                    </div>
+                </motion.div>
 
-                    <CentralServiceElemetsSegment />
+                <CentralServiceElemetsSegment />
 
-                    <EndMessageSegment />
+                <EndMessageSegment />
                     
-                </div>
             </motion.div>
         </>
 

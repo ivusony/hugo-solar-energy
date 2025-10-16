@@ -52,16 +52,16 @@ export default function Procurement() {
                 variants={item}
                 className="mt-10 px-2 md:px-0"
             >
-                <h3 className="mb-5 text-center text-xl md:text-2xl font-bold">
+                <h3 className="hugo-h2">
                     { locales[locale].procurement_and_construction.procurement.h3 }
                 </h3>
-                <p className="mb-5 text-justify md:text-center text-xl">
+                <p className="hugo-p-justify">
                     { findCompanyTitleAndMakeLink(locales[locale].procurement_and_construction.procurement.p1) }
                 </p>
-                <p className="mb-5 text-justify md:text-center text-xl">
+                <p className="hugo-p-justify">
                     { findCompanyTitleAndMakeLink(locales[locale].procurement_and_construction.procurement.p2) }
                 </p>
-                <p className="mb-5 text-justify md:text-center text-xl">
+                <p className="hugo-p-justify">
                     { findCompanyTitleAndMakeLink(locales[locale].procurement_and_construction.procurement.p3) }
                 </p>
             </motion.div>

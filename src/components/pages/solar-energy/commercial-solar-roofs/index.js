@@ -46,14 +46,14 @@ const FAQItem = ({ key, question, answer }) => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full flex justify-between items-center text-left text-gray-800 font-medium px-4 py-4 focus:outline-none"
             >
-                <span className="text-xl text-[var(--color)]">{question}</span>
+                <span className="hugo-h3">{question}</span>
                 <svg
                     className={`w-5 h-5 transition-transform duration-300 stroke-[var(--color-secondary)] ${isOpen ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                 >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
             <div
@@ -61,13 +61,13 @@ const FAQItem = ({ key, question, answer }) => {
                 style={{ maxHeight: height }}
                 className="overflow-hidden transition-all duration-500 px-4"
             >
-                <p className="py-2 text-[var(--color)] text-justify">{findCompanyTitleAndMakeLink(answer)}</p>
+                <p className="hugo-p-justify">{findCompanyTitleAndMakeLink(answer)}</p>
             </div>
         </motion.div>
     );
 };
 
-// 
+
 function FAQSolarRoofs() {
     let { locale } = useRouter();
     let locales = useLocales();
@@ -88,7 +88,7 @@ function FAQSolarRoofs() {
             id="solar-industry-segment"
             className="max-w-7xl mx-auto text-center mt-10  py-10 bg-white"
         >
-            <h2 className="text-3xl font-bold mb-6 text-center"> { locales[locale].commercial_solar_roofs.FAQ.title }</h2>
+            <h2 className="hugo-h2"> { locales[locale].commercial_solar_roofs.FAQ.title }</h2>
             <div className="space-y-2">
                 {locales[locale].commercial_solar_roofs.FAQ.accordion.map((item, idx) => (
                     <FAQItem 
@@ -137,13 +137,13 @@ function  WhySolarRoofs(){
             initial="hidden"
             animate={controls}
             id="solar-industry-segment"
-            className="max-w-7xl mx-auto text-center mt-10 bg-[#EEF1F3] py-10"
+            className="max-w-7xl mx-auto text-center mt-10 bg-[var(--foreground)] py-10"
         >
             <motion.div
                 key={0}
                 variants={item}
             > 
-                <h2 className="text-2xl md:text-3xl font-bold mb-5">{ locales[locale].commercial_solar_roofs.why_solar_roofs.title}</h2>
+                <h2 className="hugo-h2">{ locales[locale].commercial_solar_roofs.why_solar_roofs.title}</h2>
             </motion.div>
             {/* two columns two rows stackable grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 px-5">
@@ -155,7 +155,7 @@ function  WhySolarRoofs(){
                     <div className="paragraph-icon mb-5 text-3xl text-[var(--color-secondary)] justify-start flex">
                         01
                     </div>
-                    <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p1) }</p>
+                    <p className="hugo-p-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p1) }</p>
                 </motion.div>
                 <motion.div
                     key={2}
@@ -165,7 +165,7 @@ function  WhySolarRoofs(){
                     <div className="paragraph-icon mb-5 text-3xl text-[var(--color-secondary)] justify-start flex">
                         02
                     </div>
-                    <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p2) }</p>
+                    <p className="hugo-p-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p2) }</p>
                 </motion.div>
                 <motion.div
                     key={3}
@@ -175,7 +175,7 @@ function  WhySolarRoofs(){
                     <div className="paragraph-icon mb-5 text-3xl text-[var(--color-secondary)] justify-start flex">
                         03
                     </div>
-                    <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p3) }</p>
+                    <p className="hugo-p-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p3) }</p>
                 </motion.div>
                 <motion.div
                     key={4}
@@ -185,7 +185,7 @@ function  WhySolarRoofs(){
                     <div className="paragraph-icon mb-5 text-3xl text-[var(--color-secondary)] justify-start flex">
                         04
                     </div>
-                    <p className="text-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p4) }</p>
+                    <p className="hugo-p-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.why_solar_roofs.p4) }</p>
                 </motion.div>
             </div>
         </motion.div>
@@ -240,11 +240,9 @@ export default function CommercialSolarRoofs() {
                 initial="hidden"
                 animate={controls}
                 id="solar-industry-segment"
-                className="mx-auto max-w-7xl py-5"
+                className="bg-[var(--background)] py-5 mx-auto max-w-7xl px-2 md:px-0"
             >
-                <div className="px-2 md:px-0">
-                    <Breadcrumb />
-                </div>
+                <Breadcrumb />
                 
                 {/* h1 & h2 */}
                 <motion.div
@@ -252,10 +250,8 @@ export default function CommercialSolarRoofs() {
                     variants={item}
                     className="max-w-7xl mx-auto text-center px-2 md:px-0"
                 > 
-                    <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                        <h1 className="bg-white p-1">{ locales[locale].commercial_solar_roofs.h1 }</h1>
-                    </div>
-                    <h2 className="text-xl md:text-2xl font-normal mb-10 text-justify  font-italic ">
+                    <h1 className="hugo-h1">{ locales[locale].commercial_solar_roofs.h1 }</h1>
+                    <h2 className="hugo-h2">
                         {
                             locales[locale].commercial_solar_roofs.h2
                         }
@@ -270,13 +266,13 @@ export default function CommercialSolarRoofs() {
                 > 
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                        <div className="mb-5 text-justify  text-xl">
-                            <h3 className="font-bold mb-2">{ locales[locale].commercial_solar_roofs.p1.title }</h3>
-                            <p>{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.p1.text) }</p>
+                        <div>
+                            <h3 className="hugo-h3">{ locales[locale].commercial_solar_roofs.p1.title }</h3>
+                            <p className="hugo-p-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.p1.text) }</p>
                         </div>
-                        <div className="mb-5 text-justify  text-xl">
-                            <h3 className="font-bold mb-2">{ locales[locale].commercial_solar_roofs.p2.title }</h3>
-                            <p>{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.p2.text) }</p>
+                        <div>
+                            <h3 className="hugo-h3">{ locales[locale].commercial_solar_roofs.p2.title }</h3>
+                            <p className="hugo-p-justify">{ findCompanyTitleAndMakeLink(locales[locale].commercial_solar_roofs.p2.text) }</p>
                         </div>
                     </div>
                 </motion.div>

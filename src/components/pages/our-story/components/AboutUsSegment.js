@@ -37,13 +37,13 @@ export default function AboutUsSegment() {
                 key={0}
                 variants={item}
             >
-                <h1 className="text-4xl md:text-5xl font-bold text-center mb-10 mt-10">{ locales[locale].our_story.components.AboutUsSegment.h1 }</h1>
+                <h1 className="hugo-h1">{ locales[locale].our_story.components.AboutUsSegment.h1 }</h1>
             </motion.div>
             <motion.div
                 key={1}
                 variants={item}
             >
-                <h2 className="text-xl md:text-3xl font-semibold mb-10 text-justify md:text-center">
+                <h2 className="hugo-h2">
                     { locales[locale].our_story.components.AboutUsSegment.h2 }
                 </h2>
             </motion.div>
@@ -52,7 +52,7 @@ export default function AboutUsSegment() {
                         key={2}
                         variants={item}
                     >
-                        <p className="mb-5 text-justify  text-xl ">
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.AboutUsSegment.p1 }
                         </p>
                     </motion.div>
@@ -60,7 +60,7 @@ export default function AboutUsSegment() {
                         key={3}
                         variants={item}
                     >
-                        <p className="mb-5 text-justify  text-xl ">
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.AboutUsSegment.p2 }
                         </p>
                     </motion.div>
@@ -68,7 +68,7 @@ export default function AboutUsSegment() {
                         key={4}
                         variants={item}
                     >
-                        <p className="mb-5 text-justify  text-xl ">
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.AboutUsSegment.p3 }
                         </p>
                     </motion.div>
@@ -76,7 +76,7 @@ export default function AboutUsSegment() {
                         key={5}
                         variants={item}
                     >
-                        <p className="mb-5 text-justify  text-xl ">
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.AboutUsSegment.p4 }
                         </p>
                     </motion.div>

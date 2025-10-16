@@ -13,24 +13,45 @@
 }
 
 /* @media (prefers-color-scheme: dark) { */
-  :root {
-    --background: #fff;
-    --foreground: #EEF1F3;
-    --foreground-darker: #C4C4C4;
-    --color: #00366C;
-    --color-darker: #00214A;
-    --color-lighter: #336699;
-    --color-secondary: #F5A623;
-    --color-secondary-dark: #D48806;
-    --h1-size: 4vw;
-    --h1-size-mobile: 9vw;
-    --h2-size: 3vw;
-    --h2-size-mobile: 5vw;
-    --segment-padding-top : 80px;
-    --segment-padding-left : 3vw;
-    --segment-padding-right : 3vw;
-  }
 /* } */
+
+:root {
+--background: #fff;
+--foreground: #EEF1F3;
+--foreground-darker: #C4C4C4;
+--color: #00366C;
+--color-darker: #00214A;
+--color-lighter: #336699;
+--color-secondary: #F5A623;
+--color-secondary-dark: #D48806;
+--h1-size: 4vw;
+--h1-size-mobile: 9vw;
+--h2-size: 3vw;
+--h2-size-mobile: 5vw;
+--segment-padding-top : 80px;
+--segment-padding-left : 3vw;
+--segment-padding-right : 3vw;
+}
+
+.hugo-h1 {
+    @apply text-4xl md:text-5xl font-bold text-center mb-10 mt-10;
+}
+
+.hugo-h2 {
+    @apply text-xl md:text-2xl font-semibold mb-10 text-center;
+}
+
+.hugo-h3 {
+    @apply font-bold text-lg mb-5 text-[var(--color)];
+}
+
+.hugo-p-justify {
+    @apply mb-5 text-justify  text-xl;
+}
+
+.hugo-p {
+    @apply mb-5 text-lg;
+}
 
 @font-face {
     font-family: 'Montserrat';

@@ -33,12 +33,9 @@ export default function SalesOfEquipment() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="max-w-7xl mx-auto"
+                className="bg-[var(--background)] py-5 mx-auto max-w-7xl px-2 md:px-0"
             >
-                <div className="pb-[var(--segment-padding-bottom)] px-2 md:px-0">
-                    <Breadcrumb/>
-                </div>
-
+                <Breadcrumb/>
 
                 <motion.div
                     key={1}
@@ -46,10 +43,8 @@ export default function SalesOfEquipment() {
                     className="max-w-7xl mx-auto text-center px-2 md:px-0"
                     id="header"
                 > 
-                    <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                        <h1 className="bg-white p-1">{ locales[locale].sales_of_equipment.h1 }</h1>
-                    </div>
-                    <h2 className="text-2xl md:text-3xl font-normal mb-10  font-italic text-justify md:text-center">
+                    <h1 className="hugo-h1">{ locales[locale].sales_of_equipment.h1 }</h1>
+                    <h2 className="hugo-h2">
                         {
                             findCompanyTitleAndMakeLink(locales[locale].sales_of_equipment.h2)
                         }
@@ -61,18 +56,18 @@ export default function SalesOfEquipment() {
                     variants={item}
                     className="max-w-7xl mx-auto grid grid-cols-1 gap-10 mb-10 px-2 md:px-0"
                 > 
-                    <p className="mb-5 text-justify md:text-center text-xl ">
+                    <p className="hugo-p-justify">
                         { findCompanyTitleAndMakeLink(locales[locale].sales_of_equipment.p1) }
                     </p>
                 </motion.div>
 
 
+                <SalesEquipment/>
 
+                <EndMessageSegment/>
             </motion.div>
 
-            <SalesEquipment/>
-
-            <EndMessageSegment/>
+           
 
         </>
     )

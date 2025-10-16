@@ -39,12 +39,12 @@ export default function ProjectDevelopmentSteps() {
                     <div className="bg-white p-6 rounded-lg shadow-md w-full h-full transform transition-transform duration-300 hover:scale-105 z-10 flex flex-col items-center">
                         
                         {/* Icon */}
-                        <svg className="w-8 h-8 mb-3" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
-                        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" />
+                        <svg width="40px" height="40px" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
+                            <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" />
                         </svg>
 
-                        <h3 className="font-semibold mb-2 text-2xl">{ locales[locale].project_development.DevelopmentStepsSegment.steps["1"].title }</h3>
-                        <p className="absolute bottom-2 p-5 text-lg text-[var(--color)] text-justify">
+                        <h3 className="hugo-h3">{ locales[locale].project_development.DevelopmentStepsSegment.steps["1"].title }</h3>
+                        <p className="hugo-p">
                             { locales[locale].project_development.DevelopmentStepsSegment.steps["1"].description }
                         </p>
                     </div>
@@ -60,13 +60,13 @@ export default function ProjectDevelopmentSteps() {
                     className="relative flex flex-col items-center text-center h-[230px] w-full"
                 >
                     <div className="bg-white p-6 rounded-lg shadow-md w-full h-full transform transition-transform duration-300 hover:scale-105 z-10 flex flex-col items-center">
-                        
-                        <svg className="w-8 h-8 mb-3" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
+
+                        <svg width="40px" height="40px" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
                         <path d="M12 20l9-5-9-5-9 5 9 5zm0-10l9-5-9-5-9 5 9 5z" />
                         </svg>
 
-                        <h3 className="font-semibold mb-2 text-2xl">{ locales[locale].project_development.DevelopmentStepsSegment.steps["2"].title }</h3>
-                        <p className="absolute bottom-2 p-5 text-lg text-[var(--color)] text-justify">
+                        <h3 className="hugo-h3">{ locales[locale].project_development.DevelopmentStepsSegment.steps["2"].title }</h3>
+                        <p className="hugo-p">
                             { locales[locale].project_development.DevelopmentStepsSegment.steps["2"].description }
                         </p>
                     </div>
@@ -84,14 +84,14 @@ export default function ProjectDevelopmentSteps() {
                     className="relative flex flex-col items-center text-center h-[230px] w-full"
                 >
                     <div className="bg-white p-6 rounded-lg shadow-md w-full h-full transform transition-transform duration-300 hover:scale-105 z-10 flex flex-col items-center">
-                        
-                        <svg className="w-8 h-8 mb-3" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
+
+                        <svg width="40px" height="40px" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
                         <path d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
                         <path d="M12 14c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z" />
                         </svg>
 
-                        <h3 className="font-semibold mb-2 text-2xl">{ locales[locale].project_development.DevelopmentStepsSegment.steps["3"].title }</h3>
-                        <p className="absolute bottom-2 p-5 text-lg text-[var(--color)] text-justify">
+                        <h3 className="hugo-h3">{ locales[locale].project_development.DevelopmentStepsSegment.steps["3"].title }</h3>
+                        <p className="hugo-p">
                             { locales[locale].project_development.DevelopmentStepsSegment.steps["3"].description }
                         </p>
                     </div>
@@ -109,13 +109,13 @@ export default function ProjectDevelopmentSteps() {
                     className="relative flex flex-col items-center text-center h-[230px] w-full"
                 >
                     <div className="bg-white p-6 rounded-lg shadow-md w-full h-full transform transition-transform duration-300 hover:scale-105 z-10 flex flex-col items-center">
-                        
-                        <svg className="w-8 h-8 mb-3" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
+
+                        <svg width="30px" height="30px" fill="none" stroke="var(--color-secondary)" strokeWidth="2" viewBox="0 0 24 24">
                         <path d="M4 6h16M4 10h16M4 14h16M4 18h16" />
                         </svg>
 
-                        <h3 className="font-semibold mb-2 text-2xl">{ locales[locale].project_development.DevelopmentStepsSegment.steps["4"].title }</h3>
-                        <p className="absolute bottom-2 p-5 text-lg text-[var(--color)] text-justify">
+                        <h3 className="hugo-h3">{ locales[locale].project_development.DevelopmentStepsSegment.steps["4"].title }</h3>
+                        <p className="hugo-p">
                             { locales[locale].project_development.DevelopmentStepsSegment.steps["4"].description }
                         </p>
                     </div>

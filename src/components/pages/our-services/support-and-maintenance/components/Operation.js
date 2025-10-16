@@ -52,7 +52,7 @@ export default function Operation() {
                 variants={item}
                 className="mt-10 px-2 md:px-0"
             >
-                <p className="mb-5 text-justify md:text-center text-xl">
+                <p className="hugo-p-justify">
                     { findCompanyTitleAndMakeLink(locales[locale].support_and_maintenance.operation.h4) }
                 </p>
             </motion.div>
@@ -71,13 +71,13 @@ export default function Operation() {
                     />
                 </motion.div>
 
-            <div className="bg-[#EEF1F3] p-4 mt-15">
+            <div className="bg-[var(--color-foreground)] p-4 mt-15">
                 <motion.div
                     key={3}
                     variants={item}
                     className="px-2 md:px-0 "
                 >
-                        <h4 className="font-semibold text-xl mb-6">{ locales[locale].support_and_maintenance.operation.list_title }</h4>
+                        <h4 className="hugo-h3">{ locales[locale].support_and_maintenance.operation.list_title }</h4>
                 </motion.div>
                 {
                     locales[locale].support_and_maintenance.operation.list.map((listItem, index) => (

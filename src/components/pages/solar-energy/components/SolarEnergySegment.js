@@ -42,35 +42,33 @@ export default function SolarEnergySegment() {
             initial="hidden"
             animate={controls}
             id="solar-industry-segment"
-            className="py-5 mx-auto max-w-7xl px-2 md:px-0"
+            className="bg-[var(--background)] py-5 mx-auto max-w-7xl px-2 md:px-0"
         >   
             <Breadcrumb />
 
             <motion.div
                 key={1}
                 variants={item}
-                className="max-w-7xl mx-auto text-center"
+                className="max-w-7xl mx-auto"
             > 
-                <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                    <h2 className="bg-white p-1">{ locales[locale].solar_energy.components.solar_energy.h2 }</h2>
-                </div>
-                <h3 className="text-xl md:text-2xl font-normal mb-10 text-justify  font-italic">
+                <h2 className="hugo-h1">{ locales[locale].solar_energy.components.solar_energy.h2 }</h2>
+                <h3 className="hugo-h2">
                     {
                         locales[locale].solar_energy.components.solar_energy.h3
                     }
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                    <p className="mb-5 text-justify  text-xl ">
+                    <p className="hugo-p-justify">
                         { locales[locale].solar_energy.components.solar_energy.p1 }
                     </p>
-                    <p className="mb-5 text-justify  text-xl ">
+                    <p className="hugo-p-justify">
                         { locales[locale].solar_energy.components.solar_energy.p2 }
                     </p>
-                    <p className="mb-5 text-justify  text-xl ">
+                    <p className="hugo-p-justify">
                         { locales[locale].solar_energy.components.solar_energy.p3 }
                     </p>
-                    <p className="mb-5 text-justify  text-xl ">
+                    <p className="hugo-p-justify">
                         { locales[locale].solar_energy.components.solar_energy.p4 }
                     </p>
                 </div>

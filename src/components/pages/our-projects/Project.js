@@ -159,15 +159,10 @@ export default function Project({ project }) {
                     variants={container}
                     initial="hidden"
                     animate={controls}
-                    className="max-w-7xl mx-auto px-2 md:px-0"
+                    className="bg-[var(--background)] py-5 mx-auto max-w-7xl px-2 md:px-0"
                 >
 
-                    
-
-                    <div className="pb-[var(--segment-padding-bottom)]">
-                        <Breadcrumb/>
-                    </div>
-
+                    <Breadcrumb/>
 
                     <motion.div
                         key={1}
@@ -175,9 +170,7 @@ export default function Project({ project }) {
                         className="max-w-7xl mx-auto text-center"
                         id="header"
                     > 
-                        <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                            <h1 className="bg-white p-1">{ project.name }</h1>
-                        </div>
+                        <h1 className="hugo-h1">{ project.name }</h1>
                         
                     </motion.div>
 
@@ -195,7 +188,7 @@ export default function Project({ project }) {
                     >
                         { project.about_project && 
                             <div className="max-w-7xl mx-auto my-15 p-0 sm:p-4  bg-white ">
-                                <p className="text-[--var(--color)] text-xl mb-4 px-4">{ project.about_project }</p>
+                                <p className="hugo-p-justify">{ project.about_project }</p>
                             </div>
                         }
                     </motion.div>

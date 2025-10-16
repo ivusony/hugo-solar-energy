@@ -52,7 +52,7 @@ export default function Contstruction() {
                 variants={item}
                 className="mt-10 px-2 md:px-0"
             >
-                <h3 className="mb-5 text-center text-xl md:text-2xl font-bold">
+                <h3 className="hugo-h2">
                     { locales[locale].procurement_and_construction.construction.h3 }
                 </h3>
             </motion.div>
@@ -62,7 +62,7 @@ export default function Contstruction() {
                 variants={item}
                 className="px-2 md:px-0"
             >
-                <p className="mb-5 text-justify md:text-center text-xl">
+                <p className="hugo-p-justify">
                     { findCompanyTitleAndMakeLink(locales[locale].procurement_and_construction.construction.p1) }
                 </p>
             </motion.div>
@@ -72,23 +72,18 @@ export default function Contstruction() {
                 variants={item}
                 className="px-2 md:px-0"
             >
-                <p className="mb-5 text-justify md:text-center text-xl">
+                <p className="hugo-p-justify">
                     { findCompanyTitleAndMakeLink(locales[locale].procurement_and_construction.construction.p2) }
                 </p>
             </motion.div>
 
-            
-                
-
-           
-
-            <div className="bg-[#EEF1F3] p-4 mt-15">
+            <div className="bg-[var(--color-foreground)] p-4 mt-15">
                 <motion.div
                     key={4}
                     variants={item}
                     className="px-2 md:px-0"
                 >
-                    <h4 className="font-semibold text-xl mb-6">{ locales[locale].procurement_and_construction.construction.h4 }</h4>
+                    <h4 className="hugo-h3">{ locales[locale].procurement_and_construction.construction.h4 }</h4>
                 </motion.div>
                 {
                     locales[locale].procurement_and_construction.construction.list.map((listItem, index) => (

@@ -17,7 +17,7 @@ export default function SolarEnergy() {
         const label = document.getElementById('page-label');
         if (banner && label) {
             const offset = window.pageYOffset;
-            label.style.transform = `translateY(${offset * 0.3}px)`;
+            label.style.transform = `translateY(${offset * 0.5}px)`;
         }
     }
 
@@ -31,7 +31,7 @@ export default function SolarEnergy() {
 
     return (
         <div id="solar-energy" className={`${ styles.SolarEnergy }`}>
-            <div id="page-banner" className="h-[100vh] flex items-center justify-center">
+            <div id="page-banner" className="h-[100vh] flex items-center justify-center bg-[var(--background)] ">
                 <Image
                     src="/assets/images/stock/solar-energy.jpg"
                     alt="Solar Energy Banner"

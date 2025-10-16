@@ -31,14 +31,14 @@ export default function EndMessageSegment() {
                 key={0}
                 variants={item}
             >
-                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-5">{locales[locale].support_and_maintenance.EndMessageSegment.title}</h2>
+                <h2 className="hugo-h2">{locales[locale].support_and_maintenance.EndMessageSegment.title}</h2>
             </motion.div>
 
             <motion.div
                 key={1}
                 variants={item}
             >
-                <p className="max-w-3xl mx-auto text-center text-lg md:text-xl">{ findCompanyTitleAndMakeLink(locales[locale].support_and_maintenance.EndMessageSegment.text) }</p>
+                <p className="hugo-p-justify max-w-3xl mx-auto">{ findCompanyTitleAndMakeLink(locales[locale].support_and_maintenance.EndMessageSegment.text) }</p>
             </motion.div>
 
             {/* center align <a> tag button, secondary color, white text, sharp corners, large - contact us */}

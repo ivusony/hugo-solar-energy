@@ -130,9 +130,11 @@ export default function Drawer() {
     useEffect(() => {
         const drawer = document.querySelector(`#navbarDrawer`);
         if (drawerVisible) {
+            console.log('Opening drawer' + Date.now());
             drawer.classList.remove("translate-x-[-100%]");
             drawer.classList.add("translate-x-0");
         } else {
+            console.log('Closing drawer' + Date.now());
             drawer.classList.remove("translate-x-0");
             drawer.classList.add("translate-x-[-100%]");
         }
@@ -169,7 +171,7 @@ export default function Drawer() {
 
   return (
     <div
-        className="fixed top-0 left-0 h-[100vh] w-full md:w-[400px] z-[100] bg-[#EEF1F3]  transition-transform duration-300 ease"
+        className="fixed top-0 left-0 h-[100vh] w-full md:w-[400px] z-[100] bg-[#EEF1F3] translate-x-[-100%] transition-transform duration-300 ease"
         id="navbarDrawer"
     >
         <div

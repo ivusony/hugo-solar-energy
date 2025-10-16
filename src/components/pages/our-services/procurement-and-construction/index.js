@@ -31,12 +31,9 @@ export default function ProcurementAndConstruction() {
                 variants={container}
                 initial="hidden"
                 animate={controls}
-                className="max-w-7xl mx-auto px-2 md:px-0"
+                className="bg-[var(--background)] py-5 mx-auto max-w-7xl px-2 md:px-0"
             >
-                <div className="pb-[var(--segment-padding-bottom)]">
-                    <Breadcrumb/>
-                </div>
-
+                <Breadcrumb/>
 
                 <motion.div
                     key={1}
@@ -44,10 +41,8 @@ export default function ProcurementAndConstruction() {
                     className="max-w-7xl mx-auto text-center"
                     id="header"
                 > 
-                    <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                        <h1 className="bg-white p-1">{ locales[locale].procurement_and_construction.h1 }</h1>
-                    </div>
-                    <h2 className="text-2xl md:text-3xl font-normal mb-10  font-italic text-justify md:text-center">
+                    <h1 className="hugo-h1">{ locales[locale].procurement_and_construction.h1 }</h1>
+                    <h2 className="hugo-h2">
                         {
                             locales[locale].procurement_and_construction.h2
                         }
@@ -59,18 +54,18 @@ export default function ProcurementAndConstruction() {
                     variants={item}
                     className="max-w-7xl mx-auto grid grid-cols-1 gap-10 mb-10"
                 > 
-                    <h3 className="mb-5 text-justify md:text-center text-xl ">
+                    <h3 className="hugo-h3 text-center">
                         { locales[locale].procurement_and_construction.h3 }
                     </h3>
                 </motion.div>
 
+                <Procurement/>
+
+                <Contstruction/>
+
+                <EndMessageSegment />
+
             </motion.div>
-
-            <Procurement/>
-
-            <Contstruction/>
-
-            <EndMessageSegment />
         </>
     )
 }

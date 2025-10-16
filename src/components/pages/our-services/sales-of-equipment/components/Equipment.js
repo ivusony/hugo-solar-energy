@@ -94,7 +94,7 @@ export default function SalesEquipment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="bg-[#EEF1F3] py-10 md:py-15 max-w-7xl mx-auto mb-10"
+            className="bg-[var(--color-foreground)] py-10 md:py-15 max-w-7xl mx-auto mb-10"
         >
             <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
                 {
@@ -106,8 +106,8 @@ export default function SalesEquipment() {
                             <div  className="h-full bg-white p-5 rounded-lg shadow transform scale-100 transition-transform transition-shadow duration-300 ease hover:shadow-lg hover:scale-101 flex flex-col justify-between">
                                 {/* if svg SVGs key name includes equipment_item.category */}
                                 { Object.keys(SVGs).find(key => key.includes(equipment_item.category)) && SVGs[Object.keys(SVGs).find(key => key.includes(equipment_item.category))] }
-                                <h3 className="text-xl font-semibold mb-3">{equipment_item.category}</h3>
-                                <p className="text-lg text-[var(--color)]">{equipment_item.focus}</p>
+                                <h3 className="hugo-h2">{equipment_item.category}</h3>
+                                <p className="hugo-p-justify">{equipment_item.focus}</p>
                             </div>
                         </motion.div>
                     ))

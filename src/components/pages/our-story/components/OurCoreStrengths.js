@@ -32,7 +32,7 @@ export default function OurCoreStrengths() {
                 key={0}
                 variants={item}
             >     
-                <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
+                <h2 className="hugo-h2">
                     { locales[locale].our_story.components.OurCoreStrengths.h2 }
                 </h2>
             </motion.div>
@@ -50,8 +50,8 @@ export default function OurCoreStrengths() {
                                 <path className='stroke-[var(--color-secondary)]' d="M5.5 6.39691C5.17745 7.20159 5 8.08007 5 9C5 12.866 8.13401 16 12 16C15.866 16 19 12.866 19 9C19 5.13401 15.866 2 12 2C11.0801 2 10.2016 2.17745 9.39691 2.5" strokeWidth="1.5" strokeLinecap="round"/>
                             </svg>
                         </div>
-                        <h3 className="font-bold mb-4">{ locales[locale].our_story.components.OurCoreStrengths.p1.title }</h3>
-                        <p>
+                        <h3 className="hugo-h3">{ locales[locale].our_story.components.OurCoreStrengths.p1.title }</h3>
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.OurCoreStrengths.p1.text }
                         </p>
                     </motion.div>
@@ -82,8 +82,8 @@ export default function OurCoreStrengths() {
                                 </g>
                             </svg>
                         </div>
-                        <h3 className="font-bold mb-4">{ locales[locale].our_story.components.OurCoreStrengths.p2.title }</h3>
-                        <p>
+                        <h3 className="hugo-h3">{ locales[locale].our_story.components.OurCoreStrengths.p2.title }</h3>
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.OurCoreStrengths.p2.text }
                         </p>
                     </motion.div>
@@ -99,8 +99,8 @@ export default function OurCoreStrengths() {
                                 <path className="stroke-[var(--color-secondary)]" d="M2 12H22" strokeWidth="1.5" strokeLinecap="round"/>
                             </svg>
                         </div>
-                        <h3 className="font-bold mb-4">{ locales[locale].our_story.components.OurCoreStrengths.p3.title }</h3>
-                        <p>
+                        <h3 className="hugo-h3">{ locales[locale].our_story.components.OurCoreStrengths.p3.title }</h3>
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.OurCoreStrengths.p3.text }
                         </p>
                     </motion.div>
@@ -135,8 +135,8 @@ export default function OurCoreStrengths() {
                                 </g>
                             </svg>
                         </div>
-                        <h3 className="font-bold mb-4">{ locales[locale].our_story.components.OurCoreStrengths.p4.title }</h3>
-                        <p>
+                        <h3 className="hugo-h3">{ locales[locale].our_story.components.OurCoreStrengths.p4.title }</h3>
+                        <p className="hugo-p-justify">
                             { locales[locale].our_story.components.OurCoreStrengths.p4.text }
                         </p>
                     </motion.div>

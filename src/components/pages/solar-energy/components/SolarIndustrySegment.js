@@ -44,7 +44,6 @@ function IndustryBoxes(){
             animate={controls}
             className={` mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4  mt-10 mb-10 auto-rows-[150px] sm:auto-rows-[200px] lg:auto-rows-[180px]`}
         >
-            
             <motion.div
                 key={1}
                 variants={item}
@@ -114,16 +113,14 @@ export default function SolarIndustrySegment() {
             initial="hidden"
             animate={controls}
             id="solar-industry-segment"
-            className="pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] py-10 "
+            className="bg-[var(--background)] py-10 "
         >   
             <motion.div
                 key={1}
                 variants={item}
                 className="max-w-7xl mx-auto text-center"
             > 
-                <div className="text-3xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center">
-                    <h2 className="bg-white p-1">{ locales[locale].solar_energy.components.solar_industry.h2 }</h2>
-                </div>
+                <h2 className="hugo-h2">{ locales[locale].solar_energy.components.solar_industry.h2 }</h2>
             </motion.div>
 
             <IndustryBoxes />
