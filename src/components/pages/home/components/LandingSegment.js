@@ -53,23 +53,27 @@ export default function LandingSegment() {
         <div id="landing-segment" className="h-[100vh] relative bg-gradient-to-b from-transparent to-[black]/70">
             <div 
                 id="intro-media-text-box" 
-                className="absolute bottom-1/4  md:bottom-1/6  left-[calc(5vw)] md:left-[5vw] h-[60%] md:border-l-1 border-white md:pl-4 flex items-end"
+                className=" absolute bottom-1/4  md:bottom-1/6  left-[calc(5vw)] md:left-[5vw] h-[60%] md:border-l-1 border-white md:pl-4 flex items-end"
             >
-                <div>
-                    <h1 className="text-white text-4xl md:text-7xl font-bold mb-4">HUGO SOLAR ENERGY</h1>
-                    <h2 className="text-white text-xl md:text-4xl font-bold md:font-normal mb-8">{locales[locale].home.components.IntroMediaSegment.introMediaTextBox}</h2>
-                    {/* var(--color) button "OUR PROJECTS" text white, sharp edges */}
-                    <Link 
-                        href={`${ locale == "sr" ? "" : "/" + locale }/our-projects` }
-                    >
-                        <button
-                            className=" bg-[var(--color)] text-white px-6 md:px-8 py-4  text-sm md:text-lg font-bold hover:brightness-90 transition-all duration-300 ease-in-out cursor-pointer"
-                        >
-                        {
-                            locale == "sr" ? "NAŠI PROJEKTI" : "OUR PROJECTS"
-                        }
-                        </button>
-                    </Link>
+                <div className="glow-wrapper">
+                    <div className="glow-container">
+                        <div className="w-full h-full">
+                            <h1 className="text-white text-4xl md:text-7xl font-bold mb-4">HUGO SOLAR ENERGY</h1>
+                            <h2 className="text-white text-xl md:text-4xl font-bold md:font-normal mb-8">{locales[locale].home.components.IntroMediaSegment.introMediaTextBox}</h2>
+                            {/* var(--color) button "OUR PROJECTS" text white, sharp edges */}
+                            <Link 
+                                href={`${ locale == "sr" ? "" : "/" + locale }/our-projects` }
+                            >
+                                <button
+                                    className=" bg-[var(--color)] text-white px-6 md:px-8 py-4  text-sm md:text-lg font-bold hover:brightness-90 transition-all duration-300 ease-in-out cursor-pointer"
+                                >
+                                {
+                                    locale == "sr" ? "NAŠI PROJEKTI" : "OUR PROJECTS"
+                                }
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
              <button 
