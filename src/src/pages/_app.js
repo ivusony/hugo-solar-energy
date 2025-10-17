@@ -7,6 +7,7 @@ import Head from "next/head";
 export default function App({ Component, pageProps }) {
     return(
         <AppProvider>
+            
             <MainLayout>
                 <Head>
                     <title>Hugo Solar Energy</title>

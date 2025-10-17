@@ -9,14 +9,16 @@ import { useAppContext } from "components/hooks/useAppContext";
 export default function MainNavi() {
 
     let router = useRouter();
+    let { asPath } = router;
     let { state, setState, toggleDrawer } = useAppContext();
     let { locale } = router;
+
+    console.log("asPath:", asPath); 
 
 
     // define function: if scrollY > 0 add class 'scrolled' to .mainNavi
     function handleScroll() {
         const mainNavi = document.querySelector(`.${styles.mainNavi}`);
-        const navbarBrandName = document.querySelector(`#navbar-brand-name`);
         const languageSelect = document.querySelector(`.${styles.languageSelect}`);
         if (window.scrollY > 0) {
             mainNavi.classList.add(styles.scrolled);
@@ -25,16 +27,26 @@ export default function MainNavi() {
             mainNavi.classList.remove(styles.scrolled);
             languageSelect.classList.remove(styles.scrolled);
         }
-        // if scrollY > viewport height add class 'opacity-100' to #navbar-brand-name, else remove it
-        if (window.scrollY > window.innerHeight) {
-            navbarBrandName.classList.add("opacity-100");
-            navbarBrandName.classList.remove("opacity-0");
-        } else {
-            navbarBrandName.classList.remove("opacity-100");
-            navbarBrandName.classList.add("opacity-0");
-        }
-
     };
+
+   
+
+    function handleBrandNameOnScroll() {
+        const navbarBrandName = document.querySelector(`#navbar-brand-name`);
+        if (asPath === "/" ) {
+            if (window.scrollY > window.innerHeight) {
+                navbarBrandName.classList.add("navi-navbar-brand-name-color");
+            } else {
+                navbarBrandName.classList.remove("navi-navbar-brand-name-color");
+            }
+        } else {
+            if (window.scrollY > 0) {
+                navbarBrandName.classList.add("navi-navbar-brand-name-color");
+            } else {
+                navbarBrandName.classList.remove("navi-navbar-brand-name-color");
+            }
+        }
+    }
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -42,6 +54,15 @@ export default function MainNavi() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleBrandNameOnScroll);
+        return () => {
+            window.removeEventListener("scroll", handleBrandNameOnScroll);
+        };
+    }, [asPath]);
+
+
 
 
     return (
@@ -94,7 +115,7 @@ export default function MainNavi() {
                     </div>
                 </div>
                 <div className={ `font-bold text-lg flex justify-end items-center w-[30%] text-white tracking-wider     ${styles.navbarBrand}`}>
-                    <span id="navbar-brand-name" className="mr-5 hidden md:block opacity-0 transition-opacity duration-900 text-[var(--color)]">HUGO SOLAR ENERGY</span>
+                    <span id="navbar-brand-name" className="mr-5 hidden md:block transition-color duration-900 text-white">HUGO SOLAR ENERGY</span>
                     <img className={ styles.mainNaviLogo } src="/assets/hugo_logo.png" alt="Hugo Solar Energy Logo" />
                 </div>
             </div>

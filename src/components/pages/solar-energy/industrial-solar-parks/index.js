@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import {  useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView, InView } from "react-intersection-observer";
 import { useRouter } from "next/router";

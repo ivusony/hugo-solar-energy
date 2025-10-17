@@ -15,6 +15,15 @@
 /* @media (prefers-color-scheme: dark) { */
 /* } */
 
+body {
+    background: var(--background);
+    color: var(--color);
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    background-size: 4mm 4mm;
+    background-position: 0 0;
+}
+
 :root {
 --background: #fff;
 --foreground: #EEF1F3;
@@ -33,26 +42,39 @@
 --segment-padding-right : 3vw;
 }
 
-.hugo-h1 {
-    @apply text-4xl md:text-5xl font-bold text-center mb-10 mt-10;
-}
+@layer components {
+    .hugo-h1 {
+        @apply text-4xl md:text-5xl font-bold text-center mb-10 mt-10;
+    }
 
-.hugo-h2 {
-    @apply text-xl md:text-2xl font-semibold mb-10 text-center;
-}
+    .hugo-h2 {
+        @apply text-xl md:text-2xl font-semibold mb-10 text-center;
+    }
 
-.hugo-h3 {
-    @apply font-bold text-lg mb-5 text-[var(--color)];
-}
+    .hugo-h3 {
+        @apply font-bold text-lg mb-5 text-[var(--color)];
+    }
 
-.hugo-p-justify {
-    @apply mb-5 text-justify  text-xl;
-}
+    .hugo-p-justify {
+        @apply mb-5 text-justify  text-xl;
+    }
 
-.hugo-p {
-    @apply mb-5 text-lg;
-}
+    .hugo-p {
+        @apply mb-5 text-lg;
+    }
 
+    .navi-navbar-brand-name-visible-white {
+    @apply opacity-100 text-white;
+    }
+
+    .navi-navbar-brand-name-color {
+        color: var(--color) !important;
+    }
+
+    .navi-navbar-brand-name-hidden {
+        @apply opacity-0;
+    }
+}
 
 
 @font-face {
@@ -105,7 +127,7 @@
     height: 100%;
     overflow: visible; 
     background-color: transparent; 
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .glow-container::before {
@@ -114,7 +136,7 @@
     top: 50%; 
     left: 50%;
     width: 100%;
-    height: 100%;
+    height: 50%;
     
     background: conic-gradient(
         from 0deg at 50% 50%,
@@ -129,18 +151,6 @@
     animation: subtle-move 20s linear infinite;
 
     z-index: 0;
-}
-
-
-
-
-body {
-    background: var(--background);
-    color: var(--color);
-    font-family: 'Roboto', Helvetica, sans-serif;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
-    background-size: 4mm 4mm;
-    background-position: 0 0;
 }
 
 

@@ -31,6 +31,26 @@ export default function SolarEnergySegment() {
         },
     };
 
+
+    // if offset top is greater than page heiight, change #solar-energy opacity to 1, else to 0
+    function handleScroll() {
+        const h2 = document.querySelector('#solar-energy-header');
+        if (window.scrollY > window.innerHeight - 150) {
+            h2.classList.remove('opacity-0');
+            h2.classList.add('opacity-100');
+        } else {
+            h2.classList.remove('opacity-100');
+            h2.classList.add('opacity-0');
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
     useEffect(() => {
         if (inView) controls.start("visible");
     }, [controls, inView]);
@@ -51,7 +71,7 @@ export default function SolarEnergySegment() {
                 variants={item}
                 className="max-w-7xl mx-auto"
             > 
-                <h2 className="hugo-h1">{ locales[locale].solar_energy.components.solar_energy.h2 }</h2>
+                <h2 id="solar-energy-header" className="hugo-h1 opacity-0 transition-opacity duration-500">{ locales[locale].solar_energy.components.solar_energy.h2 }</h2>
                 <h3 className="hugo-h2">
                     {
                         locales[locale].solar_energy.components.solar_energy.h3
