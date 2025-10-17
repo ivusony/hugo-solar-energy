@@ -25,7 +25,7 @@ export default function EndMessageSegment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="text-[var(--color)] py-10 md:py-15 "
+            className="text-[var(--color)] pb-10"
         >
             <motion.div
                 key={0}

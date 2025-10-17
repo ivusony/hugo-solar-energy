@@ -8,6 +8,7 @@ import EndMessageSegment from "./components/EndMessageSegment";
 import container from "@components/shared/MotionContainer";
 import item from "@components/shared/MotionItem";
 import Breadcrumb from "@components/shared/Breadcrumb";
+import InterviewIllustration from "./components/InterviewIllustration";
 
 export default function OurServices() {
 
@@ -61,6 +62,8 @@ export default function OurServices() {
                 </motion.div>
 
                 <CentralServiceElemetsSegment />
+
+                <InterviewIllustration />
 
                 <EndMessageSegment />
                     

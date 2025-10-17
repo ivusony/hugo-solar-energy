@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useLocales } from "@components/hooks/useLocales";
 import SolarEnergySegment from "./components/SolarEnergySegment";
 import SolarIndustrySegment from "./components/SolarIndustrySegment";
+import ElectricityIllustration from "./components/ElectricityIllustration";
 
 export default function SolarEnergy() {
 
@@ -45,6 +46,8 @@ export default function SolarEnergy() {
             <SolarEnergySegment />
 
             <SolarIndustrySegment />
+
+            <ElectricityIllustration />
         </div>
     );
 }
