@@ -1,0 +1,10 @@
+# Block all web crawlers from the /api directory
+User-agent: *
+Disallow: /api/
+
+# Allow all web crawlers to access the entire site (except /api)
+User-agent: *
+Allow: /
+
+# Specify the location of your sitemap
+Sitemap: https://hugo-solar-energy.vercel.app/sitemap.xml
