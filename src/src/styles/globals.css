@@ -113,6 +113,23 @@ body {
         opacity: 1;
     }
 }
+#menuSvgBox1, #menuSvgBox2, #menuSvgBox3 {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 4s ease-in-out infinite;
+}
+
+#menuSvgBox1 { animation-delay: 0s; }
+#menuSvgBox2 { animation-delay: 0.5s; }
+#menuSvgBox3 { animation-delay: 1s; }
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 
 .glow-wrapper {
     position: relative;
