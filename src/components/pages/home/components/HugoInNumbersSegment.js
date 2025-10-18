@@ -9,11 +9,19 @@ import { useEffect, useRef, useState } from "react";
 
 
 import { useInView } from "react-intersection-observer";
+import { useTheme } from "@components/hooks/useTheme";
 
 
 export default function HugoInNumbersSegment() {
     let { locale } = useRouter();
     let locales = useLocales();
+    let {
+        color,
+        colorDarker,
+        colorLighter,
+        colorSecondary,
+        colorSecondaryDark,
+    } = useTheme();
 
     const [ref, inView] = useInView({ threshold: .3 });
 
@@ -47,13 +55,14 @@ export default function HugoInNumbersSegment() {
         solar_panels_installed: 0,
     });
 
-    
 
     useEffect(() => {
         if(inView) {
             setData(dataRef.current);
         }
     }, [inView]);
+
+
 
     return (
         <div id="hugo-in-numbers-segment" ref={ref} className={`relative bg-white pt-20 ${styles.HugoInNumbersSegment}`}>
@@ -76,7 +85,7 @@ export default function HugoInNumbersSegment() {
                                 datasets: [{
                                     data: [data.years_active, 0],
                                     backgroundColor: [
-                                        '#00366C',
+                                        color
                                     ],
                                     
                                     borderWidth: 0,
@@ -109,7 +118,7 @@ export default function HugoInNumbersSegment() {
                                 datasets: [{
                                     data: [data.megawatts_delivered, 0],
                                     backgroundColor: [
-                                        '#00366C',
+                                        color,
                                     ],
                                     
                                     borderWidth: 0,
@@ -143,8 +152,8 @@ export default function HugoInNumbersSegment() {
                                 datasets: [{
                                     data: [data.experts_in_team.men, data.experts_in_team.women],
                                     backgroundColor: [
-                                        '#00366C',
-                                        '#00A3FF',
+                                        colorDarker,
+                                        colorLighter,
                                     ],
                                     borderWidth: 0,
                                 }],
@@ -177,7 +186,7 @@ export default function HugoInNumbersSegment() {
                                 datasets: [{
                                     data: [data.number_of_projects, 0],
                                     backgroundColor: [
-                                        '#00366C',
+                                        colorDarker,
                                     ],
                                     
                                     borderWidth: 0,
@@ -210,7 +219,7 @@ export default function HugoInNumbersSegment() {
                                 datasets: [{
                                     data: [data.solar_panels_installed, 0],
                                     backgroundColor: [
-                                        '#00366C',
+                                        colorDarker,
                                     ],
                                     
                                     borderWidth: 0,

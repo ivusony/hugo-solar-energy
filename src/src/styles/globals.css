@@ -15,16 +15,9 @@
 /* @media (prefers-color-scheme: dark) { */
 /* } */
 
-body {
-    background: var(--background);
-    color: var(--color);
-    font-family: 'Roboto', Helvetica, sans-serif;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
-    background-size: 4mm 4mm;
-    background-position: 0 0;
-}
 
 :root {
+--base: #f8f8f8;
 --background: #fff;
 --foreground: #EEF1F3;
 --foreground-darker: #C4C4C4;
@@ -33,6 +26,11 @@ body {
 --color-lighter: #336699;
 --color-secondary: #F5A623;
 --color-secondary-dark: #D48806;
+/* --color: #FF5722;
+--color-darker: #E64A19;
+--color-lighter: #FF8A65;
+--color-secondary: #4CAF50;
+--color-secondary-dark: #388E3C; */
 --h1-size: 4vw;
 --h1-size-mobile: 9vw;
 --h2-size: 3vw;
@@ -41,6 +39,16 @@ body {
 --segment-padding-left : 3vw;
 --segment-padding-right : 3vw;
 }
+
+body {
+    background: var(--background);
+    color: var(--color);
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 4mm 4mm;
+    background-position: 0 0;
+}
+
 
 @layer components {
     .hugo-h1 {
