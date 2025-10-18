@@ -295,7 +295,7 @@ export default function CommercialSolarRoofs() {
                     </p>
                     <a 
                         href={ `${locale == "sr" ? "" : "/en"}/contact-us` } 
-                        className="inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
+                        className="w-full sm:w-[300px] inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
                     >
                         {
                             locale == "sr" ? "Kontaktirajte nas" : "Contact Us"

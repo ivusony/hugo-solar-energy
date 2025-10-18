@@ -52,13 +52,13 @@ export default function IntroductionSegment() {
             variants={container}
             initial="hidden"
             animate={controls} 
-            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-[var(--segment-padding-top)] pb-[var(--segment-padding-bottom)] bg-white min-h-[100vh] flex items-center justify-center"
+            className="relative pl-[var(--segment-padding-left)] pr-[var(--segment-padding-right)] pt-[var(--segment-padding-top)] pb-[var(--segment-padding-bottom)] bg-white min-h-[100vh] flex items-center justify-center px-2"
         >
             <div className={`${styles.IntroMediaSegmentContainer} `}>
                 <h2 className={`text-2xl md:text-4xl font-bold mt-5 mb-10 text-center flex justify-center`}>{locales[locale].home.components.IntroductionSegment.title}</h2>
-                <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic`}>{locales[locale].home.components.IntroductionSegment.text}</h3>
+                <h3 className={`text-xl md:text-2xl font-normal mb-10 text-justify  font-italic px-2`}>{locales[locale].home.components.IntroductionSegment.text}</h3>
                 
-                <div className="bg-[var(--foreground)] py-10 w-full border-t-3 border-[var(--color)]">
+                <div className="bg-[var(--foreground)] py-10 w-full border-t-3 border-[var(--color)] px-2">
                     <p className={`text-2xl md:text-3xl font-bold mt-5 mb-5 text-center flex justify-center`}>
                         {locales[locale].home.components.IntroductionSegment.boxes.title}
                     </p>
@@ -144,10 +144,11 @@ export default function IntroductionSegment() {
                         variants={item}  
                         className="flex justify-center mt-10"
                     >
-                        <Link href={ locales[locale].home.components.IntroductionSegment.discoverMoreButton.url } className="no-underline">
-                            <button className="bg-[var(--color-secondary)] text-white px-6 py-3 hover:bg-[var(--color-secondary-dark)] transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-103">
-                                { locales[locale].home.components.IntroductionSegment.discoverMoreButton.text }
-                            </button>
+                        <Link 
+                            href={ locales[locale].home.components.IntroductionSegment.discoverMoreButton.url } 
+                            className="text-center w-full sm:w-[300px] bg-[var(--color-secondary)] text-white px-6 py-3 hover:bg-[var(--color-secondary-dark)] transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-103"
+                        >
+                            { locales[locale].home.components.IntroductionSegment.discoverMoreButton.text }
                         </Link>
                     </motion.div>
                 </div>
