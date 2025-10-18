@@ -9,6 +9,7 @@ import Breadcrumb from "@components/shared/Breadcrumb";
 import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMakeLink";
 import SalesEquipment from "./components/Equipment";
 import EndMessageSegment from "./components/EndMessageSegment";
+import Link from "next/link";
 
 
 
@@ -63,6 +64,26 @@ export default function SalesOfEquipment() {
 
 
                 <SalesEquipment/>
+
+                <motion.div
+                    key={3}
+                    variants={item}
+                    className="flex justify-center mb-10"
+                >
+                    <Link
+                        href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/support-and-maintenance` } 
+                        className="relative  text-center w-full sm:w-[300px] inline-block bg-[var(--color)] text-white py-3 px-6 text-lg font-semibold mt-10 hover:bg-[var(--color-darker)] transition-colors duration-300 ease"
+                    >
+                        {/* white left arrow svg */}
+                        <svg xmlns="http://www.w3.org/2000/svg" className="inline-block mr-2 absolute left-4 top-1/2 transform -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} width={20} height={20}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M7 8l-4 4m0 0l4 4m-4-4h18" />
+                        </svg>
+                        {
+                            locale == "sr" ? "Podrška i održavanje" : "Support & Maintenance"
+                        }
+                        
+                    </Link>
+                </motion.div>
 
                 <EndMessageSegment/>
             </motion.div>

@@ -10,6 +10,7 @@ import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMa
 import Operation from "./components/Operation";
 import EndMessageSegment from "./components/EndMessageSegment";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SupportAndMaintenance() {
 
@@ -52,6 +53,42 @@ export default function SupportAndMaintenance() {
 
 
                 <Operation/>
+
+                <motion.div
+                    key={2}
+                    variants={item}
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-7xl mx-auto mt-10 text-center"
+                >
+                    <div className="grid-col-1 flex justify-end">
+                        <Link
+                            href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/procurement-and-construction` } 
+                            className="relative text-center w-full sm:w-[300px] inline-block bg-[var(--color)] text-white py-3 px-6 text-lg font-semibold  hover:bg-[var(--color-darker)] transition-colors duration-300 ease"
+                        >
+                            {/* white left arrow svg */}
+                            <svg xmlns="http://www.w3.org/2000/svg" className="inline-block mr-2 absolute left-4 top-1/2 transform -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} width={20} height={20}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M7 8l-4 4m0 0l4 4m-4-4h18" />
+                            </svg>
+                            {
+                                locale == "sr" ? "Nabavka i izgradnja" : "Procurement & Construction"
+                            }
+                        
+                        </Link>
+                    </div>
+                    <div className="grid-col-1 flex justify-start">
+                        <Link
+                            href={ `${ locale == "sr" ? "" : "/" + locale }/our-services/sales-of-equipment` }
+                            className="relative text-center w-full sm:w-[300px] inline-block bg-[var(--color)] text-white py-3 px-6 text-lg font-semibold  hover:bg-[var(--color-darker)] transition-colors duration-300 ease"
+                        >
+                            {
+                                locale == "sr" ? "Prodaja opreme" : "Sales of Equipment"
+                            }
+                            {/* white right arrow svg */}
+                            <svg xmlns="http://www.w3.org/2000/svg" className="inline-block ml-2 absolute right-4 top-1/2 transform -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} width={20} height={20}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                    </div>
+                </motion.div>
 
                 <EndMessageSegment/>
 

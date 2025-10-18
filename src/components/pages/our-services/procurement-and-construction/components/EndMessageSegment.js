@@ -25,7 +25,7 @@ export default function EndMessageSegment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="text-[var(--color)] py-10 md:py-15 "
+            className="text-[var(--color)] bg-[var(--color-foreground)] py-10 md:py-15 px-2 mt-10"
         >
             <motion.div
                 key={0}
@@ -49,7 +49,7 @@ export default function EndMessageSegment() {
             >
                 <a 
                     href={ `${locale == "sr" ? "" : "/en"}/contact-us` } 
-                    className="inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
+                    className="w-full sm:w-[300px] inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
                 >
                     {locales[locale].procurement_and_construction.EndMessageSegment.button_text}
                 </a>

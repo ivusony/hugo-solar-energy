@@ -7,6 +7,7 @@ import Image from "next/image";
 import container from "@components/shared/MotionContainer";
 import item from "@components/shared/MotionItem";
 import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMakeLink";
+import Link from "next/link";
 
 
 export default function Contstruction() {
@@ -97,7 +98,6 @@ export default function Contstruction() {
                     ))
                 }
             </div>
-            
 
         </motion.div>
     )

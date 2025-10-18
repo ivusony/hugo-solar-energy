@@ -94,7 +94,7 @@ export default function SalesEquipment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="bg-[var(--color-foreground)] py-10 md:py-15 max-w-7xl mx-auto mb-10"
+            className="bg-[var(--color-foreground)] py-10 md:py-15 max-w-7xl mx-auto"
         >
             <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-[var(--segment-padding-left)] pr-[var(--segment-padding-right)]">
                 {

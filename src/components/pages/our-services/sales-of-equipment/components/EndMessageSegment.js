@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import container from "@components/shared/MotionContainer";
 import item from "@components/shared/MotionItem";
 import findCompanyTitleAndMakeLink from "@components/utils/findCompanyTitleAndMakeLink";
+import Link from "next/link";
 
 export default function EndMessageSegment() {
 
@@ -25,7 +26,7 @@ export default function EndMessageSegment() {
             variants={container}
             initial="hidden"
             animate={controls}
-            className="text-[var(--color)] py-10 md:py-15 "
+            className="text-[var(--color)] bg-[var(--color-foreground)] py-10 md:py-15 px-2 "
         >
             <motion.div
                 key={0}
@@ -47,12 +48,12 @@ export default function EndMessageSegment() {
                 variants={item}
                 className="text-center"
             >
-                <a 
+                <Link
                     href={ `${locale == "sr" ? "" : "/en"}/contact-us` } 
-                    className="inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
+                    className=" w-full sm:w-[300px] inline-block bg-[var(--color-secondary)] text-white py-3 px-6  text-lg font-semibold mt-10 hover:bg-[var(--color-secondary-dark)] transition-colors duration-300 ease"
                 >
                     {locales[locale].sales_of_equipment.EndMessageSegment.button_text}
-                </a>
+                </Link>
             </motion.div>
         </motion.div>
     )
